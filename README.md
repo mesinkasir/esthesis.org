@@ -1,4 +1,6 @@
+[![Deploy Eleventy to XMIT](https://github.com/adamdjbrett/esthesis.org/actions/workflows/deploy-xmit.yml/badge.svg)](https://github.com/adamdjbrett/esthesis.org/actions/workflows/deploy-xmit.yml)
 # esthesis.org
+[demo](https://esthesis.xmit.dev)
 
 A New version of Esthesis Website build with 11ty JAMSTACK feat Dodam custom Wp Headless CMS
 
