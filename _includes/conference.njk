@@ -1,0 +1,106 @@
+---
+layout: base.njk
+---
+<section class="container-fluid border-bottom">
+    <div class="row row-full-height">
+        
+        
+        <div class="col-md-4 col-12 d-flex flex-column justify-content-center text-white col-centered p-3 p-md-5" 
+             style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('{{ image or metadata.image }}'); background-size: cover; background-position: center; min-height: 50vh;">
+            <div class="col-md-10 mx-auto">
+                
+                <nav class="breadcrumbs small mb-3 text-uppercase opacity-75">
+                    {%- for crumb in page.date | breadcrumbs(title, metadata) -%}
+                        {% if crumb.url %}
+                            <a href="{{ crumb.url }}" class="text-white text-decoration-none">{{ crumb.text }}</a>
+                        {% else %}
+                            <span>{{ crumb.text }}</span>
+                        {% endif %}
+                        {%- if not loop.last %} / {% endif -%}
+                    {%- endfor -%}
+                </nav>
+                
+                <h1 class="text-uppercase text-hero-post fw-bold display-4" style="line-height: 0.9; letter-spacing: -0.02em;">
+                    {{ title }}
+                </h1>
+
+                {% if description %}
+                    <h2 class="lead my-3 opacity-90">{{ description }}</h2>
+                {% endif %}
+                
+                {% if date %}
+                    <p class="small mt-4 opacity-75">
+                        <i class="far fa-calendar-alt me-2"></i>
+                        <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+
+        
+        <div class="col-md-8 p-3 p-md-5 col-scrollable bg-white">
+            
+            <div class="mb-5 d-flex justify-content-between align-items-center">
+                <a href="/archive/" class="text-dark text-decoration-none fw-bold">
+                    <i class="fas fa-arrow-left me-2"></i> BACK TO ARCHIVE
+                </a>
+                
+              
+            </div>
+
+            
+            <div class="mb-5 tocus p-4 border-start border-4 border-dark bg-light shadow-sm">
+                <h3 class="fw-bold h6 text-uppercase mb-3" style="letter-spacing: 0.1em;">Table of Contents</h3>
+                
+                {{ content | toc | safe }} 
+            </div>
+
+            <article class="post-article fs-5 line-height-lg">
+                {{ content | safe }}
+            </article>
+            <div class="mt-5 pt-5 border-top">
+                {% if tags %}
+                    <div class="mb-3">
+                        <span class="text-muted small text-uppercase fw-bold me-2">Tags:</span>
+                        {% for tag in tags %}
+                            {% if tag != "posts" %}
+                                <a href="/tags/{{ tag | slugify }}/" class="badge text-bg-light border text-decoration-none me-1 fw-normal">{{ tag | displayName }}</a>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+
+                {% if author %}
+                    <div class="author-meta py-3 px-4 bg-light rounded d-inline-block">
+                        <span class="text-muted small">WRITTEN BY</span><br>
+                        <a href="/contributor/{{ author | slugify }}/" class="text-dark fw-bold text-decoration-none h5">
+                            {{ author }}
+                        </a>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="row mt-5 pt-4 border-top">
+                {% set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+                {% set nextPost = collections.posts | getNextCollectionItem(page) %}
+                
+                <div class="col-6">
+                    {% if previousPost %}
+                        <a href="{{ previousPost.url }}" class="text-decoration-none">
+                            <span class="text-muted small fw-bold">PREVIOUS</span>
+                            <div class="text-dark fw-bold mt-1">← {{ previousPost.data.title }}</div>
+                        </a>
+                    {% endif %}
+                </div>
+                <div class="col-6 text-end">
+                    {% if nextPost %}
+                        <a href="{{ nextPost.url }}" class="text-decoration-none">
+                            <span class="text-muted small fw-bold">NEXT</span>
+                            <div class="text-dark fw-bold mt-1">{{ nextPost.data.title }} →</div>
+                        </a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

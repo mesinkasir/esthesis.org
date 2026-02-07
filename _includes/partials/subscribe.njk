@@ -1,17 +1,26 @@
-{% if wordpress.config.widget_show_subs %}
+{% if metadata.subs.show_widget %}
 <section class="container-fluid pinki">
-<div class="container newsletter ">
-<div class="row mt-5 mb-5">
-<div class="col-md-5 mx-auto text-center mt-5 mb-5">
-<h3>{{wordpress.config.subs_title}}</h3>
-<div class="mt-5 mb-3">
-<form action="{{wordpress.config.subs_formspree}}" method="post">
-<input class="form-control p-3" name="Email" id="email" type="email">
-<button class="btn btn-dark p-3 col-12 mt-3" type="submit">{{wordpress.config.subs_button}}</button>
-</form>
-</div>
-</div>
-</div>
-</div>
+    <div class="container newsletter">
+        <div class="row mt-5 mb-5">
+            <div class="col-md-5 mx-auto text-center mt-5 mb-5">
+                <h3 class="fw-bold">{{ metadata.subs.title }}</h3>
+                <div class="mt-4 mb-3">
+                   <form action="{{ metadata.subs.formspree_id }}" method="post">
+                        <div class="mb-3">
+                            <input class="form-control p-3 shadow-sm" 
+                                   name="email" 
+                                   id="email" 
+                                   type="email" 
+                                   placeholder="Your email address..." 
+                                   required>
+                        </div>
+                        <button class="btn btn-dark p-3 col-12 fw-bold" type="submit">
+                            {{ metadata.subs.button }}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 {% endif %}

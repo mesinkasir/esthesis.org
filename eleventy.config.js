@@ -1,132 +1,116 @@
-import {
-	IdAttributePlugin,
-	InputPathToUrlTransformPlugin,
-	HtmlBasePlugin,
-} from "@11ty/eleventy";
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginNavigation from "@11ty/eleventy-navigation";
-import yaml from "js-yaml";
-import { execSync } from "child_process";
+import { readFileSync } from "fs";
 import markdownIt from "markdown-it";
-import fontAwesomePlugin from "@11ty/font-awesome";
+import markdownItFootnote from "markdown-it-footnote";
+import markdownItAnchor from "markdown-it-anchor";
+import markdownItAttrs from "markdown-it-attrs";
+import toc from "eleventy-plugin-toc";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginFilters from "./_config/filters.js";
-import configureWodam from "./_config/wodam.js";
-/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-export default async function (eleventyConfig) {
-	configureWodam(eleventyConfig);
-	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
-		}
-	});
-	eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
-	eleventyConfig
-		.addPassthroughCopy({
-			"./public/": "/",
-		})
-		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
+import yaml from "js-yaml";
 
-	eleventyConfig.addWatchTarget("css/**/*.css");
-	eleventyConfig.addWatchTarget("content/**/*.{svg,webp,png,jpg,jpeg,gif}");
+export default function (eleventyConfig) {
+  const isFastBuild = process.env.FAST_BUILD === "1" || false;
 
-	eleventyConfig.addBundle("css", {
-		toFileDirectory: "dist",
-		bundleHtmlContentFromSelector: "style",
-	});
-	eleventyConfig.addBundle("js", {
-		toFileDirectory: "dist",
-		bundleHtmlContentFromSelector: 'script[type="module"]',
-	});
+  // Plugins
+  eleventyConfig.addPlugin(toc, {
+    tags: ['h2', 'h3', 'h4', 'h5'],
+    wrapper: 'div',
+    wrapperClass: 'list-group'
+  });
+  eleventyConfig.addPlugin(pluginSyntaxHighlight, { preAttributes: { tabindex: 0 } });
+  eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(pluginFilters);
 
-	eleventyConfig.addPlugin(pluginSyntaxHighlight, {
-		preAttributes: { tabindex: 0 },
-	});
-		eleventyConfig.addPlugin(fontAwesomePlugin, {
-		transform: 'i[class]',
-		shortcode: false,
-		failOnError: true,
-		defaultAttributes: {
-			class: 'icon-svg'
-		}
-	});
-	eleventyConfig.addPlugin(pluginNavigation);
-	eleventyConfig.addPlugin(HtmlBasePlugin);
-	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
-// creativitas code
-	const md = new markdownIt({
-		html: true,
-		breaks: true,
-		linkify: true,
-	});
-	eleventyConfig.addFilter("md", function (content) {
-		return md.render(content);
-	});
+  // Markdown Configuration
+  const slugifyString = (str) =>
+  String(str)
+    .toLowerCase()
+    .replace(/\s+/g, "-")
+    .replace(/[^\w\-]+/g, "")
+    .replace(/\-\-+/g, "-")
+    .replace(/^-+/, "")
+    .replace(/-+$/, "");
+  const mdLib = markdownIt({
+    html: true,
+    breaks: true,
+    linkify: true,
+    typographer: true
+  })
+  .use(markdownItAnchor, {
+  slugify: slugifyString,
+  permalink: markdownItAnchor.permalink.ariaHidden({
+    placement: "after",
+    class: "header-anchor",
+    symbol: ""
+  }),
+  level: [2, 3, 4] 
+})
+  .use(markdownItFootnote)
+  .use(markdownItAttrs)
+  .use(markdownItAnchor, {
+    permalink: markdownItAnchor.permalink.ariaHidden({
+      placement: "after",
+      class: "header-anchor",
+      symbol: ""
+    }),
+    level: [1, 2, 3, 4],
+    slugify: eleventyConfig.getFilter("slugify")
+  });
+
+  eleventyConfig.setLibrary("md", mdLib);
+  eleventyConfig.addFilter("md", (content) => mdLib.render(content));
+
+  // Passthrough Copy
+  eleventyConfig.addPassthroughCopy({ "public/css": "css" });
+  eleventyConfig.addPassthroughCopy({ "public/images": "images" });
+  eleventyConfig.addPassthroughCopy({ "public/docs": "docs" });
+  eleventyConfig.addPassthroughCopy({ "public/admin": "admin" });
+  eleventyConfig.addPassthroughCopy({ "public/images": "images" });
+  eleventyConfig.addPassthroughCopy({ "node_modules/pagefind/pagefind-ui.*": "pagefind" });
+
+  eleventyConfig.addWatchTarget("css/**/*.css");
+eleventyConfig.addCollection("contributor", function(collectionApi) {
+  return collectionApi.getFilteredByGlob("content/contributor/*.md");
+});
+  // --- DATA EXTENSION FIX ---
+  eleventyConfig.addDataExtension("yaml", (contents) => yaml.load(contents));
+
+  // Bundling Logic
+  if (!isFastBuild) {
+    eleventyConfig.addBundle("css", { toFileDirectory: "dist" });
+    eleventyConfig.addBundle("js", { toFileDirectory: "dist" });
+    eleventyConfig.addBundle("fontawesome", { toFileDirectory: "dist" });
+  } else {
+    eleventyConfig.addShortcode("getBundle", () => "");
+  }
 
 
-	eleventyConfig.on("eleventy.after", () => {
-		execSync(`npx pagefind --site _site --glob \"**/*.html\"`, {
-			encoding: "utf-8",
-		});
-	});
+  // Collections
+  const getPosts = (collectionApi) => collectionApi.getFilteredByGlob("content/posts/**/*.md").reverse();
+  eleventyConfig.addCollection("posts", (collectionApi) => getPosts(collectionApi));
 
-	eleventyConfig.addPlugin(IdAttributePlugin, {
-		slugify: (text) => {
-			const slug = eleventyConfig.getFilter("slugify")(text);
-			return `print-${slug}`;
-		},
-	});
+  eleventyConfig.addCollection("authorPages", (collectionApi) => {
+    const authorsData = JSON.parse(readFileSync("./_data/authors.json", "utf-8"));
+    const posts = getPosts(collectionApi);
+    return Object.entries(authorsData).map(([key, author]) => ({
+      key,
+      ...author,
+      posts: posts.filter(p => p.data.author === key),
+      url: `/author/${key}/`
+    })).filter(a => a.posts.length > 0);
+  });
 
-
-// creativitas code
-
-	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom", // or "rss", "json"
-		outputPath: "/feed/feed.xml",
-		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 10,
-			},
-		},
-		collection: {
-			name: "all",
-			limit: 20,
-		},
-		metadata: {
-			language: "en",
-			title:
-				"The New Polis",
-			subtitle:
-				"New Polis.",
-			base: "https://www.example.com/",
-			author: {
-				name: "adamdjbrett",
-			},
-		},
-	});
-
-	eleventyConfig.addPlugin(pluginFilters);
-
-	eleventyConfig.addPlugin(IdAttributePlugin, {});
-
-	eleventyConfig.addShortcode("currentBuildDate", () => {
-		return new Date().toISOString();
-	});
+  // --- RETURN OBJECT FIX ---
+  return {
+    dir: {
+      input: "content",
+      output: "_site",
+      includes: "../_includes",
+      data: "../_data",
+    },
+    dataTemplateEngine: "njk", 
+    markdownTemplateEngine: "njk",
+    htmlTemplateEngine: "njk",
+  };
 }
-
-export const config = {
-	templateFormats: ["md", "njk", "html", "liquid", "11ty.js"],
-
-	markdownTemplateEngine: "njk",
-
-	htmlTemplateEngine: "njk",
-
-	dir: {
-		input: "content", // default: "."
-		includes: "../_includes", // default: "_includes" (`input` relative)
-		data: "../_data", // default: "_data" (`input` relative)
-		output: "_site",
-	},
-};

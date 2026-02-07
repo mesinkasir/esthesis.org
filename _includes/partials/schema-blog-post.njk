@@ -1,0 +1,26 @@
+<script type="application/ld+json">
+{% set contributorData = collections.contributor | getContributor(authors) %}
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ title }}",
+  "description": "{{ description or excerpt or metadata.description }}",
+  "datePublished": "{{ date | isoDate }}",
+  "dateModified": "{{ date | isoDate }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ contributorData.data.name or authors or metadata.title }}",
+    "url": "{{ metadata.url }}{{ contributorData.url or '' }}"
+  },
+  "image": "{{ metadata.url }}{{ image or metadata.image }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.title }}",
+    "url": "{{ metadata.url }}"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ metadata.url }}{{ page.url }}"
+  }
+}
+</script>

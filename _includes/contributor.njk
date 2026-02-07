@@ -1,0 +1,61 @@
+---
+layout: base.njk
+---
+<div class="container">
+    <div class="col-md-8 mx-auto text-center mt-5 mb-4">
+       {% if image or metadata.image %}
+    <img src="{{ image or metadata.image }}" 
+         alt="Profile Picture of {{ title }}" 
+         class="rounded-circle object-fit-cover border" 
+         width="90" 
+         height="90"
+         style="aspect-ratio: 1/1;">
+{% endif %}
+        <div>
+            <h1 class="mb-0">{{ title }}</h1>
+            {% if website %}
+                <p class="mb-0">
+                    <a href="{{ website }}" target="_blank" rel="nofollow noopener">
+                        {{ website | replace('https://', '') | replace('http://', '') }}
+                    </a>
+                </p>
+            {% endif %}
+        </div>
+    </div>   
+    <div class="p-3 text-center col-md-8 mx-auto">
+        <div class="contributor-bio">
+            {{ content | safe }}
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid border-bottom">
+    <div class="col-md-10 mx-auto p-3">
+        <div class="row justify-content-center">
+            {% set namedPosts = collections.posts | postsNamedForContributor(title) %}
+            
+            {% for post in namedPosts %}
+            <article class="col-md-4 p-3">
+                <div class="img-post-list">
+                    <a href="{{ post.url }}" title="{{ post.data.title }}">
+                        <img class="img-fluid mb-4 post-list-image rounded" width="100%" 
+                             alt="{{ post.data.title }}"
+                             src="{{ post.data.image or metadata.image }}"/>
+                    </a>
+                    <a href="{{ post.url }}" class="text-decoration-none text-dark">
+                        <p class="fw-semibold  mb-1">{{ post.data.categories[0] | default('Article') }}</p>
+                        <h4 class="fw-bold">{{ post.data.title }}</h4>
+                        {% if post.data.description %}
+                            <div class="post-list-text text-muted small">{{ post.data.description | truncate(100) }}</div>
+                        {% endif %}
+                    </a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        
+        <p class="p-3 p-md-5 text-center">
+            <a href="/archive/" class="btn btn-light rounded-3 btn-lg">All Articles</a>
+        </p>
+    </div>
+</div>

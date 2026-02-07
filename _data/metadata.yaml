@@ -1,0 +1,94 @@
+title: Esthesis
+description: Arts, Culture, and Ideas
+url: http://localhost:8080
+language: en
+locale: en_US
+email: 
+formspree_id: 
+metasocial: 
+  twitter: "https://x.com/user"
+  tweetuser: "@user"
+  facebook: "https://fb.com/user"
+
+favicon: /images/esthesis-fav.png
+image: /images/esthesis.png
+
+# Hero Section
+hero_title: "Esthesis"
+
+# Navbar Configuration
+navbar:
+  logo: "/images/esthesis.png"
+  title: "Esthesis"
+  button: "Subscribe"
+  button_url: "/subscribe"
+  list:
+    - nav: "Home"
+      url: "/"
+    - nav: "About"
+      url: "/about"
+  header_list:
+    - nav: "Home"
+      url: "/"
+    - nav: "About"
+      url: "/about"
+    - nav: "Archive"
+      url: "/archive"
+
+# Page Settings
+blog:
+  title: "Journal"
+  description: "Latest insights and articles"
+categories:
+  title: "Categories"
+  description: "Browse by topic"
+tags:
+  title: "Tags"
+  description: "Explore keywords"
+authors:
+  title: "Authors"
+  description: "Our contributors"
+
+# Subscription Box
+subs:
+  title: "Stay Updated"
+  formspree_id: "https://formspree.io/f/xoxoxo"
+  button: "Join Now"
+  show_widget: true
+
+# Footer Configuration
+footer:
+  logo: /images/esthesis.png
+  title: "Esthesis"
+  description: "Providing critical thought and philosophical discourse."
+  text: "Built with Eleventy"
+  copyrights: "© 2026 The New Polis. All rights reserved."
+  nav_title: "Quick Links"
+  list:
+    - nav: "Privacy Policy"
+      url: "/privacy"
+  social:
+    - icon: "fab fa-facebook"
+      title: "Facebook"
+      url: "https://facebook.com"
+    - icon: "fab fa-twitter"
+      title: "Twitter"
+      url: "https://twitter.com"
+
+# Widgets
+widgets:
+  show_latest: true
+  show_authors: true
+  show_toc: true
+  toc_title: "Table of Contents"
+  widget_1:
+    title: "Popular Posts"
+  widget_2:
+    title: "About Us"
+    image: "/images/esthesis.png"
+    alt: "About Esthesis"
+    text: "Brief description about the journal."
+    url: "/about"
+    show: true
+  widget_3:
+    title: "Contributors"

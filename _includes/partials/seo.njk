@@ -1,36 +1,58 @@
-<title>
-{{ title or tag_name or category_name or author_name or post.title or wordpress.config.title }}
-</title>
-{% set final_title = title or tag_name or category_name or author_name or post.title or wordpress.config.title %}
-<meta content="{{ final_title }}" property="og:title" />
-<meta content="{{ final_title }}" property="dc:title" />
-<meta content="{{ final_title }}" name="twitter:title" />
-<meta content="{{ final_title }}" name="title" />
-<meta content="{{ final_title }}" property="og:site_name" />
-{% set final_description = description or post.excerpt or tag_description or category_description or author_description or wordpress.config.description %}
-<meta content="{{ final_description | safe | striptags | truncate(160) }}" name="description" />
-<meta content="{{ final_description | safe | striptags | truncate(160) }}" property="facebook:description" />
-<meta content="{{ final_description | safe | striptags | truncate(160) }}" property="og:description" />
-<meta content="{{ final_description | safe | striptags | truncate(160) }}" name="twitter:description" />
-{% set final_image = image or post.featuredImage or wordpress.config.image %}
+<title>{{title or metadata.title}}</title>
+<meta content="{{title or metadata.title}}" property="og:title" />
+<meta content="{{title or metadata.title}}" property="dc:title" />
+<meta content="{{title or metadata.title}}" name="twitter:title" />
+<meta content="{{title or metadata.title}}" name="title" />
+<meta content="{{title or metadata.title}}" property="og:site_name" />
+<meta content="{{description or metadata.description}}" name="description" />
+<meta
+	content="{{description or metadata.description}}"
+	property="facebook:description"
+/>
+<meta
+	content="{{description or metadata.description}}"
+	property="og:description"
+/>
+<meta
+	content="{{description or metadata.description}}"
+	name="twitter:description"
+/>
 <meta property="twitter:card" content="summary_large_image" />
-<meta content="{{ final_image }}" name="twitter:image" />
-<meta content="{{ final_image }}" name="facebook:image" />
-<meta content="{{ final_image }}" name="og:image" />
-<link href="{{ wordpress.config.favicon }}" rel="icon" type="image/x-icon" />
-<link rel="apple-touch-icon" href="{{ wordpress.config.favicon }}" />
-<meta content="{{ wordpress.config.facebook }}" property="facebook:author" />
-<meta content="{{ wordpress.config.twitteruser }}" property="twitter:author" />
-<meta property="dc:creator" content="{{ wordpress.config.author.name or wordpress.config.title }}" />
-<meta content="{{ wordpress.config.twitter }}" name="twitter:site" />
+<meta content="{{image or metadata.image}}" name="twitter:image" />
+<meta content="{{image or metadata.image}}" name="facebook:image" />
+<meta content="{{image or metadata.image}}" name="og:image" />
+<link href="{{ metadata.favicon }}" rel="icon" type="image/x-icon" />
+<link rel="apple-touch-icon" href="{{ metadata.favicon }}" />
+<meta content="{{ metadata.metasocial.facebook }}" property="facebook:author" />
+<meta
+	content="{{ metadata.metasocial.twitteruser }}"
+	property="twitter:author"
+/>
+<meta property="dc:creator" content="{{ metadata.author.name }}" />
+<meta content="{{ metadata.metasocial.twitter }}" name="twitter:site" />
 <meta property="og:type" content="website" />
 <meta content="index, follow" name="robots">
-<link rel="canonical" href="{{ wordpress.config.url }}{{ page.url }}" />
-<meta name="language" content="{{ wordpress.config.language }}" />
-<meta name="locale" content="{{ wordpress.config.locale }}" />
-<meta property="og:locale" content="{{ wordpress.config.locale }}" />
+<link rel="canonical" href="{{ metadata.url }}{{ page.url }}" />
+<link
+	rel="alternate"
+	href="feed/feed.xml"
+	type="application/atom+xml"
+	title="{{ metadata.title }}"
+/>
+<meta name="language" content="{{ metadata.language }}" />
+<meta name="locale" content="{{ metadata.locale }}" />
+<meta property="og:locale" content="{{ metadata.locale }}" />
 <meta name="generator" content="{{ eleventy.generator }}" />
-<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ wordpress.config.title }}">
+<link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
+{% include "partials/schema-breadcrumb.njk" %}
+
+{% if layout == "blog.njk" %}
+{% include "partials/schema-blog.njk" %}
+{% endif %}
+
+{% if authors %}
+{% include "partials/schema-blog-post.njk" %}
+
 <style>
 {% include "node_modules/bootstrap/dist/css/bootstrap.min.css" %}
 {% include "css/style.css" %}

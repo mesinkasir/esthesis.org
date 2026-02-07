@@ -1,0 +1,71 @@
+---
+title: Tags
+description: 
+permalink: /tags/
+---
+<div class=""container">
+<h1>Tags</h1>
+
+<p>Browse all posts organized by tag, grouped alphabetically.</p>
+
+<div style="margin-top: 2em;">
+
+{% set alphabet = ['0-9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'] %}
+
+{% set allTags = [] %}
+{% for post in collections.posts %}
+  {% if post.data.tags %}
+    {% for tag in post.data.tags %}
+      {% set tagTrimmed = tag | trim %}
+      {% if tagTrimmed and tagTrimmed not in ['posts', 'all'] and tagTrimmed not in allTags %}
+        {% set allTags = allTags.concat([tagTrimmed]) %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+{% set allTagsSorted = allTags | sort %}
+
+{% for letter in alphabet %}
+  {% set tagsInLetter = [] %}
+  {% for tag in allTagsSorted %}
+    {% set firstChar = tag[0] | upper %}
+    {% if letter == '0-9' %}
+      {% if firstChar >= '0' and firstChar <= '9' %}
+        {% set tagsInLetter = tagsInLetter.concat([tag]) %}
+      {% endif %}
+    {% elif firstChar == letter %}
+      {% set tagsInLetter = tagsInLetter.concat([tag]) %}
+    {% endif %}
+  {% endfor %}
+
+  {% if tagsInLetter | length > 0 %}
+    <details>
+      <summary><h2 style="display: inline; margin: 0;">{{ letter }} ({{ tagsInLetter | length }} tags)</h2></summary>
+
+      <div style="margin: 1em 0 1em 1.5em;">
+      {% for tag in tagsInLetter %}
+        {% set tagPosts = [] %}
+        {% for post in collections.posts %}
+          {% if post.data.tags and tag in post.data.tags %}
+            {% set tagPosts = tagPosts.concat([post]) %}
+          {% endif %}
+        {% endfor %}
+
+        <details>
+          <summary><strong>{{ tag | displayName }}</strong> <small>({{ tagPosts | length }} posts)</small></summary>
+          <ul style="margin: 0.5em 0 0.5em 2em;">
+          {%- for post in tagPosts | reverse -%}
+            <li"><a href="{{ post.url }}">{{ post.data.title }}</a> <small>({{ post.date | readableDate }})</small></li>
+          {%- endfor -%}
+          </ul>
+        </details>
+      {% endfor %}
+      </div>
+    </details>
+  {% endif %}
+{% endfor %}
+
+</div>
+
+</div>

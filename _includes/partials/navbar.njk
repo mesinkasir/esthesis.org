@@ -1,22 +1,27 @@
 <nav class="navbar navbar-expand-lg bg-white border-bottom p-3">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{{wordpress.config.url}}">
-	<img class="img-fluid rounded-3 me-2" width="35" height="35" alt="{{wordpress.config.title}}" 
-    src="{{wordpress.config.navbar_logo}}"/>
-  {{wordpress.config.navbar_title}}</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse  justify-content-end" id="navbarSupportedContent">
-       <ul class="navbar-nav text-center">
-        {% for key, item in wordpress.config.navlist %}<li class="nav-item ms-3">
-          <a class="nav-link nav-link-maroon-hover" aria-current="page" href="{{item.url}}">{{item.nav}}</a>
-        </li>{% endfor %}
-        </ul>
-      <div class="d-flex justify-content-center">
-        <a href="{{wordpress.config.navbar_button_url}}" class="ms-3 btn btn-light rounded-5 border-secondary">
-        {{wordpress.config.navbar_button}}</a>
-      </div>
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ metadata.url }}">
+            <img class="img-fluid rounded-3 me-2" width="35" height="35" 
+                 alt="{{ metadata.title }}" 
+                 src="{{ metadata.navbar.logo }}"/>
+            {{ metadata.navbar.title }}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav text-center">
+                {% for item in metadata.navbar.list %}
+                <li class="nav-item ms-3">
+                    <a class="nav-link nav-link-maroon-hover" href="{{ item.url }}">{{ item.nav }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+            <div class="d-flex justify-content-center">
+                <a href="{{ metadata.navbar.button_url }}" class="ms-3 btn btn-light rounded-5 border-secondary">
+                    {{ metadata.navbar.button }}
+                </a>
+            </div>
+        </div>
     </div>
-  </div>
 </nav>

@@ -1,0 +1,17 @@
+---
+layout: base.njk
+title: Tag
+pagination:
+  data: collections.tags
+  size: 1
+  alias: tag
+permalink: "/tag/{{ tag }}/"
+---
+
+<h1>Tag: {{ tag | displayName }}</h1>
+
+<ul>
+  {% for post in collections.posts | filterByTagSafe(tag) | reverse %}
+    <li><a href="{{ post.url }}">{{ post.data.title }}</a> <small>({{ post.date | readableDate }})</small></li>
+  {% endfor %}
+</ul>

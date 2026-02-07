@@ -8,9 +8,11 @@ layout: base.njk
 eleventyComputed:
   title: Category: {{ category.name }}
 ---
+<div class="container">
 {% for post in category.posts %}
 <article>
 <h2><a href="/post/{{ post.slug }}/">{{ post.title }}</a></h2>
 <p>{{ post.excerpt|safe }}</p>
 </article>
 {% endfor %}
+</div>

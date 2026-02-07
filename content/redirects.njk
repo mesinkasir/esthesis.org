@@ -1,0 +1,258 @@
+---
+permalink: /_redirects
+---
+
+# Uploads: documents
+/images/docs/images/wp-content/uploads/*.pdf  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.doc  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.docx /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.ppt  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.pptx /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.xls  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.xlsx /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.txt  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.rtf  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.csv  /docs/images/wp-content/uploads/:splat  301
+/images/docs/images/wp-content/uploads/*.zip  /docs/images/wp-content/uploads/:splat  301
+
+# Uploads: images (fallback)
+/images/wp-content/uploads/*      /images/wp-content/uploads/:splat 301
+
+# Removed non-upload asset paths from WP
+/wp-content/plugins/* / 410
+/wp-content/themes/*  / 410
+/wp-includes/*        / 410
+/themes/*             / 410
+
+{% for item in collections.all %}
+  {% if item.data.redirect_from %}
+    {% set froms = item.data.redirect_from %}
+    {% if froms is string %}{% set froms = [froms] %}{% endif %}
+    {% for from in froms %}
+{{ from }} {{ item.url }} 301
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+# Category/tag casing and spacing redirects
+{% for category in collections.categories %}
+  {% set display = category | displayName %}
+/category/{{ display }}/ /category/{{ category }}/ 301
+/category/{{ display | replace(" ", "%20") }}/ /category/{{ category }}/ 301
+{% endfor %}
+
+/category/uncategorized/ /category/aesthetics/ 301
+/contributor/kenneth-ken-lokensgard/ /contributor/kenneth-lokensgard/ 301
+
+{% for tag in collections.tags %}
+  {% set display = tag | displayName %}
+/tag/{{ display }}/ /tag/{{ tag }}/ 301
+/tag/{{ display | replace(" ", "%20") }}/ /tag/{{ tag }}/ 301
+{% endfor %}
+
+# Auto-generated redirects for moved assets
+
+# Image variant redirects
+/images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2-768x512.jpg /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg 301
+/images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM-90x68.png /images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM.png 301
+/images/wp-content/uploads/2017/03/psychedelia-300x215.png /images/wp-content/uploads/2017/03/psychedelia.png 301
+/images/wp-content/uploads/2017/03/psychedelia-768x551.png /images/wp-content/uploads/2017/03/psychedelia.png 301
+/images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2-385x257.jpg /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg 301
+/images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM-1024x769.png /images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM.png 301
+/images/wp-content/uploads/2017/03/vg-227x300.jpg /images/wp-content/uploads/2017/03/vg.jpg 301
+/images/wp-content/uploads/2017/03/motet_2-300x213.jpg /images/wp-content/uploads/2017/03/motet_2.jpg 301
+/images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2-1024x683.jpg /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg 301
+/images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2-300x200.jpg /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg 301
+/images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM-768x577.png /images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM.png 301
+/images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2-480x320.jpg /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg 301
+/images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM-300x225.png /images/wp-content/uploads/2017/03/Screen-Shot-2017-03-06-at-3.07.29-PM.png 301
+/images/wp-content/uploads/2017/03/psychedelia-1024x735.png /images/wp-content/uploads/2017/03/psychedelia.png 301
+/images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2-880x586.jpg /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg 301
+/images/wp-content/uploads/2017/04/beauty-and-the-beast-480x320.jpg /images/wp-content/uploads/2017/04/beauty-and-the-beast.jpg 301
+/images/wp-content/uploads/2017/04/beauty-and-the-beast-880x586.jpg /images/wp-content/uploads/2017/04/beauty-and-the-beast.jpg 301
+/images/wp-content/uploads/2017/04/beauty-and-the-beast-300x200.jpg /images/wp-content/uploads/2017/04/beauty-and-the-beast.jpg 301
+/images/wp-content/uploads/2017/04/taksimpark-300x169.jpg /images/wp-content/uploads/2017/04/taksimpark.jpg 301
+/images/wp-content/uploads/2017/04/beauty-and-the-beast-385x257.jpg /images/wp-content/uploads/2017/04/beauty-and-the-beast.jpg 301
+/images/wp-content/uploads/2017/04/taksimpark-768x432.jpg /images/wp-content/uploads/2017/04/taksimpark.jpg 301
+/images/wp-content/uploads/2017/04/shamaness-768x482.png /images/wp-content/uploads/2017/04/shamaness.png 301
+/images/wp-content/uploads/2017/04/beauty-and-the-beast-768x512.jpg /images/wp-content/uploads/2017/04/beauty-and-the-beast.jpg 301
+/images/wp-content/uploads/2017/04/shamaness-300x188.png /images/wp-content/uploads/2017/04/shamaness.png 301
+/images/wp-content/uploads/2017/04/taksimpark-1024x576.jpg /images/wp-content/uploads/2017/04/taksimpark.jpg 301
+/images/wp-content/uploads/2017/05/This-is-a-shot-1024x532.png /images/wp-content/uploads/2017/05/This-is-a-shot.png 301
+/images/wp-content/uploads/2017/05/Screen-Shot-2017-05-01-at-12.31.01-PM-300x153.png /images/wp-content/uploads/2017/05/Screen-Shot-2017-05-01-at-12.31.01-PM.png 301
+/images/wp-content/uploads/2017/05/the-sin-768x1291.jpg /images/wp-content/uploads/2017/05/the-sin.jpg 301
+/images/wp-content/uploads/2017/05/Screen-Shot-2017-05-01-at-12.31.01-PM-1024x521.png /images/wp-content/uploads/2017/05/Screen-Shot-2017-05-01-at-12.31.01-PM.png 301
+/images/wp-content/uploads/2017/05/c1f791beef78ad9e2e9e2b98553b1c53-265x300.jpg /images/wp-content/uploads/2017/05/c1f791beef78ad9e2e9e2b98553b1c53.jpg 301
+/images/wp-content/uploads/2017/05/Picture-3-1024x516.png /images/wp-content/uploads/2017/05/Picture-3.png 301
+/images/wp-content/uploads/2017/05/9b46f88d50e64b78fcc3ed9c8d90eefd-1-300x184.jpg /images/wp-content/uploads/2017/05/9b46f88d50e64b78fcc3ed9c8d90eefd-1.jpg 301
+/images/wp-content/uploads/2017/05/Picture-3-768x387.png /images/wp-content/uploads/2017/05/Picture-3.png 301
+/images/wp-content/uploads/2017/05/the-sin-179x300.jpg /images/wp-content/uploads/2017/05/the-sin.jpg 301
+/images/wp-content/uploads/2017/05/Picture-4-300x154.png /images/wp-content/uploads/2017/05/Picture-4.png 301
+/images/wp-content/uploads/2017/05/copies-385x257.jpg /images/wp-content/uploads/2017/05/copies.jpg 301
+/images/wp-content/uploads/2017/05/Picture-5-1024x532.png /images/wp-content/uploads/2017/05/Picture-5.png 301
+/images/wp-content/uploads/2017/05/Picture-4-768x395.png /images/wp-content/uploads/2017/05/Picture-4.png 301
+/images/wp-content/uploads/2017/05/Picture-3-300x151.png /images/wp-content/uploads/2017/05/Picture-3.png 301
+/images/wp-content/uploads/2017/05/Picture-4-1024x527.png /images/wp-content/uploads/2017/05/Picture-4.png 301
+/images/wp-content/uploads/2017/05/copies-300x200.jpg /images/wp-content/uploads/2017/05/copies.jpg 301
+/images/wp-content/uploads/2017/05/Picture-5-768x399.png /images/wp-content/uploads/2017/05/Picture-5.png 301
+/images/wp-content/uploads/2017/05/the-sin-609x1024.jpg /images/wp-content/uploads/2017/05/the-sin.jpg 301
+/images/wp-content/uploads/2017/05/Picture-5-300x156.png /images/wp-content/uploads/2017/05/Picture-5.png 301
+/images/wp-content/uploads/2017/05/This-is-a-shot-768x399.png /images/wp-content/uploads/2017/05/This-is-a-shot.png 301
+/images/wp-content/uploads/2017/05/035be880288406228967bdfa5afdf533-300x300.jpg /images/wp-content/uploads/2017/05/035be880288406228967bdfa5afdf533.jpg 301
+/images/wp-content/uploads/2017/05/This-is-a-shot-300x156.png /images/wp-content/uploads/2017/05/This-is-a-shot.png 301
+/images/wp-content/uploads/2017/05/copies-480x320.jpg /images/wp-content/uploads/2017/05/copies.jpg 301
+/images/wp-content/uploads/2017/05/Screen-Shot-2017-05-01-at-12.31.01-PM-768x391.png /images/wp-content/uploads/2017/05/Screen-Shot-2017-05-01-at-12.31.01-PM.png 301
+/images/wp-content/uploads/2017/02/Morris-exhibit-768x602.jpg /images/wp-content/uploads/2017/02/Morris-exhibit.jpg 301
+/images/wp-content/uploads/2017/02/Morris-exhibit-300x235.jpg /images/wp-content/uploads/2017/02/Morris-exhibit.jpg 301
+/images/wp-content/uploads/2017/02/Reading-butterflies-300x300.jpg /images/wp-content/uploads/2017/02/Reading-butterflies.jpg 301
+/images/wp-content/uploads/2017/02/adolf_wolfli_1000-212x300.jpg /images/wp-content/uploads/2017/02/adolf_wolfli_1000.jpg 301
+/images/wp-content/uploads/2017/02/tiny-house-385x257.jpg /images/wp-content/uploads/2017/02/tiny-house.jpg 301
+/images/wp-content/uploads/2017/02/tiny-house-768x512.jpg /images/wp-content/uploads/2017/02/tiny-house.jpg 301
+/images/wp-content/uploads/2017/02/tiny-house-880x586.jpg /images/wp-content/uploads/2017/02/tiny-house.jpg 301
+/images/wp-content/uploads/2017/02/tiny-house-480x320.jpg /images/wp-content/uploads/2017/02/tiny-house.jpg 301
+/images/wp-content/uploads/2017/02/tiny-house-300x200.jpg /images/wp-content/uploads/2017/02/tiny-house.jpg 301
+/images/wp-content/uploads/2017/11/IMG_2103-90x68.jpg /images/wp-content/uploads/2017/11/IMG_2103.jpg 301
+/images/wp-content/uploads/2017/11/wikipedia-commons-768x497.jpg /images/wp-content/uploads/2017/11/wikipedia-commons.jpg 301
+/images/wp-content/uploads/2017/11/atmospheric-reentry-768x549.jpg /images/wp-content/uploads/2017/11/atmospheric-reentry.jpg 301
+/images/wp-content/uploads/2017/11/atmospheric-reentry-300x214.jpg /images/wp-content/uploads/2017/11/atmospheric-reentry.jpg 301
+/images/wp-content/uploads/2017/11/wikipedia-commons-1024x662.jpg /images/wp-content/uploads/2017/11/wikipedia-commons.jpg 301
+/images/wp-content/uploads/2017/11/wikipedia-commons-300x194.jpg /images/wp-content/uploads/2017/11/wikipedia-commons.jpg 301
+/images/wp-content/uploads/2017/11/IMG_2103-768x576.jpg /images/wp-content/uploads/2017/11/IMG_2103.jpg 301
+/images/wp-content/uploads/2017/11/IMG_2103-1024x768.jpg /images/wp-content/uploads/2017/11/IMG_2103.jpg 301
+/images/wp-content/uploads/2017/11/IMG_2103-300x225.jpg /images/wp-content/uploads/2017/11/IMG_2103.jpg 301
+/images/wp-content/uploads/2017/10/Turrell-Sky-Spaces-272x300.jpg /images/wp-content/uploads/2017/10/Turrell-Sky-Spaces.jpg 301
+/images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical-768x576.jpg /images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical.jpg 301
+/images/wp-content/uploads/2017/07/541806823_1280x720-300x169.jpg /images/wp-content/uploads/2017/07/541806823_1280x720.jpg 301
+/images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical-300x225.jpg /images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical.jpg 301
+/images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical-90x68.jpg /images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical.jpg 301
+/images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical-1024x768.jpg /images/wp-content/uploads/2017/07/Budweiser-puppy-love-commerical.jpg 301
+/images/wp-content/uploads/2017/07/Screen-Shot-2017-07-04-at-9.25.54-PM-300x132.png /images/wp-content/uploads/2017/07/Screen-Shot-2017-07-04-at-9.25.54-PM.png 301
+/images/wp-content/uploads/2017/07/Duchamp_Fountaine-284x300.jpg /images/wp-content/uploads/2017/07/Duchamp_Fountaine.jpg 301
+/images/wp-content/uploads/2017/07/Duchamp_Fountaine-768x812.jpg /images/wp-content/uploads/2017/07/Duchamp_Fountaine.jpg 301
+/images/wp-content/uploads/2017/07/541806823_1280x720-768x432.jpg /images/wp-content/uploads/2017/07/541806823_1280x720.jpg 301
+/images/wp-content/uploads/2017/07/541806823_1280x720-1024x576.jpg /images/wp-content/uploads/2017/07/541806823_1280x720.jpg 301
+/images/wp-content/uploads/2017/08/Van-Gogh-Starry-Night-300x240.jpg /images/wp-content/uploads/2017/08/Van-Gogh-Starry-Night.jpg 301
+/images/wp-content/uploads/2017/08/Van-Gogh-Starry-Night-768x614.jpg /images/wp-content/uploads/2017/08/Van-Gogh-Starry-Night.jpg 301
+/images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466-480x320.jpg /images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466.jpg 301
+/images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1-300x200.jpg /images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1.jpg 301
+/images/wp-content/uploads/2017/01/Frida-Kahlo-705x1024.jpg /images/wp-content/uploads/2017/01/Frida-Kahlo.jpg 301
+/images/wp-content/uploads/2017/01/Tracey-Emin-exhibit-300x197.jpg /images/wp-content/uploads/2017/01/Tracey-Emin-exhibit.jpg 301
+/images/wp-content/uploads/2017/01/Frida-Kahlo-206x300.jpg /images/wp-content/uploads/2017/01/Frida-Kahlo.jpg 301
+/images/wp-content/uploads/2017/01/Klee-saint-of-inner-light-168x300.jpg /images/wp-content/uploads/2017/01/Klee-saint-of-inner-light.jpg 301
+/images/wp-content/uploads/2017/01/Beuys-Fat-Chair-768x992.jpg /images/wp-content/uploads/2017/01/Beuys-Fat-Chair.jpg 301
+/images/wp-content/uploads/2017/01/Beuys-Fat-Chair-232x300.jpg /images/wp-content/uploads/2017/01/Beuys-Fat-Chair.jpg 301
+/images/wp-content/uploads/2017/01/Tracey-Emin-exhibit-768x504.jpg /images/wp-content/uploads/2017/01/Tracey-Emin-exhibit.jpg 301
+/images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466-300x200.jpg /images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466.jpg 301
+/images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1-880x586.jpg /images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1.jpg 301
+/images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1-480x320.jpg /images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1.jpg 301
+/images/wp-content/uploads/2017/01/Klee-saint-of-inner-light-574x1024.jpg /images/wp-content/uploads/2017/01/Klee-saint-of-inner-light.jpg 301
+/images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466-385x257.jpg /images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466.jpg 301
+/images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1-768x512.jpg /images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1.jpg 301
+/images/wp-content/uploads/2017/01/Beuys-Fat-Chair-792x1024.jpg /images/wp-content/uploads/2017/01/Beuys-Fat-Chair.jpg 301
+/images/wp-content/uploads/2017/01/Frida-Kahlo-768x1116.jpg /images/wp-content/uploads/2017/01/Frida-Kahlo.jpg 301
+/images/wp-content/uploads/2017/01/Tracey-Emin-exhibit-1024x671.jpg /images/wp-content/uploads/2017/01/Tracey-Emin-exhibit.jpg 301
+/images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1-1024x682.jpg /images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1.jpg 301
+/images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1-385x257.jpg /images/wp-content/uploads/2017/01/BTH-Stills-05-Kids-walk-on-Tibetan-Soil1.jpg 301
+/images/wp-content/uploads/2017/06/temple-768x433.jpg /images/wp-content/uploads/2017/06/temple.jpg 301
+/images/wp-content/uploads/2017/06/temple-300x169.jpg /images/wp-content/uploads/2017/06/temple.jpg 301
+/images/wp-content/uploads/2017/06/27470aded22f2ade51e9b0295cb6e375-222x300.jpg /images/wp-content/uploads/2017/06/27470aded22f2ade51e9b0295cb6e375.jpg 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM-90x68.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM-1024x787.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM-768x590.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.47.02-PM-300x211.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.47.02-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.47.02-PM-768x541.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.47.02-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-3.02.35-PM-300x297.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-3.02.35-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.47.02-PM-1024x721.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.47.02-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM-300x231.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-2.55.30-PM.png 301
+/images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-3.02.35-PM-768x761.png /images/wp-content/uploads/2019/05/Screen-Shot-2019-05-09-at-3.02.35-PM.png 301
+/images/wp-content/uploads/2019/08/Screen-Shot-2019-08-07-at-3.22.35-PM-300x263.png /images/wp-content/uploads/2019/08/Screen-Shot-2019-08-07-at-3.22.35-PM.png 301
+/images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier-300x185.jpg /images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier.jpg 301
+/images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier-800x493.jpg /images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier.jpg 301
+/images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier-768x473.jpg /images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier.jpg 301
+/images/wp-content/uploads/2018/05/publicdomainq-0004934crltvo-300x200.png /images/wp-content/uploads/2018/05/publicdomainq-0004934crltvo.png 301
+/images/wp-content/uploads/2018/02/Bad-Air-768x603.jpg /images/wp-content/uploads/2018/02/Bad-Air.jpg 301
+/images/wp-content/uploads/2018/02/Bad-Air-300x236.jpg /images/wp-content/uploads/2018/02/Bad-Air.jpg 301
+/images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia-768x1086.jpg /images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia.jpg 301
+/images/wp-content/uploads/2018/02/rasputin_pa-1-229x300.jpg /images/wp-content/uploads/2018/02/rasputin_pa-1.jpg 301
+/images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia-212x300.jpg /images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia.jpg 301
+/images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia-724x1024.jpg /images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia.jpg 301
+/images/wp-content/uploads/2018/07/FIG-4-1-300x300.jpg /images/wp-content/uploads/2018/07/FIG-4-1.jpg 301
+/images/wp-content/uploads/2018/07/autoportret_nr10-1024x766.jpg /images/wp-content/uploads/2018/07/autoportret_nr10.jpg 301
+/images/wp-content/uploads/2018/07/autoportret_nr10-768x574.jpg /images/wp-content/uploads/2018/07/autoportret_nr10.jpg 301
+/images/wp-content/uploads/2018/07/FIG-2-1-235x300.jpg /images/wp-content/uploads/2018/07/FIG-2-1.jpg 301
+/images/wp-content/uploads/2018/07/autoportret_nr10-300x224.jpg /images/wp-content/uploads/2018/07/autoportret_nr10.jpg 301
+/images/wp-content/uploads/2018/07/FIG-3-1-232x300.jpg /images/wp-content/uploads/2018/07/FIG-3-1.jpg 301
+/images/wp-content/uploads/2018/07/autoportret_nr10-90x68.jpg /images/wp-content/uploads/2018/07/autoportret_nr10.jpg 301
+/images/wp-content/uploads/2018/07/FIG-5-1-300x201.jpg /images/wp-content/uploads/2018/07/FIG-5-1.jpg 301
+/images/wp-content/uploads/2018/07/FIG-6-1-300x199.jpg /images/wp-content/uploads/2018/07/FIG-6-1.jpg 301
+/images/wp-content/uploads/2018/08/WaltDisneyConcertHall-90x68.jpeg /images/wp-content/uploads/2018/08/WaltDisneyConcertHall.jpeg 301
+/images/wp-content/uploads/2018/08/urban-kathmandu.fig3_-1024x768.jpg /images/wp-content/uploads/2018/08/urban-kathmandu.fig3_.jpg 301
+/images/wp-content/uploads/2018/08/urban-kathmandu.fig3_-90x68.jpg /images/wp-content/uploads/2018/08/urban-kathmandu.fig3_.jpg 301
+/images/wp-content/uploads/2018/08/WaltDisneyConcertHall-300x225.jpeg /images/wp-content/uploads/2018/08/WaltDisneyConcertHall.jpeg 301
+/images/wp-content/uploads/2018/08/WaltDisneyConcertHall-768x576.jpeg /images/wp-content/uploads/2018/08/WaltDisneyConcertHall.jpeg 301
+/images/wp-content/uploads/2018/08/toyo-ito-90x68.jpg /images/wp-content/uploads/2018/08/toyo-ito.jpg 301
+/images/wp-content/uploads/2018/08/urban-kathmandu.fig3_-768x576.jpg /images/wp-content/uploads/2018/08/urban-kathmandu.fig3_.jpg 301
+/images/wp-content/uploads/2018/08/urban-kathmandu.fig3_-300x225.jpg /images/wp-content/uploads/2018/08/urban-kathmandu.fig3_.jpg 301
+/images/wp-content/uploads/2018/01/cropped-silhouette-woman-3-2-300x160.jpg /images/wp-content/uploads/2018/01/cropped-silhouette-woman-3-2.jpg 301
+/images/wp-content/uploads/2018/01/cropped-silhouette-woman-3-2-768x410.jpg /images/wp-content/uploads/2018/01/cropped-silhouette-woman-3-2.jpg 301
+/images/wp-content/uploads/2018/01/cropped-silhouette-woman-3-2-1024x546.jpg /images/wp-content/uploads/2018/01/cropped-silhouette-woman-3-2.jpg 301
+/images/wp-content/uploads/2016/11/professional-dress-228x300.jpg /images/wp-content/uploads/2016/11/professional-dress.jpg 301
+/images/wp-content/uploads/2016/11/pasted-image-0-188x300.png /images/wp-content/uploads/2016/11/pasted-image-0.png 301
+/images/wp-content/uploads/2016/11/slam-poetry-1024x640.png /images/wp-content/uploads/2016/11/slam-poetry.png 301
+/images/wp-content/uploads/2016/11/pasted-image-0-642x1024.png /images/wp-content/uploads/2016/11/pasted-image-0.png 301
+/images/wp-content/uploads/2016/11/slam-poetry-300x188.png /images/wp-content/uploads/2016/11/slam-poetry.png 301
+/images/wp-content/uploads/2016/11/Zombies-ahead-300x163.png /images/wp-content/uploads/2016/11/Zombies-ahead.png 301
+/images/wp-content/uploads/2016/11/Zombies-ahead-768x418.png /images/wp-content/uploads/2016/11/Zombies-ahead.png 301
+/images/wp-content/uploads/2016/11/slam-poetry-768x480.png /images/wp-content/uploads/2016/11/slam-poetry.png 301
+/images/wp-content/uploads/2016/11/pasted-image-0-1-205x300.png /images/wp-content/uploads/2016/11/pasted-image-0-1.png 301
+/images/wp-content/uploads/2016/11/jeweled-music-230x300.jpg /images/wp-content/uploads/2016/11/jeweled-music.jpg 301
+/images/wp-content/uploads/2016/11/Zombies-ahead-1024x558.png /images/wp-content/uploads/2016/11/Zombies-ahead.png 301
+/images/wp-content/uploads/2016/10/Roger-Green-playing-768x514.png /images/wp-content/uploads/2016/10/Roger-Green-playing.png 301
+/images/wp-content/uploads/2016/10/Eddie-Daemon-229x300.jpg /images/wp-content/uploads/2016/10/Eddie-Daemon.jpg 301
+/images/wp-content/uploads/2016/10/Roger-Green-playing-385x257.png /images/wp-content/uploads/2016/10/Roger-Green-playing.png 301
+/images/wp-content/uploads/2016/10/11944224_12-hour-spiritual-jazz-mix-john-coltrane_baa39110_m-300x169.jpg /images/wp-content/uploads/2016/10/11944224_12-hour-spiritual-jazz-mix-john-coltrane_baa39110_m.jpg 301
+/images/wp-content/uploads/2016/10/Roger-Green-playing-300x201.png /images/wp-content/uploads/2016/10/Roger-Green-playing.png 301
+/images/wp-content/uploads/2016/10/Eddie-Daemon-1-300x289.jpg /images/wp-content/uploads/2016/10/Eddie-Daemon-1.jpg 301
+/images/wp-content/uploads/2016/10/Roger-Green-playing-480x320.png /images/wp-content/uploads/2016/10/Roger-Green-playing.png 301
+/images/wp-content/uploads/2016/10/Roger-Green-playing-1024x685.png /images/wp-content/uploads/2016/10/Roger-Green-playing.png 301
+/images/wp-content/uploads/2016/09/Storybooks-300x162.jpg /images/wp-content/uploads/2016/09/Storybooks.jpg 301
+/images/wp-content/uploads/2016/08/IAMSORRY-11-300x202.jpg /images/wp-content/uploads/2016/08/IAMSORRY-11.jpg 301
+/images/wp-content/uploads/2016/08/ancient-rock-art-768x458.jpg /images/wp-content/uploads/2016/08/ancient-rock-art.jpg 301
+/images/wp-content/uploads/2016/08/Cityscape-300x199.jpg /images/wp-content/uploads/2016/08/Cityscape.jpg 301
+/images/wp-content/uploads/2016/08/Cityscape-1024x680.jpg /images/wp-content/uploads/2016/08/Cityscape.jpg 301
+/images/wp-content/uploads/2016/08/screen-10-300x267.jpg /images/wp-content/uploads/2016/08/screen-10.jpg 301
+/images/wp-content/uploads/2016/08/CC0-Public-Domain-2-1000x450-300x135.jpg /images/wp-content/uploads/2016/08/CC0-Public-Domain-2-1000x450.jpg 301
+/images/wp-content/uploads/2016/08/terror-from-darwins-expressions-of-emotions-of-man-and-animals-1872-public-domain-image-expired-copyright-commons-wikimedia-org-300x300.jpg /images/wp-content/uploads/2016/08/terror-from-darwins-expressions-of-emotions-of-man-and-animals-1872-public-domain-image-expired-copyright-commons-wikimedia-org.jpg 301
+/images/wp-content/uploads/2016/08/screen-10-1024x910.jpg /images/wp-content/uploads/2016/08/screen-10.jpg 301
+/images/wp-content/uploads/2016/08/screen-10-768x683.jpg /images/wp-content/uploads/2016/08/screen-10.jpg 301
+/images/wp-content/uploads/2016/08/A-Midsummer’s-Nights-Dream-1935-300x197.jpg /images/wp-content/uploads/2016/08/A-Midsummer’s-Nights-Dream-1935.jpg 301
+/images/wp-content/uploads/2016/08/IMG_6411-1024x768.jpg /images/wp-content/uploads/2016/08/IMG_6411.jpg 301
+/images/wp-content/uploads/2016/08/cocktail-hour-208x300.jpg /images/wp-content/uploads/2016/08/cocktail-hour.jpg 301
+/images/wp-content/uploads/2016/08/Maenads-300x120.png /images/wp-content/uploads/2016/08/Maenads.png 301
+/images/wp-content/uploads/2016/08/Voluntourism-machu-picchu-Inspired-Escapes_0-90x68.jpg /images/wp-content/uploads/2016/08/Voluntourism-machu-picchu-Inspired-Escapes_0.jpg 301
+/images/wp-content/uploads/2016/08/A-Midsummer’s-Nights-Dream-1935-768x504.jpg /images/wp-content/uploads/2016/08/A-Midsummer’s-Nights-Dream-1935.jpg 301
+/images/wp-content/uploads/2016/08/ancient-rock-art-300x179.jpg /images/wp-content/uploads/2016/08/ancient-rock-art.jpg 301
+/images/wp-content/uploads/2016/08/Maenads-768x307.png /images/wp-content/uploads/2016/08/Maenads.png 301
+/images/wp-content/uploads/2016/08/Cityscape-480x320.jpg /images/wp-content/uploads/2016/08/Cityscape.jpg 301
+/images/wp-content/uploads/2016/08/Cityscape-880x586.jpg /images/wp-content/uploads/2016/08/Cityscape.jpg 301
+/images/wp-content/uploads/2016/08/Voluntourism-machu-picchu-Inspired-Escapes_0-300x225.jpg /images/wp-content/uploads/2016/08/Voluntourism-machu-picchu-Inspired-Escapes_0.jpg 301
+/images/wp-content/uploads/2016/08/CC0-Public-Domain-2-1000x450-768x346.jpg /images/wp-content/uploads/2016/08/CC0-Public-Domain-2-1000x450.jpg 301
+/images/wp-content/uploads/2016/08/IAMSORRY-11-768x516.jpg /images/wp-content/uploads/2016/08/IAMSORRY-11.jpg 301
+/images/wp-content/uploads/2016/08/IMG_6411-768x576.jpg /images/wp-content/uploads/2016/08/IMG_6411.jpg 301
+/images/wp-content/uploads/2016/08/Cityscape-768x510.jpg /images/wp-content/uploads/2016/08/Cityscape.jpg 301
+/images/wp-content/uploads/2016/08/IMG_6411-300x225.jpg /images/wp-content/uploads/2016/08/IMG_6411.jpg 301
+/images/wp-content/uploads/2016/08/the-dance-300x206.jpg /images/wp-content/uploads/2016/08/the-dance.jpg 301
+/images/wp-content/uploads/2016/08/cocktail-party-300x213.jpg /images/wp-content/uploads/2016/08/cocktail-party.jpg 301
+/images/wp-content/uploads/2016/08/Maenads-1024x410.png /images/wp-content/uploads/2016/08/Maenads.png 301
+/images/wp-content/uploads/2016/08/Joy-Steinberg-230x300.jpg /images/wp-content/uploads/2016/08/Joy-Steinberg.jpg 301
+/images/wp-content/uploads/2016/08/Cityscape-385x257.jpg /images/wp-content/uploads/2016/08/Cityscape.jpg 301
+/images/wp-content/uploads/2016/08/IMG_6411-90x68.jpg /images/wp-content/uploads/2016/08/IMG_6411.jpg 301
+/images/wp-content/uploads/2016/12/Beyonce-207x300.jpg /images/wp-content/uploads/2016/12/Beyonce.jpg 301
+/images/wp-content/uploads/2016/12/Automated-person-300x194.jpg /images/wp-content/uploads/2016/12/Automated-person.jpg 301
+/images/wp-content/uploads/2016/12/Automated-person-1024x663.jpg /images/wp-content/uploads/2016/12/Automated-person.jpg 301
+/images/wp-content/uploads/2016/12/IMG_0770-1024x1024.jpg /images/wp-content/uploads/2016/12/IMG_0770.jpg 301
+/images/wp-content/uploads/2016/12/IMG_0770-300x300.jpg /images/wp-content/uploads/2016/12/IMG_0770.jpg 301
+/images/wp-content/uploads/2016/12/Automated-person-768x497.jpg /images/wp-content/uploads/2016/12/Automated-person.jpg 301
+/images/wp-content/uploads/2016/12/Fig.-5_1280px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_Vienna_-_Google_Art_Project_-_edited-300x220.jpg /images/wp-content/uploads/2016/12/Fig.-5_1280px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_Vienna_-_Google_Art_Project_-_edited.jpg 301
+/images/wp-content/uploads/2016/12/IMG_0770-768x768.jpg /images/wp-content/uploads/2016/12/IMG_0770.jpg 301
+/images/wp-content/uploads/2016/12/Fig.-5_1280px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_Vienna_-_Google_Art_Project_-_edited-768x563.jpg /images/wp-content/uploads/2016/12/Fig.-5_1280px-Pieter_Bruegel_the_Elder_-_The_Tower_of_Babel_Vienna_-_Google_Art_Project_-_edited.jpg 301

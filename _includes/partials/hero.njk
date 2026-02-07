@@ -1,7 +1,9 @@
 <header class="container-fluid border-bottom">
-<div class="container col-md-10 mx-auto p-3 text-center">
-<h1 class="text-uppercase text-hero fw-bold"><a href="{{wordpress.config.url}}" class="none">
-{{ title or tag_name or category_name or author_name or post.title or wordpress.config.title }}
-</a></h1>
-</div>
+    <div class="container col-md-10 mx-auto p-3 text-center">
+        <h1 class="text-uppercase text-hero fw-bold">
+            <a href="{{ metadata.url }}" class="none">
+                {{ title or tag_name or category_name or author_name or metadata.title }}
+            </a>
+        </h1>
+    </div>
 </header>

@@ -1,0 +1,93 @@
+---
+layout: base.njk
+title: Categories
+permalink: /categories/
+---
+<header class="container-fluid border-bottom">
+<div class="container col-md-10 mx-auto p-3 p-md-5 text-center">
+<h1 class="text-uppercase text-hero-post fw-bold"><a href="{{page.url}}" class="none">
+{{title}}
+</a></h1>
+</div>
+</header>
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-10 mx-auto">
+            <header class="mb-5 border-bottom pb-4">
+                <h2 class=fw-bold text-dark">Categories</h2>
+                <p class="lead text-muted">Browse all posts organized by category.</p>
+            </header>
+
+            <div class="category-wrapper">
+                {% set categoriesSet = [] %}
+                {% for post in collections.posts %}
+                    {% if post.data.categories %}
+                        {% for cat in post.data.categories %}
+                            {% if cat not in categoriesSet %}
+                                {% set categoriesSet = categoriesSet.concat([cat]) %}
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+
+                {% set categoriesSorted = categoriesSet | sort %}
+
+                {% for category in categoriesSorted %}
+                    {% set catPosts = [] %}
+                    {% for post in collections.posts %}
+                        {% if post.data.categories and category in post.data.categories %}
+                            {% set catPosts = catPosts.concat([post]) %}
+                        {% endif %}
+                    {% endfor %}
+
+                    <div class="category-item mb-3">
+                        <details class="card border-0 shadow-sm">
+                            <summary class="card-header bg-white p-3 cursor-pointer d-flex justify-content-between align-items-center">
+                                <h3 class="h5 mb-0 fw-semibold">
+                                    {{ category | displayName }}
+                                    <span class="badge rounded-pill bg-light text-dark ms-2 fw-normal border">
+                                        {{ catPosts | length }} posts
+                                    </span>
+                                </h3>
+                                <span class="text-muted small">View Posts ↓</span>
+                            </summary>
+                            
+                            <div class="card-body p-0">
+                                <ul class="list-group list-group-flush">
+                                    {%- for post in catPosts | reverse -%}
+                                        <li class="list-group-item d-flex justify-content-between align-items-center py-3">
+                                            <a href="{{ post.url }}" 
+                                            class="text-decoration-none 
+                                            text-dark flex-grow-1">
+                                                {{ post.data.title }}
+                                            </a>
+                                            <small class="text-muted ms-3 text-end" style="min-width: 120px;">
+                                                {{ post.date | readableDate }}
+                                            </small>
+                                        </li>
+                                    {%- endfor -%}
+                                </ul>
+                            </div>
+                        </details>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .cursor-pointer { cursor: pointer; }
+    summary::-webkit-details-marker { display: none; }
+    summary { list-style: none; }
+    .category-item details[open] summary {
+        border-bottom: 1px solid #eee;
+    }
+    .category-item details {
+        transition: all 0.3s ease;
+    }
+    .category-item details:hover {
+        transform: translateX(5px);
+    }
+</style>
+{% include "partials/subscribe.njk" %}

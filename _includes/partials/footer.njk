@@ -1,45 +1,53 @@
 <footer class="container">
-<div class="row border-bottom">
-<div class="col-md-6 p-3 p-md-5">
-<h3 class="fw-bold text-footer-title mb-3">
-<a href="{{wordpress.config.url}}" class="none">
-<img class="logo me-3 rounded-3"
-alt="{{wordpress.config.footer_title}}"
-width="80px"
-height="80px"
-src="{{wordpress.config.footer_logo}}"/>
-{{wordpress.config.footer_title}}
-</a></h3>
-<p class="small">{{wordpress.config.footer_description}}</p>
-<p>{{wordpress.config.footer_text}}</p>
-</div>
-<div class="col-md-5 offset-md-1 p-3 p-md-5">
-<ul class="row footer-list">
-<li class="col-6 mt-2">
-<a href="{{wordpress.config.url}}" class="none fw-bold text-dark">{{wordpress.config.footer_nav_title}}</a>
-</li>{% for key, n in wordpress.config.footer_navlist %}
-<li class="col-6 mt-2">
-<a href="{{n.url}}" class="none d">{{n.nav}}</a>
-</li>{% endfor %}
-</ul>
-</div>
-</div>
-<div class="row p-3 mt-3 border-bottom">
-<p class="col-md-8 small">
-<a class="none" href="{{wordpress.config.url}}" class="none d">{{wordpress.config.footer_copyrights}}</a>
-</p>
-<p class="col-md-4 text-end">
-{% for key, item in wordpress.config.footer_social %}
-<a href="{{item.url}}" title="{{item.title}}" class="me-2 none d">
-<i class="{{item.icon}} icon"></i>
-</a>
-{% endfor %}
-</p>
-</div>
-<div class="col-md-12 mt-3 text-center">
-<p class="small">
-Built with <a class="none d" href="https://www.11ty.dev/">{{ eleventy.generator }}</a> | 
-Maintance by 
-<a class="none d" href="https://adamdjbrett.com">Adam Dj Brett</a></p>
-</div>
+    <div class="row border-bottom">
+        <div class="col-md-6 p-3 p-md-5">
+            <h3 class="fw-bold text-footer-title mb-3">
+                <a href="{{ metadata.url }}" class="none">
+                    <img class="logo me-3 rounded-3" 
+                         alt="{{ metadata.footer.title }}"
+                         width="80px" height="80px" 
+                         src="{{ metadata.footer.logo }}"/>
+                    {{ metadata.footer.title }}
+                </a>
+            </h3>
+            <p class="small">{{ metadata.footer.description }}</p>
+            <p>{{ metadata.footer.text }}</p>
+        </div>
+
+        <div class="col-md-5 offset-md-1 p-3 p-md-5">
+            <ul class="row footer-list">
+                <li class="col-6 mt-2">
+                    <a href="{{ metadata.url }}" class="none fw-bold text-dark">
+                        {{ metadata.footer.nav_title }}
+                    </a>
+                </li>
+                {% for n in metadata.footer.list %}
+                <li class="col-6 mt-2">
+                    <a href="{{ n.url }}" class="none">{{ n.nav }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+    <div class="row p-3 mt-3 border-bottom">
+        <p class="col-md-8 small">
+            <a class="none" href="{{ metadata.url }}">{{ metadata.footer.copyrights }}</a>
+        </p>
+        <div class="col-md-4 text-end">
+            {% for item in metadata.footer.social %}
+            <a href="{{ item.url }}" title="{{ item.title }}" 
+            class="me-2 none">
+                <i class="{{ item.icon }} icon"></i>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    <div class="col-md-12 mt-3 text-center">
+        <p class="small">
+            Built with <a class="none" href="https://www.11ty.dev/">{{ eleventy.generator }}</a> | 
+            Maintained by <a class="none" href="https://adamdjbrett.com">Adam Dj Brett</a>
+        </p>
+    </div>
 </footer>

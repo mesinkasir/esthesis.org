@@ -1,0 +1,184 @@
+backend:
+  name: github
+  repo: adamdjbrett/esthesis.org
+  branch: main
+  base_url: https://xxx.workers.dev # cloudflare workers.dev
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+
+  - name: "settings"
+    label: "Global Settings"
+    delete: false
+    editor:
+      preview: false
+    files:
+      - name: "metadata"
+        label: "Site Metadata"
+        file: "_data/metadata.yaml"
+        fields:
+          - { label: "Site Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Site URL", name: "url", widget: "string" }
+          - { label: "Favicon", name: "favicon", widget: "image" }
+          
+          - label: "Navigation Bar"
+            name: "navbar"
+            widget: "object"
+            fields:
+              - { label: "Logo", name: "logo", widget: "image" }
+              - { label: "Button Text", name: "button", widget: "string" }
+              - { label: "Button URL", name: "button_url", widget: "string" }
+              - label: "Nav List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "nav", widget: "string" }
+                  - { label: "URL", name: "url", widget: "string" }
+
+          - label: "Social Media"
+            name: "metasocial"
+            widget: "object"
+            fields:
+              - { label: "Twitter URL", name: "twitter", widget: "string" }
+              - { label: "Facebook URL", name: "facebook", widget: "string" }
+
+          - label: "Subscription Box"
+            name: "subs"
+            widget: "object"
+            fields:
+              - { label: "Show Widget", name: "show_widget", widget: "boolean" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Formspree ID", name: "formspree_id", widget: "string" }
+
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - label: "Author"
+        name: "author"
+        widget: "relation"
+        collection: "contributors"
+        search_fields: ["title"]
+        value_field: "title" 
+        display_fields: ["title"]
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Featured Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Categories", name: "categories", widget: "list" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "contributors"
+    label: "Contributors"
+    folder: "content/contributor"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Full Name", name: "title", widget: "string" }
+      - { label: "Profile Image", name: "image", widget: "image" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Bio Content", name: "body", widget: "markdown" }
+
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Permalink", name: "permalink", widget: "string" }
+      - { label: "Body Content", name: "body", widget: "markdown" }
+
+
+  - name: "setup"
+    label: "Site Setup"
+    delete: false
+    files:
+      - name: "archive"
+        label: "Archive Page"
+        file: "content/setup/archive.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - name: "pagination"
+            label: "Pagination Settings"
+            widget: "object"
+            fields:
+              - { label: "Data Source", name: "data", widget: "hidden", default: "collections.posts" }
+              - { label: "Posts Per Page", name: "size", widget: "number", default: 12 }
+              - { label: "Alias", name: "alias", widget: "hidden", default: "posts" }
+              - { label: "Reverse Order", name: "reverse", widget: "boolean", default: true }
+
+      - name: "categories"
+        label: "Categories Index"
+        file: "content/setup/categories.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+
+      - name: "category_detail"
+        label: "Category Detail (Single)"
+        file: "content/setup/category.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - name: "pagination"
+            label: "Pagination Settings"
+            widget: "object"
+            fields:
+              - { label: "Data Source", name: "data", widget: "hidden", default: "collections.categories" }
+              - { label: "Size", name: "size", widget: "hidden", default: 1 }
+              - { label: "Alias", name: "alias", widget: "hidden", default: "category" }
+
+      - name: "contributors_list"
+        label: "Contributors Page"
+        file: "content/setup/contributor.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - name: "pagination"
+            label: "Pagination Settings"
+            widget: "object"
+            fields:
+              - { label: "Data Source", name: "data", widget: "hidden", default: "collections.contributor" }
+              - { label: "Size", name: "size", widget: "number", default: 12 }
+              - { label: "Alias", name: "alias", widget: "hidden", default: "contributors" }
+
+      - name: "search"
+        label: "Search Page"
+        file: "content/setup/search.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+
+      - name: "tag_detail"
+        label: "Tag Detail (Single)"
+        file: "content/setup/tag.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Permalink", name: "permalink", widget: "string" }
+          - name: "pagination"
+            label: "Pagination Settings"
+            widget: "object"
+            fields:
+              - { label: "Data Source", name: "data", widget: "hidden", default: "collections.tags" }
+              - { label: "Size", name: "size", widget: "hidden", default: 1 }
+              - { label: "Alias", name: "alias", widget: "hidden", default: "tag" }
+
+      - name: "tags_index"
+        label: "Tags Index"
+        file: "content/setup/tags.njk"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text", required: false }
+          - { label: "Permalink", name: "permalink", widget: "string" }
