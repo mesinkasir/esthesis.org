@@ -18,7 +18,7 @@ permalink: "/categories/{{ category | slugify }}/"
                         <li class="breadcrumb-item active" aria-current="page">{{ category | formatCategoryTag }}</li>
                     </ol>
                 </nav>
-                <h1 class="display-4 fw-bold text-dark" data-pagefind-meta="title" data-pagefind-weight="2">
+                <h1 class="display-4 fw-bold text-dark" data-pagefind-meta="title" data-pagefind-weight="1">
                     <span class="text-muted fw-light">Category:</span> {{ category | formatCategoryTag }}
                 </h1>
             </header>
@@ -49,22 +49,21 @@ permalink: "/categories/{{ category | slugify }}/"
                                     {{ post.data.description | truncate(110) }}
                                 </p>
                                 
-             <div class="mt-auto d-flex align-items-center">
-    {% set rawAuthor = (post.data.author or post.data.authors) | ensureString %}
-    {% set contributor = collections.all | getContributor(rawAuthor) %}
-    {% set name = contributor.data.name if contributor else (rawAuthor | displayName) %}
+                                {% set authors = (post.data.author or post.data.authors) | parseAuthors(collections.all) %}
+                                {% if authors.length > 0 %}
+                                <div class="mt-auto d-flex align-items-center">
+                                    {% set primaryAuthor = authors[0] %}
+                                    <img class="rounded-circle me-2" width="30" height="30"
+                                         alt="{{ primaryAuthor.name }}"
+                                         src="{{ primaryAuthor.image or metadata.image }}"/>
 
-    <img class="rounded-circle me-2" width="30" height="30"
-         alt="{{ name }}"
-         src="{{ contributor.data.image if contributor.data.image else metadata.image }}"/>
-
-    <span class="small">
-        By 
-        <a href="/contributor/{{ rawAuthor | slugify }}/" class="fw-bold text-decoration-none">
-            {{ name }}
-        </a>
-    </span>
-</div>
+                                    <span class="small">
+                                        By {% for author in authors %}
+                                            <a href="/contributor/{{ author.slug }}/" class="fw-bold text-decoration-none">{{ author.name }}</a>{% if not loop.last %}; {% endif %}
+                                        {% endfor %}
+                                    </span>
+                                </div>
+                                {% endif %}
                             </div>
                         </div>
                     </article>

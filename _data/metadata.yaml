@@ -1,5 +1,5 @@
 title: "ESTHESIS"
-description: Arts, Culture, and Ideas
+description: "Arts | Culture | Ideas"
 url: http://localhost:8080
 language: en
 locale: en_US
@@ -23,13 +23,15 @@ github:
 navbar:
   logo: "/images/esthesis.png"
   title: "ESTHESIS"
-  button: "Subscribe"
-  button_url: "/subscribe"
+  button: "Search"
+  button_url: "/search/"
   list:
     - nav: "Home"
       url: "/"
     - nav: "About"
       url: "/about"
+    - nav: "Archives"
+      url: "/archive/"  
   header_list:
     - nav: "Archive"
       url: "/archive/"
@@ -65,15 +67,34 @@ subs:
 
 # Footer Configuration
 footer:
-  logo: /images/esthesis.png
+  logo: /images/esthesis.svg
   description: "Providing critical thought and philosophical discourse."
   text: "Esthesis is partner of the Global Art & Ideas Network (GAIN)"
-  copyrights: "Esthesis is a White Stone Foundation Publication and is a partner with the Global Art & Ideas Nexus, Aurora CO 80014"
+  copyrights: "Esthesis is a Whitestone Foundation Publication. All rights reserved."
   nav_title: "Quick Links"
   list:
+    - nav: "Archive"
+      url: "/archive/" 
+    - nav: "Categories"
+      url: "/categories/"
+    - nav: "Tags"
+      url: "/tags/"  
+    - nav: "Contact"
+      url: "/contact/"
+    - nav: "Contributors"
+      url: "/contributors/"
+    - nav: "Editors"
+      url: "/editorial-staff/"
+    - nav: "Submissions"
+      url: "/submissions/"
+    - nav: "Feed"
+      url: "/feed/feed.xml"
     - nav: "Privacy Policy"
       url: "/privacy"
   social:
+    - icon: "feed fa-solid fa-rss"
+      title: "RSS"
+      url: "/feed/feed.xml"
     - icon: "fab fa-facebook"
       title: "Facebook"
       url: "https://facebook.com"

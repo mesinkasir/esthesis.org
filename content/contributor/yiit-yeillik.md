@@ -1,7 +1,6 @@
 ---
 name: "Yiğit Yeşillik"
 role: "author"
-description: ""
 image: ""
 ---
 

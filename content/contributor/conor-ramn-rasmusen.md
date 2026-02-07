@@ -1,7 +1,6 @@
 ---
 name: "Conor Ramón Rasmusen"
 role: "author"
-description: ""
 image: ""
 ---
 

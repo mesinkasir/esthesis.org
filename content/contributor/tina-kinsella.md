@@ -1,7 +1,6 @@
 ---
 name: "Tina Kinsella"
 role: "author"
-description: ""
 image: ""
 ---
 

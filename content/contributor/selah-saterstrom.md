@@ -1,7 +1,6 @@
 ---
 name: "Selah Saterstrom"
 role: "author"
-description: ""
 image: ""
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: "Robert McDougall"
 role: "author"
-description: ""
 image: ""
 ---
 

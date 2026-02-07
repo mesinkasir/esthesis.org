@@ -1,4 +1,5 @@
 import { DateTime } from "luxon";
+import slugify from "slugify";
 
 export default function(eleventyConfig) {
     // --- 1. RELATIONSHIP FILTER ---
@@ -125,12 +126,36 @@ export default function(eleventyConfig) {
 
     eleventyConfig.addFilter("parseAuthors", (authorString, collectionsAll) => {
         if (!authorString || !collectionsAll) return [];
-        const authors = String(authorString).split(';').map(a => a.trim()).filter(Boolean);
-        return authors.map(auth => {
-            const contributor = collectionsAll.find(item => item.fileSlug === auth);
+        const contributors = Array.isArray(collectionsAll)
+            ? collectionsAll.filter(item => typeof item?.inputPath === "string" && item.inputPath.includes("/content/contributor/"))
+            : [];
+
+        const normalize = (value) => String(value || "")
+            .toLowerCase()
+            .replace(/["制]/g, "")
+            .replace(/\(.*?\)/g, "")
+            .replace(/[^a-z0-9]+/g, " ")
+            .trim();
+
+        const safeSlugify = (value) => slugify(String(value || ""), { lower: true, strict: true });
+
+        const parts = (Array.isArray(authorString) ? authorString.join(";") : String(authorString))
+            .split(";")
+            .map(a => a.trim())
+            .filter(Boolean);
+
+        return parts.map(raw => {
+            const rawNormalized = normalize(raw);
+            const rawSlug = safeSlugify(raw);
+
+            let contributor =
+                contributors.find(item => item.fileSlug === raw) ||
+                contributors.find(item => item.fileSlug === rawSlug) ||
+                contributors.find(item => normalize(item?.data?.name || item?.data?.title || item?.fileSlug) === rawNormalized);
+
             return {
-                slug: auth,
-                name: contributor?.data?.name || contributor?.data?.title || auth,
+                slug: contributor?.fileSlug || rawSlug,
+                name: contributor?.data?.name || contributor?.data?.title || raw,
                 image: contributor?.data?.image || null
             };
         });

@@ -1,0 +1,11 @@
+---
+permalink: /sitemaps/docs-sitemap.xml
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for doc in public_docs or [] -%}
+    <url>
+      <loc>{{ doc | absUrl(metadata.url) }}</loc>
+    </url>
+  {%- endfor -%}
+</urlset>

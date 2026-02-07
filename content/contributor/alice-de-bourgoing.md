@@ -1,7 +1,6 @@
 ---
 name: "Alice De Bourgoing"
 role: "author"
-description: ""
 image: ""
 ---
 

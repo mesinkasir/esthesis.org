@@ -1,7 +1,6 @@
 ---
 name: "Steven Dunn"
 role: "author"
-description: ""
 image: ""
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: "Eric Galowitsch"
 role: "author"
-description: ""
 image: ""
 ---
 

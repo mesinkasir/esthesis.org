@@ -1,0 +1,21 @@
+---
+permalink: /sitemaps/contributor-sitemap.xml
+---
+{%- set items = collections.contributor or [] -%}
+{%- set maxPosts = 1 -%}
+{%- for person in items -%}
+  {%- set count = (collections.posts | postsNamedForContributor(person.data.name or person.data.title or person.fileSlug) | length) -%}
+  {%- if count > maxPosts -%}{%- set maxPosts = count -%}{%- endif -%}
+{%- endfor -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for person in items -%}
+    {%- set name = person.data.name or person.data.title or person.fileSlug -%}
+    {%- set count = (collections.posts | postsNamedForContributor(name) | length) -%}
+    {%- set priority = (0.3 + (0.6 * (count / maxPosts))) | round(1) -%}
+    <url>
+      <loc>{{ person.url | absUrl(metadata.url) }}</loc>
+      <priority>{{ priority }}</priority>
+    </url>
+  {%- endfor -%}
+</urlset>

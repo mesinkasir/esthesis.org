@@ -1,7 +1,6 @@
 ---
 name: "Marcelo de Melo"
 role: "author"
-description: ""
 image: ""
 ---
 

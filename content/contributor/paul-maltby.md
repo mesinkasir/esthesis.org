@@ -1,7 +1,6 @@
 ---
 name: "Paul Maltby"
 role: "author"
-description: ""
 image: ""
 ---
 

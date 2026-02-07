@@ -1,7 +1,6 @@
 ---
 name: "Eric Washington"
 role: "author"
-description: ""
 image: ""
 ---
 

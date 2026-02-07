@@ -1,7 +1,7 @@
 ---
 name: "Bernadette Calafell"
 role: "author"
-description: ""
+
 image: ""
 ---
 

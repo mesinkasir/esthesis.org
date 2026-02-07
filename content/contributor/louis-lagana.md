@@ -1,7 +1,6 @@
 ---
 name: "Louis Lagana"
 role: "author"
-description: ""
 image: ""
 ---
 

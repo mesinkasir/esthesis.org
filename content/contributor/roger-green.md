@@ -1,7 +1,6 @@
 ---
 name: "Roger Green"
 role: "author"
-description: ""
 image: ""
 ---
 

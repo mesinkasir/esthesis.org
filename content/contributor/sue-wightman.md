@@ -1,7 +1,6 @@
 ---
 name: "Sue Wightman"
 role: "author"
-description: ""
 image: ""
 ---
 

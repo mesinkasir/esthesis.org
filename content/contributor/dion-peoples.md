@@ -1,7 +1,6 @@
 ---
 name: "Dion Peoples"
 role: "author"
-description: ""
 image: ""
 ---
 

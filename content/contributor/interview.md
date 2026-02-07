@@ -1,7 +1,6 @@
 ---
 name: "Interview"
 role: "author"
-description: ""
 image: ""
 ---
 

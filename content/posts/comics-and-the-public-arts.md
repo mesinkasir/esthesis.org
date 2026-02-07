@@ -16,7 +16,7 @@ tags:
   - "rudolphe-topffer"
 ---
 
-![Töppfer illustration](/images/Töppfer-illustration.webp)
+![Toppfer illustration](/images/Toppfer-illustration.webp)
 
 This year marks the 170th anniversary of the publication of Rudolphe Töpffer’s *Essai de Physiognomonie*, a work addressing the theoretical grounding informing the invention of graphic literature and public scholarship that has much in common with contemporary issues surrounding the role of academic discourse in public discourse.
 

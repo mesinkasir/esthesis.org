@@ -1,7 +1,6 @@
 ---
 name: "Hiroko Miyashita"
 role: "author"
-description: ""
 image: ""
 ---
 

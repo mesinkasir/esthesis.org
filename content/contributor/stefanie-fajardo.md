@@ -1,7 +1,6 @@
 ---
 name: "Stefanie Fajardo"
 role: "author"
-description: ""
 image: ""
 ---
 

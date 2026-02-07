@@ -1,7 +1,6 @@
 ---
 name: "Karli Brittz"
 role: "author"
-description: ""
 image: ""
 ---
 

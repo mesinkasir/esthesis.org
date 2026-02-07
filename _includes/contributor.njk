@@ -13,7 +13,12 @@ layout: base.njk
          style="aspect-ratio: 1/1;">
 {% endif %}
         <div>
-            <h1 class="mb-0">{{ contributorName }}</h1>
+            {% set contributorTitleWeight = 6.0 %}
+            {% if page.fileSlug == "editors" %}
+              {% set contributorTitleWeight = 5.0 %}
+            {% endif %}
+            <h1 class="mb-0" data-pagefind-meta="title" data-pagefind-weight="{{ contributorTitleWeight }}">{{ contributorName }}</h1>
+            {% if description %}<p class="visually-hidden" data-pagefind-meta="description">{{ description }}</p>{% endif %}
             {% if role %}
                 <p class="text-muted small text-uppercase mb-1">{{ role }}</p>
             {% endif %}

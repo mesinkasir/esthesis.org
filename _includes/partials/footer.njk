@@ -3,33 +3,42 @@
         <div class="col-md-6 p-3 p-md-5">
             <h3 class="fw-bold text-footer-title mb-3">
                 <a href="{{ metadata.url }}" class="none">
-                    <img class="logo me-3 rounded-3" 
+                    {% if metadata.footer.wordmark %}
+                    <img class="img-fluid align-text-bottom" height="26" alt="{{ metadata.title }}" src="{{ metadata.footer.wordmark }}" />
+                    {% elseif metadata.footer.logo %}
+                    <img class="logo rounded-3 d-block"
                          alt="{{ metadata.title }}"
-                         width="80px" height="80px" 
+                         style="height:150px;width:100%;object-fit:contain;object-position:left;"
                          src="{{ metadata.footer.logo }}"/>
-                    {% if metadata.wordmark %}
-                    <img class="img-fluid align-text-bottom" height="26" alt="{{ metadata.title }}" src="{{ metadata.wordmark }}" />
                     {% else %}
                     {{ metadata.title }}
                     {% endif %}
                 </a>
             </h3>
+            {% if metadata.footer.description %}
             <p class="small">{{ metadata.footer.description }}</p>
+            {% endif %}
+            {% if metadata.footer.text %}
             <p>{{ metadata.footer.text }}</p>
+            {% endif %}
         </div>
 
         <div class="col-md-5 offset-md-1 p-3 p-md-5">
             <ul class="row footer-list">
+                {% if metadata.footer.nav_title %}
                 <li class="col-6 mt-2">
                     <a href="{{ metadata.url }}" class="none fw-bold text-dark">
                         {{ metadata.footer.nav_title }}
                     </a>
                 </li>
+                {% endif %}
+                {% if metadata.footer.list %}
                 {% for n in metadata.footer.list %}
                 <li class="col-6 mt-2">
                     <a href="{{ n.url }}" class="none">{{ n.nav }}</a>
                 </li>
                 {% endfor %}
+                {% endif %}
             </ul>
         </div>
     </div>
@@ -39,12 +48,14 @@
             <a class="none" href="{{ metadata.url }}">&copy; {{ "" | year }} {{ metadata.footer.copyrights }}</a>
         </p>
         <div class="col-md-4 text-end">
+            {% if metadata.footer.social %}
             {% for item in metadata.footer.social %}
             <a href="{{ item.url }}" title="{{ item.title }}" 
             class="me-2 none">
                 <i class="{{ item.icon }} icon"></i>
             </a>
             {% endfor %}
+            {% endif %}
         </div>
     </div>
     

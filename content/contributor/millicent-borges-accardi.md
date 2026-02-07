@@ -1,7 +1,6 @@
 ---
 name: "Millicent Borges Accardi"
 role: "author"
-description: ""
 image: ""
 ---
 

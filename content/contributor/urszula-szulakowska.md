@@ -1,7 +1,6 @@
 ---
 name: "Urszula Szulakowska"
 role: "author"
-description: ""
 image: ""
 ---
 

@@ -1,7 +1,6 @@
 ---
 name: "Katrina Lavender"
 role: "author"
-description: ""
 image: ""
 ---
 

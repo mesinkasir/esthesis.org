@@ -1,7 +1,6 @@
 ---
 name: "Vasilina Orlova"
 role: "author"
-description: ""
 image: ""
 ---
 

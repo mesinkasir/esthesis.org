@@ -1,7 +1,6 @@
 ---
 name: "Jon Avery"
 role: "author"
-description: ""
 image: ""
 ---
 

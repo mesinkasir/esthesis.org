@@ -1,7 +1,6 @@
 ---
 name: "Davor Džalto"
 role: "author"
-description: ""
 image: ""
 ---
 

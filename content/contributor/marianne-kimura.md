@@ -1,7 +1,6 @@
 ---
 name: "Marianne Kimura"
 role: "author"
-description: ""
 image: ""
 ---
 

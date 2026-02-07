@@ -1,7 +1,6 @@
 ---
 name: "Editors"
-role: "author"
-description: ""
+role: "editor"
 image: "/images/esthesis.png"
 ---
 [Editors of Esthesis](/editorial-staff/)

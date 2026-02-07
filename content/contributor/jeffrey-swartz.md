@@ -1,7 +1,6 @@
 ---
 name: "Jeffrey Swartz"
 role: "author"
-description: ""
 image: ""
 ---
 

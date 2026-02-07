@@ -24,6 +24,12 @@ permalink: /_redirects
 /wp-includes/*        / 410
 /themes/*             / 410
 
+# Legacy post URLs (/posts/* -> /)
+/posts/ /archive/ 301
+{% for post in collections.posts %}
+/posts{{ post.url }} {{ post.url }} 301
+{% endfor %}
+
 {% for item in collections.all %}
   {% if item.data.redirect_from %}
     {% set froms = item.data.redirect_from %}
@@ -43,8 +49,13 @@ permalink: /_redirects
 {% endfor %}
 
 /category/uncategorized/ /categories/aesthetics/ 301
+/authors/ /contributors/ 301
+/contributor/ /contributors/ 301
+/archives/ /archive/ 301
+/archives /archive/ 301
 /contributor/kenneth-ken-lokensgard/ /contributor/kenneth-lokensgard/ 301
 /contributor/editor/ /contributor/editors/ 301
+/contributor/michael-orourke/ /contributor/michael-o-rourke/ 301
 /author/editor/ /author/editors/ 301
 
 {% for tag in collections.tags %}

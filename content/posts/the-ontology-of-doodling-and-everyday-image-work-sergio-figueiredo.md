@@ -17,7 +17,7 @@ tags:
   - "webcomics"
 ---
 
-![](/i.pinimg.com/736x/03/5b/e8/035be880288406228967bdfa5afdf533.jpg)
+![](/images/i.pinimg.com/736x/03/5b/e8/035be880288406228967bdfa5afdf533.jpg)
 
 > “Consider what is at stake in our world today, registered in the basic fact that the anthropocene coincides with electracy. We notice immediately that prayer and engineering do not suffice, and no one doubts they are trying. We desire effective change but *are not able*, we *cannot *despite our will and knowledge. Here is the modality specific to electrate metaphysics: *to be able*. Invention required.*Draw*.”
 

@@ -1,7 +1,6 @@
 ---
 name: "Michael Boughn"
 role: "author"
-description: ""
 image: ""
 ---
 

@@ -26,7 +26,12 @@ eleventyExcludeFromCollections: true
 
   <!-- Regular Pages (About, Archive, Blog, Search, etc.) -->
   {%- for page in collections.all %}
-  {%- if page.url and not page.data.eleventyExcludeFromCollections and page.url !== "/" %}
+  {%- if page.url
+        and not page.data.eleventyExcludeFromCollections
+        and page.url !== "/"
+        and page.url.indexOf("/sitemaps/") != 0
+        and page.url.indexOf("/feed/") != 0
+  %}
   <url>
     <loc>{{ page.url | absUrl(baseUrl) }}</loc>
     <changefreq>monthly</changefreq>
@@ -35,19 +40,27 @@ eleventyExcludeFromCollections: true
   {%- endif %}
   {%- endfor %}
 
-  <!-- Feed URLs -->
+  <!-- Sitemaps -->
+  {%- for sm in collections.sitemaps or [] %}
   <url>
-    <loc>{{ "/feed/feed.rss" | absUrl(baseUrl) }}</loc>
+    <loc>{{ sm.url | absUrl(baseUrl) }}</loc>
+    <lastmod>{{ buildinfo.now | isoDate }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  {%- endfor %}
+
+  <!-- Feed URLs (include everything under /feed/) -->
+  {%- for item in collections.all %}
+  {%- if item.url and item.url.indexOf("/feed/") == 0 %}
+  <url>
+    <loc>{{ item.url | absUrl(baseUrl) }}</loc>
     <lastmod>{{ buildinfo.now | isoDate }}</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>{{ "/feed/feed.xml" | absUrl(baseUrl) }}</loc>
-    <lastmod>{{ buildinfo.now | isoDate }}</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
+  {%- endif %}
+  {%- endfor %}
 
   <!-- Author Feeds -->
   {%- for author in collections.authors %}

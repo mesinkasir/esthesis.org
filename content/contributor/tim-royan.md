@@ -1,7 +1,6 @@
 ---
 name: "Tim Royan"
 role: "author"
-description: ""
 image: ""
 ---
 

@@ -8,7 +8,7 @@ pagination:
 permalink: "/tags/{{ tag | slugify }}/"
 ---
 
-<h1 data-pagefind-meta="title" data-pagefind-weight="2">Tag: {{ tag | formatCategoryTag }}</h1>
+<h1 data-pagefind-meta="title" data-pagefind-weight="1">Tag: {{ tag | formatCategoryTag }}</h1>
 
 <ul data-pagefind-ignore>
   {% for post in collections.posts | filterByTagSafe(tag) | reverse %}

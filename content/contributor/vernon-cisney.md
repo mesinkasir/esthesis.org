@@ -1,7 +1,6 @@
 ---
 name: "Vernon Cisney"
 role: "author"
-description: ""
 image: ""
 ---
 

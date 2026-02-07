@@ -1,7 +1,6 @@
 ---
 name: "Jacquelynn Baas"
 role: "author"
-description: ""
 image: ""
 ---
 

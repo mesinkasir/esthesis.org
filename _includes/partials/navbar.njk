@@ -4,11 +4,7 @@
             <img class="img-fluid rounded-3 me-2" width="35" height="35" 
                  alt="{{ metadata.title }}" 
                  src="{{ metadata.navbar.logo }}"/>
-            {% if metadata.wordmark %}
-            <img class="img-fluid align-text-bottom" height="20" alt="{{ metadata.title }}" src="{{ metadata.wordmark }}" />
-            {% else %}
-            {{ metadata.navbar.title or metadata.title }}
-            {% endif %}
+            {{ metadata.navbar.title }}
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
             <span class="navbar-toggler-icon"></span>

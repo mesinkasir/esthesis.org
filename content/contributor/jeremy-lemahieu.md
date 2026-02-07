@@ -1,7 +1,6 @@
 ---
 name: "Jeremy LeMahieu"
 role: "author"
-description: ""
 image: ""
 ---
 
