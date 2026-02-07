@@ -7,7 +7,7 @@ email:
 formspree_id: 
 metasocial: 
   twitter: "https://x.com/user"
-  tweettwitteruser: "@user"
+  tweetuser: "@user"
   facebook: "https://fb.com/user"
 
 favicon: /images/esthesis-fav.png

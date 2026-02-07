@@ -44,21 +44,14 @@
 <meta property="og:locale" content="{{ metadata.locale }}" />
 <meta name="generator" content="{{ eleventy.generator }}" />
 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-<script type="application/ld+json">
-  {% include "partials/schema-breadcrumb.njk" %}
-</script>
+{% include "partials/schema-breadcrumb.njk" %}
 
 {% if layout == "blog.njk" %}
-<script type="application/ld+json">
-  {% include "partials/schema-blog.njk" %}
-</script>
+{% include "partials/schema-blog.njk" %}
 {% endif %}
 
 {% if authors %}
-<script type="application/ld+json">
-  {% include "partials/schema-blog-post.njk" %}
-</script>
-{% endif %}
+{% include "partials/schema-blog-post.njk" %}
 
 <style>
 {% include "node_modules/bootstrap/dist/css/bootstrap.min.css" %}
