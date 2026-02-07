@@ -32,9 +32,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci --no-audit --no-fund
 
       - name: Build Eleventy site
         run: npm run build
@@ -43,6 +44,18 @@ jobs:
         run: |
           if [ ! -d _site ]; then
             echo "_site directory missing after build" >&2
+            exit 1
+          fi
+          if [ ! -f _site/_redirects ]; then
+            echo "_redirects missing after build" >&2
+            exit 1
+          fi
+          if [ ! -d _site/pagefind ]; then
+            echo "pagefind output missing after build" >&2
+            exit 1
+          fi
+          if [ ! -f _site/pagefind/pagefind.js ]; then
+            echo "pagefind.js missing after build" >&2
             exit 1
           fi
           ls -1 _site | head -n 20
