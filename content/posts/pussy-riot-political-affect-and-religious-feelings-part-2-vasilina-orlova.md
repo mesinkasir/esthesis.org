@@ -1,7 +1,7 @@
 ---
 title: "Pussy Riot – Political Affect and Religious Feelings, Part 2 (Vasilina Orlova)"
 date: 2019-10-27T22:12:16+00:00
-author: editors
+author: "Vasilina Orlova"
 permalink: /pussy-riot-political-affect-and-religious-feelings-part-2-vasilina-orlova/
 image: /images/wp-content/uploads/2019/10/Free_Pussy_Riot_mask-800x500.jpg
 description: "The following is the second of a two-part series. The first can be found here. The possibility of seven-year sentences for the perpetrators in colorful"

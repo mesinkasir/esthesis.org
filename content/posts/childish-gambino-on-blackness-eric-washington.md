@@ -1,7 +1,7 @@
 ---
 title: "Childish Gambino On Blackness (Eric Washington)"
 date: 2018-02-06T18:50:56+00:00
-author: Editor
+author: "Eric Washington"
 permalink: /childish-gambino-on-blackness-eric-washington/
 image: /images/wp-content/uploads/2018/02/Donald-Glover-Wikpedia.jpg
 description: "Donald “Childish Gambino” Glover is an artist and a philosopher. As a black rapper, Childish Gambino knows how the world perceives young black men: lazy,"

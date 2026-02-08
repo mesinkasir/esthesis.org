@@ -1,7 +1,7 @@
 ---
 title: "How To Talk About Art, Part 3 – Interrogating What We See (Rebekah Gordon)"
 date: 2017-08-23T15:25:27+00:00
-author: editors
+author: "Rebekah Gordon"
 permalink: /how-to-talk-about-art-part-3-interrogating-what-we-see-rebekah-gordon/
 image: /images/wp-content/uploads/2017/08/Van-Gogh-Starry-Night.jpg
 description: "The following is the third of a three-part series. The first installment can be found here, the second here. In the past two installments of our “How to Talk"

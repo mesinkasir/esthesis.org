@@ -1,7 +1,7 @@
 ---
 title: "Art And Madness (Iwo Zmyślony)"
 date: 2017-01-22T21:26:23+00:00
-author: editors
+author: "Iwo Zmyślony"
 permalink: /art-and-madness-iwo-zmyslony/
 image: /images/wp-content/uploads/2017/01/Klee-saint-of-inner-light.jpg
 description: "Paul Klee. “The Saint of Inner Light.” The following is the first of a two-part series. How can we enter someone else’s head? How can we get inside? How"

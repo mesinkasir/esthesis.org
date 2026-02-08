@@ -1,7 +1,7 @@
 ---
 title: "The Hollow Christians Of End Times Fiction, Part 1 (Paul Maltby)"
 date: 2020-02-28T04:26:28+00:00
-author: editors
+author: "Paul Maltby"
 permalink: /the-hollow-christians-of-end-times-fiction-part-1-paul-maltby/
 image: /images/wp-content/uploads/2020/03/Screen-Shot-2020-03-08-at-11.31.02-PM.png
 description: "The following is republished from Religious Theory. A flaw at the heart of End Times fiction gravely weakens its credibility as Christian literature."

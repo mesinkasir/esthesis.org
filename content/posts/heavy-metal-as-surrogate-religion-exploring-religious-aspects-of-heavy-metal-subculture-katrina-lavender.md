@@ -1,7 +1,7 @@
 ---
 title: "Heavy Metal As Surrogate Religion – Exploring The Metal Subculture (Katrina Lavender)"
 date: 2018-05-13T08:18:31+00:00
-author: editors
+author: "Katrina Lavender"
 permalink: /heavy-metal-as-surrogate-religion-exploring-religious-aspects-of-heavy-metal-subculture-katrina-lavender/
 image: /images/wp-content/uploads/2018/04/800px-EddieThe_Final_Frontier.jpg
 description: "According to the Office for National Statistics, Heavy Metal has recently become an official religion, with 6200 followers in 2011. Music as a cultural artefact"

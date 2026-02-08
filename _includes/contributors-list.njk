@@ -1,0 +1,50 @@
+---
+layout: base.njk
+---
+{% include "partials/hero.njk" %}
+{% include "partials/nav.njk" %}
+
+<section class="container py-5">
+    <div class="col-md-10 mx-auto">
+        <h1 class="display-5 fw-bold mb-2" data-pagefind-meta="title" data-pagefind-weight="6.0">{{ title }}</h1>
+        {% if description %}
+        <p class="lead text-muted mb-5" data-pagefind-meta="description">{{ description }}</p>
+        {% endif %}
+
+        <div class="row g-4">
+            {%- set sorted = collections.contributor | sort(false, true, 'data.name') -%}
+            {% for person in sorted %}
+            <article class="col-6 col-md-3 mb-5">
+                <div class="contributor-card h-100">
+                    <a href="/contributor/{{ person.fileSlug }}/" class="text-decoration-none text-dark">
+                        <div class="ratio ratio-1x1 mb-3">
+                            <img src="{{ person.data.image or metadata.image }}"
+                                 alt="{{ person.data.name or person.data.title }}"
+                                 class="rounded-3 object-fit-cover grayscale-hover"
+                                 loading="lazy"
+                                 style="transition: filter 0.3s ease;">
+                        </div>
+                        <h3 class="fw-bold h5 mb-1">{{ person.data.name or person.data.title }}</h3>
+                        <p class="text-muted small text-uppercase letter-spacing-1">
+                            {{ person.data.role or person.data.affiliation or 'Author' }}
+                        </p>
+                    </a>
+                </div>
+            </article>
+            {% else %}
+                <div class="col-12 text-center py-5">
+                    <p class="lead text-muted">No contributors found.</p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<style>
+.grayscale-hover:hover {
+    filter: grayscale(100%);
+}
+.letter-spacing-1 {
+    letter-spacing: 0.05em;
+}
+</style>

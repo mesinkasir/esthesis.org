@@ -30,21 +30,13 @@ layout: base.njk
                             </a>
                         </div>
 
-                   <p class="mt-3 d-flex align-items-center">
-    {% set rawAuthor = (post.data.author or post.data.authors) | ensureString %}
-    {% set contributor = collections.all | getContributor(rawAuthor) %}
-    {% set name = contributor.data.name if contributor else (rawAuthor | displayName) %}
-
-    <img class="img-profile rounded-circle me-2" 
-         width="30" height="30"
-         alt="{{ name }}"
-         src="{{ contributor.data.image if contributor.data.image else metadata.image }}"/>
-
-    <span>
-        By <a href="/contributor/{{ rawAuthor }}/" class="fw-bold text-decoration-none">
-            {{ name }}
-        </a>
-    </span>
+                   <p class="mt-3">
+    {% set authors = (post.data.author or post.data.authors) | parseAuthors(collections.all) %}
+    {% if authors.length > 0 %}
+        By {% for author in authors %}
+            <a href="/contributor/{{ author.slug }}/" class="fw-bold text-decoration-none">{{ author.name }}</a>{% if not loop.last %}; {% endif %}
+        {% endfor %}
+    {% endif %}
 </p>
                     </article>
                     {% endfor %}

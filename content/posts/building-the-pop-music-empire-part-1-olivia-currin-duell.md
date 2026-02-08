@@ -1,7 +1,7 @@
 ---
 title: "Building The Pop Music Empire, Part 1 (Olivia Currin Duell)"
 date: 2018-10-06T02:47:29+00:00
-author: editors
+author: "Olivia Currin Duell"
 permalink: /building-the-pop-music-empire-part-1-olivia-currin-duell/
 image: /images/wp-content/uploads/2018/09/music-industry-800x500.jpg
 description: "The following if the first part in a two-part installment. Author Note: The following was written in 2015 and details how critical discussion of popular"

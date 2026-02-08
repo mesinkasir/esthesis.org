@@ -15,8 +15,7 @@ layout: base.njk
                     {%- endfor -%}
                 </nav>
                 
-                <h1 class="text-uppercase text-hero-posts 
-                fw-bold">{{ title }}</h1>
+                <h1 class="text-uppercase text-hero-posts fw-bold" data-pagefind-meta="title" data-pagefind-weight="7.0">{{ title }}</h1>
                 {% if description %}<h2 class="lead my-3">{{ description }}</h2>{% endif %}
                 <p class="small">{{ page.date | readableDate }}</p>
             </div>
@@ -34,6 +33,7 @@ layout: base.njk
             </div>
 
             <article class="post-article fs-5">
+                {% if description %}<p class="visually-hidden" data-pagefind-meta="description">{{ description }}</p>{% endif %}
                 {{ contentWithIDs | safe }}
             </article>
 
@@ -43,7 +43,7 @@ layout: base.njk
                         <a href="/tags/{{ tag | slugify }}/" class="badge text-bg-light border text-decoration-none me-1">{{ tag | displayName }}</a>
                     {% endif %}{% endfor %}
                 </p>
-                {% if author %}
+               {% if author %}
                     <p>By <span class="fw-bold">
                         <a href="/contributor/{{ author | slugify }}/" 
                         class="text-decoration-none text-body-secondary">{{ author }}</a></span></p>

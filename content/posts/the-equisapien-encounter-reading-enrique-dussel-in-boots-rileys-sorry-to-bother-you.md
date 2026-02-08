@@ -1,7 +1,7 @@
 ---
 title: "The Equisapien Encounter – Reading Enrique Dussel In Boots Riley’s “Sorry to Bother You” (Conor Ramón Rasmusen)"
 date: 2019-03-15T16:05:09+00:00
-author: editors
+author: "Conor Ramón Rasmusen"
 permalink: /the-equisapien-encounter-reading-enrique-dussel-in-boots-rileys-sorry-to-bother-you/
 image: /images/wp-content/uploads/2019/03/Boots-Riley-Wikipedia-Commons-800x500.jpg
 description: "The following is republished from The New Polis, January 30, 2019. When Boots Riley’s film Sorry To Bother You burst into U.S. theatres this past July,"

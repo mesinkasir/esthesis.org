@@ -1,7 +1,7 @@
 ---
 title: "The Curse Of La Llorona, Part 2 (Bernadette Calafell And Stefanie Fajardo)"
 date: 2019-11-13T18:12:01+00:00
-author: editors
+author: "Bernadette Calafell; Stefanie Fajardo"
 permalink: /the-curse-of-la-llorona-part-2-bernadette-calafell-and-stefanie-fajardo/
 image: /images/wp-content/uploads/2019/11/1599px-La_Llorona_en_los_canales_de_Xochimilco-800x500.jpg
 description: "The following is the second installment of a three-part series. The first can be found here. Patricia represents elements of La Malinche and a becoming"

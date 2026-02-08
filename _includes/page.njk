@@ -3,9 +3,17 @@ layout: base.njk
 ---
 <header class="container-fluid border-bottom">
 <div class="container col-md-10 mx-auto p-3 p-md-5 text-center">
-<h1 class="text-uppercase text-hero-post fw-bold"><a href="{{page.url}}" class="none">
-{{title}}
+{% set pagefindTitleWeight = 10 %}
+{% if page.url == "/contributors/" %}
+  {% set pagefindTitleWeight = 6.0 %}
+{% endif %}
+{% if page.url == "/editorial-staff/" %}
+  {% set pagefindTitleWeight = 5.0 %}
+{% endif %}
+<h1 class="text-uppercase text-hero-post fw-bold" data-pagefind-meta="title" data-pagefind-weight="{{ pagefindTitleWeight }}"><a href="{{page.url}}" class="none">
+{{ title }}
 </a></h1>
+{% if description %}<p class="visually-hidden" data-pagefind-meta="description">{{ description }}</p>{% endif %}
 </div>
 </header>
 <section class="container-fluid">

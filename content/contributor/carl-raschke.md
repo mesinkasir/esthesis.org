@@ -1,5 +1,6 @@
 ---
-title: "Carl Raschke"
+name: "Carl Raschke"
+role: editor
 image: /images/wp-content/uploads/2016/08/Carl-speaking-225x300-225x300.jpg
 permalink: /contributor/carl-raschke/
 ---

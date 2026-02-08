@@ -1,14 +1,24 @@
 ---
 permalink: /feed/feed.xml
+layout: null
+eleventyExcludeFromCollections: true
 ---
-
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="https://www.w3.org/2005/Atom">
+<?xml-stylesheet type="text/xsl" href="/feed/feed.xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
   {% set baseUrl = metadata.url | baseUrl %}
   <title>{{ metadata.title }}</title>
+  <subtitle>{{ metadata.description }}</subtitle>
   <id>{{ "/" | absUrl(baseUrl) }}</id>
-  <link href="{{ '/feed/feed.xml' | absUrl(baseUrl) }}" rel="self" />
-  <updated>{{ collections.posts[0].date.toISOString() }}</updated>
+  <link href="{{ '/' | absUrl(baseUrl) }}" />
+  <link href="{{ '/feed/feed.xml' | absUrl(baseUrl) }}" rel="self" type="application/atom+xml" />
+  <updated>
+    {%- if collections.posts and collections.posts.length -%}
+      {{ collections.posts[0].date.toISOString() }}
+    {%- else -%}
+      {{ buildinfo.now | isoDate }}
+    {%- endif -%}
+  </updated>
 
   {% for post in collections.posts %}
   <entry>

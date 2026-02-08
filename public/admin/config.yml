@@ -65,9 +65,9 @@ collections:
         name: "author"
         widget: "relation"
         collection: "contributors"
-        search_fields: ["title"]
-        value_field: "title" 
-        display_fields: ["title"]
+        search_fields: ["name"]
+        value_field: "name"
+        display_fields: ["name"]
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Featured Image", name: "image", widget: "image" }
       - { label: "Description", name: "description", widget: "text" }
@@ -81,8 +81,10 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "Full Name", name: "title", widget: "string" }
-      - { label: "Profile Image", name: "image", widget: "image" }
+      - { label: "Full Name", name: "name", widget: "string" }
+      - { label: "Role", name: "role", widget: "string", default: "author" }
+      - { label: "Short Description", name: "description", widget: "text", required: false }
+      - { label: "Profile Image", name: "image", widget: "image", required: false }
       - { label: "Permalink", name: "permalink", widget: "string" }
       - { label: "Bio Content", name: "body", widget: "markdown" }
 

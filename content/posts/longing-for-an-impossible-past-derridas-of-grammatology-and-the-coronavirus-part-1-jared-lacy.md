@@ -1,7 +1,7 @@
 ---
 title: "Longing For An Impossible Past – Derrida’s Of Grammatology And The Coronavirus, Part 1 (Jared Lacy)"
 date: 2020-08-11T21:33:42+00:00
-author: editors
+author: "Jared Lacy"
 permalink: /longing-for-an-impossible-past-derridas-of-grammatology-and-the-coronavirus-part-1-jared-lacy/
 image: /images/wp-content/uploads/2020/09/Novel_Coronavirus_SARS-CoV-2_49666286236-800x500.jpg
 description: "The following is the first installment of a two-part series. As we witness the aftermath of the initial responses to the ongoing COVID-19 pandemic — the"

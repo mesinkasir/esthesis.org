@@ -1,7 +1,7 @@
 ---
 title: "Art And Madness, Part 2 (Iwo Zmyślony)"
 date: 2017-02-07T23:20:15+00:00
-author: editors
+author: "Iwo Zmyślony"
 permalink: /art-and-madness-part-2-iwo-zmyslony/
 image: /images/wp-content/uploads/2017/02/adolf_wolfli_1000.jpg
 description: "Adolf Wölfli The following is the second installment of a two-part series. The first installment can be found here. Less than a year prior to the publication"

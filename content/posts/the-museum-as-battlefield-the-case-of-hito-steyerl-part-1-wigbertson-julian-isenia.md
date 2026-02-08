@@ -1,7 +1,7 @@
 ---
 title: "The Museum As Battlefield – The Case Of Hito Steyerl, Part 1 (Wigbertson Julian Isenia)"
 date: 2017-04-23T23:13:51+00:00
-author: editors
+author: "Wigbertson Julian Isenia"
 permalink: /the-museum-as-battlefield-the-case-of-hito-steyerl-part-1-wigbertson-julian-isenia/
 image: /images/wp-content/uploads/2017/04/taksimpark.jpg
 description: "The following is the first of a two-part series. If we lose public and semipublic space, we lose everything. Artists give up their authorship when"

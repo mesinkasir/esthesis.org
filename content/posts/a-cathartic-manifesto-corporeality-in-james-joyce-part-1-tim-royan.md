@@ -1,7 +1,7 @@
 ---
 title: "A Cathartic Manifesto: Corporeality In James Joyce, Part 1 (Tim Royan)"
 date: 2018-10-23T04:02:51+00:00
-author: editors
+author: Tim Royan
 permalink: /a-cathartic-manifesto-corporeality-in-james-joyce-part-1-tim-royan/
 image: /images/wp-content/uploads/2018/10/La_Trieste_de_Magris_al_CCCB_37_-_James_Joyce_amb_bigoti_i_ulleres-800x500.jpg
 description: "The following is the first of a two-part series. James Joyce, throughout his literary career, repeatedly implements descriptions of the human body and its"
@@ -18,7 +18,7 @@ tags:
   - "w-b-yeats"
 ---
 
-*The following is the first of a two-part series.*James Joyce, throughout his literary career, repeatedly implements descriptions of the human body and its functions as a thematic device through which to explore other, more grandiose literary topics. In the process, he utilizes an almost routine breaking of taboos that are often mundane to explore these subjects.
+*The following is the first of a two-part series.* James Joyce, throughout his literary career, repeatedly implements descriptions of the human body and its functions as a thematic device through which to explore other, more grandiose literary topics. In the process, he utilizes an almost routine breaking of taboos that are often mundane to explore these subjects.
 
 This is an essential characteristic of Joyce’s project: rather than merely producing an affect of shock in the reader or an aura of rebelliousness around his writing, Joyce’s contemplations on the human body, as well as his bold, repeated flirtations with what many of his contemporaries would – and, quite literally did – charge as obscenity, are techniques integral to the advancement of a new unique and forward-looking literary movement, namely modernism.
 

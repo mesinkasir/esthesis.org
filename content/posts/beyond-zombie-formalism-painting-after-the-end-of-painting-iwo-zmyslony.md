@@ -1,7 +1,7 @@
 ---
 title: "Beyond “Zombie Formalism” – Painting After The End Of Painting (Iwo Zmyślony)"
 date: 2016-11-21T05:31:35+00:00
-author: editors
+author: Iwo Zmyślony
 permalink: /beyond-zombie-formalism-painting-after-the-end-of-painting-iwo-zmyslony/
 image: /images/wp-content/uploads/2016/11/Zombies-ahead.png
 description: "This essay first appeared in the catalogue of the 9th Bielska Jesień curatorial exhibition 28.10-26.12.2016, held by Bielska Gallery BWA Curators Jagna"

@@ -1,7 +1,7 @@
 ---
 title: "Reflections On “Anarchist” Structures And Aesthetics In Cultural Collectives, Part 1 (Jeffrey Swartz)"
 date: 2020-01-14T15:42:20+00:00
-author: editors
+author: "Jeffrey Swartz"
 permalink: /reflections-on-anarchist-structures-and-aesthetics-in-cultural-collectives-jeffrey-swartz/
 image: /images/wp-content/uploads/2020/01/Screen-Shot-2020-02-12-at-8.53.24-PM-800x500.png
 description: "An abridged version of this text was previously published in Spanish as “Reflexiones sobre las estructuras y estéticas anarquistas en los colectivos art"

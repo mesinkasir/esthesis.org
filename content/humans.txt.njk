@@ -1,4 +1,5 @@
 ---
+layout: null
 permalink: /humans.txt
 eleventyExcludeFromCollections: true
 ---
@@ -6,10 +7,32 @@ eleventyExcludeFromCollections: true
 /* TEAM */
 Site: {{ metadata.title }}
 Description: {{ metadata.description }}
-Contact: {{ metadata.author }}
+Contact: {{ metadata.email }}
+
+GitHub Admins:
+{% for admin in metadata.github.admins or [] -%}
+- {{ admin }}
+{% endfor %}
+
+GitHub Authors:
+{% for author in repo.team.authors or [] -%}
+- {{ author }}
+{% endfor %}
+
+GitHub Co-authors:
+{% for author in repo.team.coAuthors or [] -%}
+- {{ author }}
+{% endfor %}
+
+GitHub Contributors:
+{% for author in repo.team.contributors or [] -%}
+- {{ author }}
+{% endfor %}
 
 /* SITE */
 Standards: HTML5, CSS3
 Components: Eleventy, Nunjucks, Luxon
 Software: VS Code, Node.js
-Icon: {{ metadata.icon }}
+Icon: {{ metadata.favicon }}
+
+last updated: {{ repo.lastUpdatedIso | dateTimeFull }}

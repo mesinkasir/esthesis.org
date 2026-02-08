@@ -1,7 +1,7 @@
 ---
 title: "Lost Horizon – (Dis)location And Identity In Contemporary Tibetan Art (Sarah Magnatta)"
 date: 2017-01-31T22:55:58+00:00
-author: editors
+author: "Sarah Magnatta"
 permalink: /lost-horizon-dislocation-and-identity-in-contemporary-tibetan-art-sarah-magnatta/
 image: /images/wp-content/uploads/2017/01/tenzintsetanchoklay_childrenonsoil-700x466.jpg
 description: "&nbsp; In 2011, artist Tenzing Rigdol surreptitiously moved over 20,000 kilograms of dirt from Tibet into the exile community of Dharamsala, India for an"

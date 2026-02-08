@@ -1,7 +1,7 @@
 ---
 title: "Perennialism and Primitivism In Psychedelic Religions, Part 1 (Roger Green)"
 date: 2017-03-17T01:07:23+00:00
-author: editors
+author: "Roger Green"
 permalink: /perennialism-and-primitivism-in-psychedelic-religions-roger-green/
 image: /images/wp-content/uploads/2017/03/psychedelia.png
 description: "The following is the first of a three-part series. The second part can be found here. In this essay I am going to explore New Religious Movements NRMs"

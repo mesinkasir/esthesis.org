@@ -1,9 +1,9 @@
-title: Esthesis
-description: Arts, Culture, and Ideas
+title: "ESTHESIS"
+description: "Arts | Culture | Ideas"
 url: http://localhost:8080
 language: en
 locale: en_US
-email: 
+email: carlraschke@gmail.com
 formspree_id: 
 metasocial: 
   twitter: "https://x.com/user"
@@ -12,28 +12,41 @@ metasocial:
 
 favicon: /images/esthesis-fav.png
 image: /images/esthesis.png
+wordmark: /images/esthesis.svg
+open_graph:
+  title: "ESTHESIS"
+  description: "Arts | Culture | Ideas"
+  image: /images/esthesis-og.png
 
-# Hero Section
-hero_title: "Esthesis"
+# GitHub / repository metadata (used in humans.txt)
+github:
+  admins:
+    - "Adam DJ Brett"
 
 # Navbar Configuration
 navbar:
   logo: "/images/esthesis.png"
-  title: "Esthesis"
-  button: "Subscribe"
-  button_url: "/subscribe"
+  title: "ESTHESIS"
+  button: "Search"
+  button_url: "/search/"
   list:
     - nav: "Home"
       url: "/"
     - nav: "About"
       url: "/about"
+    - nav: "Archives"
+      url: "/archive/"  
   header_list:
-    - nav: "Home"
-      url: "/"
-    - nav: "About"
-      url: "/about"
     - nav: "Archive"
-      url: "/archive"
+      url: "/archive/"
+    - nav: "Contact"
+      url: "/contact/"
+    - nav: "Contributors"
+      url: "/contributors/"
+    - nav: "Editors"
+      url: "/editorial-staff/"    
+    - nav: "Submissions"
+      url: "/submissions/"    
 
 # Page Settings
 blog:
@@ -58,16 +71,34 @@ subs:
 
 # Footer Configuration
 footer:
-  logo: /images/esthesis.png
-  title: "Esthesis"
-  description: "Providing critical thought and philosophical discourse."
-  text: "Built with Eleventy"
-  copyrights: "© 2026 The New Polis. All rights reserved."
+  logo: /images/esthesis.svg
+  description: "Arts | Culture | Ideas"
+  text: "Esthesis is partner of the Global Art & Ideas Network (GAIN)"
+  copyrights: "Esthesis is a Whitestone Foundation Publication. All rights reserved."
   nav_title: "Quick Links"
   list:
+    - nav: "Archive"
+      url: "/archive/" 
+    - nav: "Categories"
+      url: "/categories/"
+    - nav: "Tags"
+      url: "/tags/"  
+    - nav: "Contact"
+      url: "/contact/"
+    - nav: "Contributors"
+      url: "/contributors/"
+    - nav: "Editors"
+      url: "/editorial-staff/"
+    - nav: "Submissions"
+      url: "/submissions/"
+    - nav: "Feed"
+      url: "/feed/feed.xml"
     - nav: "Privacy Policy"
       url: "/privacy"
   social:
+    - icon: "feed fa-solid fa-rss"
+      title: "RSS"
+      url: "/feed/feed.xml"
     - icon: "fab fa-facebook"
       title: "Facebook"
       url: "https://facebook.com"
@@ -84,10 +115,10 @@ widgets:
   widget_1:
     title: "Popular Posts"
   widget_2:
-    title: "About Us"
+    title: "About Esthesis"
     image: "/images/esthesis.png"
     alt: "About Esthesis"
-    text: "Brief description about the journal."
+    text: "Esthesis is an electronic magazine (“e-mag”) that publishes thoughtful, innovative, sometimes provocative, and even quirky articles on the arts and contemporary ideas and culture.  Esthesis draws on a variety of contributors, including artists and academics as well as community, business, and thought leaders.  Esthesis also explores certain unexplored dimensions of consumer trends and the world of fashion and advertising."
     url: "/about"
     show: true
   widget_3:

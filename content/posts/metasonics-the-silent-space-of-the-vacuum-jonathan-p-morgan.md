@@ -1,7 +1,7 @@
 ---
 title: "“Metasonics” – The Silent Space Of The Vacuum (Jonathan P. Morgan)"
 date: 2019-04-02T04:35:16+00:00
-author: editors
+author: "Jonathan P. Morgan"
 permalink: /metasonics-the-silent-space-of-the-vacuum-jonathan-p-morgan/
 image: /images/wp-content/uploads/2019/04/Screen-Shot-2019-04-01-at-11.32.18-PM-766x500.png
 description: "Many kinds of structures seem ubiquitous and essential for the kind of meaning humanity concerns itself with. The anthropologist Claude Lévi-Strauss’ early"

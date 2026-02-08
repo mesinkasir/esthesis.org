@@ -1,7 +1,7 @@
 ---
 title: "Degenerate Art and The Modern (Sue Wightman)"
 date: 2018-05-20T04:15:28+00:00
-author: editors
+author: "Sue Wightman"
 permalink: /degenerate-art-and-the-modern-sue-wightman/
 image: /images/wp-content/uploads/2018/05/The_Prophet_woodcut_by_Emil_Nolde_1912-455x500.jpg
 description: "&8220;IT&8217;S A SICKENING OUTRAGE Sadistic Obscene Evil &hellip;&hellip;. These people are the wreckers of civilization” Tory MP Nicholas Fairbairn"

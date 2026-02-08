@@ -1,7 +1,7 @@
 ---
 title: "How To Talk About Art, Part 1 – What Is Art? (Rebekah Gordon)"
 date: 2017-07-19T12:56:28+00:00
-author: editors
+author: "Rebekah Gordon"
 permalink: /how-to-talk-about-art-part-1-what-is-art-rebekah-gordon/
 image: /images/wp-content/uploads/2017/07/Duchamp_Fountaine.jpg
 description: "The following is the first of a three-part series on the nature and language of art and artistic expression. Art, like religions, or love, can be an"

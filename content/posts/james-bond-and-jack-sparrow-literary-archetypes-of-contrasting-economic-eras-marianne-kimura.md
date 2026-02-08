@@ -1,7 +1,7 @@
 ---
 title: "James Bond And Jack Sparrow – Literary Archetypes Of Contrasting Economic Eras (Marianne Kimura)"
 date: 2019-04-09T20:57:54+00:00
-author: editors
+author: "Marianne Kimura"
 permalink: /james-bond-and-jack-sparrow-literary-archetypes-of-contrasting-economic-eras-marianne-kimura/
 image: /images/wp-content/uploads/2019/04/James-BBond-movies-800x500.jpg
 description: "Commander James Bond and Captain Jack Sparrow. Both are British. Both are fictional characters. Both are heroes. Both are clever. Both appeal to the opposite"

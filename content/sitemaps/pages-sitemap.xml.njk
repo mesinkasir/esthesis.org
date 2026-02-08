@@ -1,0 +1,20 @@
+---
+permalink: /sitemaps/pages-sitemap.xml
+---
+{%- set pages = [] -%}
+{%- for item in collections.all -%}
+  {%- set p = item.inputPath or "" -%}
+  {%- if p and (p.indexOf("./content/pages/") == 0 or p.indexOf("./content/setup/") == 0) -%}
+    {%- set pages = pages.concat([item]) -%}
+  {%- elseif p and (p.indexOf("./content/") == 0) and (p.slice(-4) == ".njk" or p.slice(-3) == ".md") and (p.indexOf("./content/posts/") != 0) and (p.indexOf("./content/contributor/") != 0) and (p.indexOf("./content/sitemaps/") != 0) -%}
+    {%- set pages = pages.concat([item]) -%}
+  {%- endif -%}
+{%- endfor -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- for item in pages | sort(false, false, "url") -%}
+    <url>
+      <loc>{{ item.url | absUrl(metadata.url) }}</loc>
+    </url>
+  {%- endfor -%}
+</urlset>

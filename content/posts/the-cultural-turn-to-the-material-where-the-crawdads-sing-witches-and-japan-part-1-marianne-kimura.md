@@ -1,7 +1,7 @@
 ---
 title: "The Cultural Turn To The Material – Where The Crawdads Sing, Witches, And Japan, Part 1 (Marianne Kimura)"
 date: 2020-06-08T20:28:50+00:00
-author: editors
+author: "Marianne Kimura"
 permalink: /the-cultural-turn-to-the-material-where-the-crawdads-sing-witches-and-japan-part-1-marianne-kimura/
 image: /images/wp-content/uploads/2020/06/wiccan-woman-800x500.jpg
 description: "The following is the first of a two-part series. In the recent punishing publishing environment where, for example, sales of adult fiction in America are"
@@ -16,9 +16,6 @@ tags:
   - "humanities"
   - "witchcraft"
 ---
-
----
-
 *The following is the first of a two-part series.*In the recent punishing publishing environment where, for example, sales of adult fiction in America are down from 144 million units to 116 million units (20%) over a 4 year period, [according to NPD BookScan](https://www.nytimes.com/2019/12/21/books/where-the-crawdads-sing-delia-owens.html), Delia Owens’ novel *Where the Crawdads Sing*“seems to be the lone exception. After a burst of holiday sales, it landed back at No. 1 on *The Times*’s latest [fiction best-seller list](https://www.nytimes.com/books/best-sellers/hardcover-fiction/), where it has held a spot for 67 weeks, with 30 weeks at No. 1”.
 
 [We read that](https://www.theguardian.com/books/2019/dec/21/delia-owens-where-the-crawdads-sing-books-america) “publishing experts are baffled by the scale of the book’s success”, that this amazing success is “an astonishing trajectory for any debut novelist, much less for a reclusive 70-year-old scientist” [and that](https://www.nytimes.com/2019/12/21/books/where-the-crawdads-sing-delia-owens.html)“industry analysts have struggled to explain the novel’s staying power, particularly at a moment when fiction sales over all are flagging, and most blockbuster novels drop off the best-seller list after a few weeks”. 

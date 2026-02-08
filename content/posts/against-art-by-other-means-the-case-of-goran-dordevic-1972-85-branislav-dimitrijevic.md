@@ -1,7 +1,7 @@
 ---
 title: "Against Art By Other Means – The Case Of Goran Đorđević, 1972-85 (Branislav Dimitrijević)"
 date: 2017-05-31T01:58:40+00:00
-author: editors
+author: "Branislav Dimitrijević"
 permalink: /against-art-by-other-means-the-case-of-goran-dordevic-1972-85-branislav-dimitrijevic/
 image: /images/wp-content/uploads/2017/05/copies.jpg
 description: "In January 1980, the leading daily newspaper in Belgrade, Politika, published a small announcement for the opening, on January 29 at 6 pm, of an exhibition"

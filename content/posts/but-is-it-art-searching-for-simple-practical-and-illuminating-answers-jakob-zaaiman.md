@@ -1,7 +1,7 @@
 ---
 title: "But Is It Art? – Searching For Simple, Practical, And Illuminating Answers (Jakob Zaaiman)"
 date: 2017-01-04T01:18:44+00:00
-author: editors
+author: "Jakob Zaaiman"
 permalink: /but-is-it-art-searching-for-simple-practical-and-illuminating-answers-jakob-zaaiman/
 image: /images/wp-content/uploads/2017/01/Beuys-Fat-Chair.jpg
 description: "Joseph Beuy’s “Fat Chair” The following is the first installment of a two-part series. “Art” desperately needs a handy, practical definition, not of the"

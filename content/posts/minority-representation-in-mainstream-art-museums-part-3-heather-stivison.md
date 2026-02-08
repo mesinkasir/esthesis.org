@@ -1,7 +1,7 @@
 ---
 title: "Minority Representation In Mainstream Art Museums, Part 3 (Heather Stivison)"
 date: 2019-02-19T16:40:29+00:00
-author: editors
+author: "Heather Stivison"
 permalink: /minority-representation-in-mainstream-art-museums-part-3-heather-stivison/
 image: /images/wp-content/uploads/2019/02/mask-800x500.jpg
 description: "The following is the third and last installment of a three-part series. The first can be found here, the second here. In recent years, New Zealand museums"

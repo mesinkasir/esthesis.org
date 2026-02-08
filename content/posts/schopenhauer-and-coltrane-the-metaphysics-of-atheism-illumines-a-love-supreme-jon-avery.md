@@ -1,7 +1,7 @@
 ---
 title: "Schopenhauer And Coltrane – The Metaphysics Of Atheism Illumines “A Love Supreme” (Jon Avery)"
 date: 2016-10-24T04:38:21+00:00
-author: editors
+author: "Jon Avery"
 permalink: /schopenhauer-and-coltrane-the-metaphysics-of-atheism-illumines-a-love-supreme-jon-avery/
 image: /images/wp-content/uploads/2016/10/11944224_12-hour-spiritual-jazz-mix-john-coltrane_baa39110_m.jpg
 description: "John Coltrane Arthur Schopenhauer, a nineteenth century German philosopher, praised music as the highest art form because it gives us immediate access to the"

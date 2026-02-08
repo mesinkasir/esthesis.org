@@ -1,7 +1,7 @@
 ---
 title: "The Dance At The Barnes (Ayala Sella)"
 date: 2018-04-02T04:29:21+00:00
-author: Editor
+author: "Ayala Sella"
 permalink: /the-dance-at-the-barnes-ayala-sella/
 image: /images/wp-content/uploads/2018/04/20100414210212La_danse_I_by_Matisse-800x500.jpg
 description: "The following essay was originally written in September 2009. In May 2012, almost nine decades after its opening, the Barnes Foundation closed its doors in"

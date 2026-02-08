@@ -1,0 +1,88 @@
+---
+permalink: /feed/feed.xsl
+layout: null
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0"
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+  xmlns:atom="http://www.w3.org/2005/Atom">
+  <xsl:output method="html" encoding="UTF-8" indent="yes" />
+
+  <xsl:template match="/">
+    <html>
+      <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Feed</title>
+        <style>
+          body{font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;max-width:880px;margin:40px auto;padding:0 20px;line-height:1.5}
+          header{display:flex;justify-content:space-between;gap:16px;align-items:baseline;margin-bottom:24px;padding-bottom:12px;border-bottom:1px solid #eee}
+          h1{font-size:24px;margin:0}
+          .meta{color:#666;font-size:14px}
+          ul{list-style:none;padding:0;margin:0}
+          li{padding:14px 0;border-bottom:1px solid #f0f0f0}
+          a{color:#f2001b;font-weight:700;text-decoration:none}
+          a:hover{color:#3D9970;text-decoration:underline}
+          .date{color:#666;font-size:13px;margin-top:4px}
+          .desc{color:#333;margin-top:6px}
+          code{background:#f6f6f6;padding:2px 6px;border-radius:6px}
+        </style>
+      </head>
+      <body>
+        <xsl:choose>
+          <xsl:when test="/rss/channel">
+            <header>
+              <div>
+                <h1><xsl:value-of select="/rss/channel/title" /></h1>
+                <div class="meta"><xsl:value-of select="/rss/channel/description" /></div>
+              </div>
+              <div class="meta">RSS</div>
+            </header>
+            <ul>
+              <xsl:for-each select="/rss/channel/item">
+                <li>
+                  <a>
+                    <xsl:attribute name="href"><xsl:value-of select="link" /></xsl:attribute>
+                    <xsl:value-of select="title" />
+                  </a>
+                  <div class="date"><xsl:value-of select="pubDate" /></div>
+                  <div class="desc"><xsl:value-of select="description" /></div>
+                </li>
+              </xsl:for-each>
+            </ul>
+          </xsl:when>
+          <xsl:when test="/atom:feed">
+            <header>
+              <div>
+                <h1><xsl:value-of select="/atom:feed/atom:title" /></h1>
+                <div class="meta"><xsl:value-of select="/atom:feed/atom:subtitle" /></div>
+              </div>
+              <div class="meta">Atom</div>
+            </header>
+            <ul>
+              <xsl:for-each select="/atom:feed/atom:entry">
+                <li>
+                  <a>
+                    <xsl:attribute name="href"><xsl:value-of select="atom:link[1]/@href" /></xsl:attribute>
+                    <xsl:value-of select="atom:title" />
+                  </a>
+                  <div class="date"><xsl:value-of select="atom:updated" /></div>
+                  <div class="desc"><xsl:value-of select="atom:summary" /></div>
+                </li>
+              </xsl:for-each>
+            </ul>
+          </xsl:when>
+          <xsl:otherwise>
+            <header>
+              <h1>Feed</h1>
+              <div class="meta">Unrecognized format</div>
+            </header>
+            <p class="meta">This feed can still be used by feed readers even if it doesn’t render nicely here.</p>
+          </xsl:otherwise>
+        </xsl:choose>
+        <p class="meta" style="margin-top:18px">Tip: copy the URL into your feed reader. <code>/feed/feed.xml</code> or <code>/feed/feed.rss</code></p>
+      </body>
+    </html>
+  </xsl:template>
+</xsl:stylesheet>

@@ -1,7 +1,7 @@
 ---
 title: "Global Art, Post-Colonialism And The End of Art History (Robert McDougall), Part 1"
 date: 2020-05-02T03:46:12+00:00
-author: editors
+author: "Robert McDougall"
 permalink: /global-art-post-colonialism-and-the-end-of-art-history-thoughts-on-hans-belting-robert-mcdougall/
 image: /images/wp-content/uploads/2020/05/2017-06-07_Der_Parthenon_der_Bücher_by_Olaf_Kosinsky-5-800x500.jpg
 description: "The following is the first of a two-part series. In Contemporary Art as Global Art: A Critical Estimate, Hans Belting sets out to explain how the concept"
@@ -42,7 +42,7 @@ Citing Arthur Danto’s work regarding the “end of art history” and then com
 
 Belting then explores how technology has influenced the globalization of art, relating how the phenomena of video art democratized the art world, as previously predicted that photographic technologies would by Walter Benjamin, because of the way it allowed artists outside the Western formal tradition to use cheaply available technology the world over.Likewise, with the ascension of Pop Art, in which the world “looked flat everywhere”, artists from across Asia were able to talk about and aestheticize their shared experiences of Late Capitalism.(15) It is from here that Belting begins to talk, by way of the example of Chinese Neo-Pop Art and how it has risen to surpass Western Pop Art in terms of financial value, the economics of the global art market. 
 
-Since Japan’s economic boom in the mid-1980’s, which Belting writes “changed the game forever”, the rise in art collecting has led to a culture of lifestyle over connoisseurship.(18) Giving the example of the escalating number of countries represented in the trade, and the strategies Sotheby’s and Christie’s now use to sell work, Belting argues that market values have distanced art evaluation from traditional pedagogical criticism. Given this financial climate, Belting explains, exhibition practice itself intentionally hides the economic experience of both the artists and collectors, quoting Thomas McEvilly to say, “the problem is no longer that art works will end up as commodities, but that they will start out as such”, and giving the example of Elmgreen and Dragset’s *[Prada Marfa](https://en.wikipedia.org/wiki/Prada_Marfa#/media/File:2014-03-28_horse_Prada_Marfa.jpg)*as exemplary to the fact.(20)
+Since Japan’s economic boom in the mid-1980’s, which Belting writes “changed the game forever”, the rise in art collecting has led to a culture of lifestyle over connoisseurship.(18) Giving the example of the escalating number of countries represented in the trade, and the strategies Sotheby’s and Christie’s now use to sell work, Belting argues that market values have distanced art evaluation from traditional pedagogical criticism. Given this financial climate, Belting explains, exhibition practice itself intentionally hides the economic experience of both the artists and collectors, quoting Thomas McEvilly to say, “the problem is no longer that art works will end up as commodities, but that they will start out as such”, and giving the example of Elmgreen and Dragset’s *[Prada Marfa](/images/post-images/2014-03-28_horse_prada_marfa.jpg)*as exemplary to the fact.(20)
 
 Listing various examples of newly-established MoCAs
 across Asia, Belting

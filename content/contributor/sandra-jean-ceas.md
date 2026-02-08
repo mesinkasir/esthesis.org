@@ -1,6 +1,7 @@
 ---
-title: "Sandra Jean Ceas"
+name: "Sandra Jean Ceas"
 image: /images/wp-content/uploads/2016/08/sandra-jean-ceas_med_hr.jpg
+role: author
 permalink: /contributor/sandra-jean-ceas/
 ---
 

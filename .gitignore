@@ -1,9 +1,8 @@
 _site/
 node_modules/
-scripts/
-package-lock.json
+scripts/ 
 .DS_Store
 *.log
 .env
 *.sh
-instructions.md
+_data/logs/

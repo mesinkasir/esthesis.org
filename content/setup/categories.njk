@@ -5,8 +5,8 @@ permalink: /categories/
 ---
 <header class="container-fluid border-bottom">
 <div class="container col-md-10 mx-auto p-3 p-md-5 text-center">
-<h1 class="text-uppercase text-hero-post fw-bold"><a href="{{page.url}}" class="none">
-{{title}}
+<h1 class="text-uppercase text-hero-post fw-bold" data-pagefind-meta="title" data-pagefind-weight="1"><a href="{{ page.url }}" class="none">
+{{ title }}
 </a></h1>
 </div>
 </header>
@@ -14,37 +14,22 @@ permalink: /categories/
     <div class="row">
         <div class="col-md-10 mx-auto">
             <header class="mb-5 border-bottom pb-4">
-                <h2 class=fw-bold text-dark">Categories</h2>
+                <h2 class="fw-bold text-dark">Categories</h2>
                 <p class="lead text-muted">Browse all posts organized by category.</p>
             </header>
 
-            <div class="category-wrapper">
-                {% set categoriesSet = [] %}
-                {% for post in collections.posts %}
-                    {% if post.data.categories %}
-                        {% for cat in post.data.categories %}
-                            {% if cat not in categoriesSet %}
-                                {% set categoriesSet = categoriesSet.concat([cat]) %}
-                            {% endif %}
-                        {% endfor %}
-                    {% endif %}
-                {% endfor %}
-
-                {% set categoriesSorted = categoriesSet | sort %}
+            <div class="category-wrapper" data-pagefind-ignore>
+                {% set categoriesSorted = (collections.categories or []) | sort %}
 
                 {% for category in categoriesSorted %}
-                    {% set catPosts = [] %}
-                    {% for post in collections.posts %}
-                        {% if post.data.categories and category in post.data.categories %}
-                            {% set catPosts = catPosts.concat([post]) %}
-                        {% endif %}
-                    {% endfor %}
+                    {% set catPosts = collections.posts | filterByCategory(category) %}
+                    {% if catPosts and catPosts.length %}
 
                     <div class="category-item mb-3">
                         <details class="card border-0 shadow-sm">
                             <summary class="card-header bg-white p-3 cursor-pointer d-flex justify-content-between align-items-center">
                                 <h3 class="h5 mb-0 fw-semibold">
-                                    {{ category | displayName }}
+                                    {{ category | formatCategoryTag }}
                                     <span class="badge rounded-pill bg-light text-dark ms-2 fw-normal border">
                                         {{ catPosts | length }} posts
                                     </span>
@@ -70,6 +55,7 @@ permalink: /categories/
                             </div>
                         </details>
                     </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>

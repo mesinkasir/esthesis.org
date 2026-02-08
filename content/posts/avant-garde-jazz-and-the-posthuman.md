@@ -1,7 +1,7 @@
 ---
 title: "Avant-Garde Jazz and the Posthuman (Roger Green)"
 date: 2016-10-15T00:59:17+00:00
-author: editors
+author: "Roger Green"
 permalink: /avant-garde-jazz-and-the-posthuman/
 image: /images/wp-content/uploads/2016/10/Roger-Green-playing.png
 description: "Photo by Richard Peterson Recently in Boulder, Colorado I had a chance to play guitar for the Ron Miles quintet. The trumpeter / cornetist Ron Miles, is a"

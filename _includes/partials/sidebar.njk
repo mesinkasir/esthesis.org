@@ -23,17 +23,17 @@
     {% endif %}
 
     {% if metadata.widgets.widget_2.show %}
-        <h3 class="col-md-12 mt-5 mb-3 fw-semibold">{{ metadata.widgets.widget_2.title }}</h3>
+        <h3 class="col-md-12 mt-5 mb-3 fw-semibold">
+            <a href="{{ metadata.widgets.widget_2.url }}" class="none">{{ metadata.widgets.widget_2.title }}</a>
+        </h3>
         <article class="row mt-3">
             <div class="col-md-12">
-                <a href="{{ metadata.widgets.widget_2.url }}" class="none d">
                     <img class="img-thumbnail border-0 p-0 mb-3" 
                          alt="{{ metadata.widgets.widget_2.alt }}" 
                          style="width: 100px; height: auto;"
                          loading="lazy"
                          src="{{ metadata.widgets.widget_2.image }}"/>
                     <p class="small">{{ metadata.widgets.widget_2.text }}</p>
-                </a>
             </div>
         </article>
     {% endif %}

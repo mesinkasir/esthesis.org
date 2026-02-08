@@ -1,7 +1,7 @@
 ---
 title: "The Curse Of La Llorona, Part 1 (Bernadette Calafell And Stefanie Fajardo)"
 date: 2019-11-06T17:29:50+00:00
-author: editors
+author: "Bernadette Calafell; Stefanie Fajardo"
 permalink: /the-curse-of-la-llorona-part-1-bernadette-calafell-and-stefanie-fajardo/
 image: /images/wp-content/uploads/2019/11/707px-LA_LLORONA_DESFILE_TRADICIONAL_DE_MUERTOS_ORIZABA_VERACRUZ_MÉXICO-707x500.jpg
 description: "La Llorona as the Space for Discourse Surrounding Colonialism and Motherhood The American psyche is currently saturated with images of children in cages"

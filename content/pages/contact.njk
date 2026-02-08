@@ -1,0 +1,90 @@
+---
+layout: page.njk
+title: Contact
+description: "Get in touch with Esthesis"
+permalink: /contact/
+---
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold mb-4">Get In Touch</h1>
+            <p class="lead text-muted mb-5">Have questions or suggestions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+
+            <form action="{{ metadata.subs.formspree_id }}" method="POST" class="needs-validation">
+                <div class="mb-3">
+                    <label for="name" class="form-label fw-semibold">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="invalid-feedback">
+                        Please provide your name.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label fw-semibold">Email Address</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">
+                        Please provide a valid email address.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="subject" class="form-label fw-semibold">Subject</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                    <div class="invalid-feedback">
+                        Please provide a subject.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label fw-semibold">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="6" required></textarea>
+                    <div class="invalid-feedback">
+                        Please provide a message.
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-dark btn-lg rounded-pill px-5">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+// Bootstrap form validation
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        const forms = document.querySelectorAll('.needs-validation');
+        Array.from(forms).forEach(function(form) {
+            form.addEventListener('submit', function(event) {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+            }, false);
+        });
+    });
+})();
+</script>
+
+<style>
+form button {
+    transition: all 0.3s ease;
+}
+
+form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.form-control:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.25);
+}
+
+.form-label {
+    color: #333;
+}
+</style>

@@ -1,7 +1,7 @@
 ---
 title: "How Political Art That Works…Works (Margot Mitchell-Nockowitz)"
 date: 2019-09-17T03:53:08+00:00
-author: editors
+author: "Margot Mitchell-Nockowitz"
 permalink: /how-political-art-that-works-works-margot-mitchell-nockowitz/
 image: /images/wp-content/uploads/2019/09/Black-lives-matter-800x500.jpg
 description: "In the 2017 Whitney Museum Biennial, contemporary painter Dana Schutz’s contributing work “Open Casket” 2016 was set to be exhibited for an allotted time"

@@ -1,7 +1,7 @@
 ---
 title: "How Humor Works – A Clear Proposal For A Classic Question, Part 3 (E. Garrett Ennis)"
 date: 2021-01-13T22:35:21+00:00
-author: editors
+author: "E. Garrett Ennis"
 permalink: /how-humor-works-a-clear-proposal-for-a-classic-question-part-3-e-garrett-ennis/
 image: /images/wp-content/uploads/2021/01/1600px-Humor_Monastery_Bucovina-750x280.jpg
 description: "The following is the third of a four-part series. The first can be found here, the second here. Chappelle’s Show. While not running as long as Stern’s,"

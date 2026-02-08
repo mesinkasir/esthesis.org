@@ -1,7 +1,7 @@
 ---
 title: "Celebrities Becoming New Focus Of Religious Worship For “Non-Believing Believers” (Madison Tarleton)"
 date: 2016-12-06T12:45:03+00:00
-author: editors
+author: "Madison Tarleton"
 permalink: /celebrities-becoming-new-focus-of-religious-worship-for-non-believing-believers-madison-tarleton/
 image: /images/wp-content/uploads/2016/12/Beyonce.jpg
 description: "Beyonce, Wikipedia Commons, public domain photo Each day millions of Instagram savants wake up and take their morning coffee with the Kardashians, spend their"

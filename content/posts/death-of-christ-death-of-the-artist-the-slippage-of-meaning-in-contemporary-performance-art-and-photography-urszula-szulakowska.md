@@ -1,7 +1,7 @@
 ---
 title: "Death Of Christ/Death Of the Artist –  The Slippage Of Meaning In Contemporary Performance Art And Photography (Urszula Szulakowska)"
 date: 2018-07-30T19:29:07+00:00
-author: editors
+author: "Urszula Szulakowska"
 permalink: /death-of-christ-death-of-the-artist-the-slippage-of-meaning-in-contemporary-performance-art-and-photography-urszula-szulakowska/
 image: /images/wp-content/uploads/2018/08/Style-Lamentation-Oil-Painting-0.4MP-680x500.jpg
 description: "Note: The works of Krzysztof Gliszczyński depicted in the text of the article below are reproduced through permission obtained by the author. From the late"
@@ -59,7 +59,7 @@ In contrast, when the Christ image was used by male expressionist artists in the
 
 Another German artist fixated on the sign of the cross and on grotesque appropriations of the crucified Christ is Jiri Dokoupil who has used this theme of crucifixion for several decades since the 1980s. Occasionally, Dokoupil included representations of Christ hanging on the cross appropriated from artists such as Rembrandt, as can be seen in A. Bonito Oliva’s **[Trans-Avantgarde International](https://www.google.com/search?biw=1280&bih=614&tbm=isch&sa=1&ei=Y-lpW4vJL9GctAWtnYT4DQ&q=Trans-Avantgarde+International+Oliva&oq=Trans-Avantgarde+International+Oliva&gs_l=img.3...138115.167916.0.168161.7.7.0.0.0.0.148.580.4j2.6.0....0...1c.1j2.64.img..1.0.0....0.oneMqA4gojU#imgrc=W_p-hx7YJ7QdEM:).
 
-A less frequent image in recent art is that of the Dead Christ in the tomb. The prototypes usually are the **[Christ in the Tomb with Two Mourners by Andrea Mantegna](/mydailyartdisplay.uk/images/wp-content/uploads/2011/03/mantegna_andrea_dead_christr.jpg) (ca. 1490)  and more rarely, **[Hans Holbein’s Body of the Dead Christ in the Tomb](https://en.wikipedia.org/wiki/The_Body_of_the_Dead_Christ_in_the_Tomb#/media/File:The_Body_of_the_Dead_Christ_in_the_Tomb,_and_a_detail,_by_Hans_Holbein_the_Younger.jpg), 1520-22, where the figure of Christ is shown totally alone in the tomb, decaying.
+A less frequent image in recent art is that of the Dead Christ in the tomb. The prototypes usually are the **[Christ in the Tomb with Two Mourners by Andrea Mantegna](https://mydailyartdisplay.uk/images/wp-content/uploads/2011/03/mantegna_andrea_dead_christr.jpg) (ca. 1490)  and more rarely, **[Hans Holbein’s Body of the Dead Christ in the Tomb](/images/post-images/the_body_of_the_dead_christ_in_the_tomb-_and_a_detail-_by_hans_holbein_the_younger.jpg), 1520-22, where the figure of Christ is shown totally alone in the tomb, decaying.
 
 This type of Renaissance religious imagery has had a great influence on the Italian film director, poet and writer Pier Paolo Pasolini (1922-65) who, despite his left-wing ideology, in the design of his filmic mis-en-scene often took recourse to the religious tradition of western painting. This can be seen in Silvia Minguzzi’s **[Pasolini on Mantega- Lamentation over the Dead Christ](https://www.silviaminguzzi.com/cristoinscurto/pasolini.htm)and **[Sam Rohdie’s The Passion of Pier Paolo Pasolini](https://www.iupress.indiana.edu/product_info.php?products_id=20916) (122-24). Pasolini was interested in the conflicting ideological scenarios that are encapsulated in famous masterpieces.
 
@@ -69,7 +69,7 @@ Another Christ image in a left-wing atheistic context is that of the [dead body 
 
 The British leftist art historian of the 1960s and 1970s John Berger referred to this particular photograph of Guevara as an iconic image of both the revolutionary hero himself and of the political forces that he represented. According to Berger in [“Che Guevara: The Moral Factor,”](https://link.springer.com/article/10.1007%2FBF02177360) it located the figure of the dead Guevara within a Christology of redemption by martyrdom (202-8).
 
-After his execution, Guevara’s body had been flown to Vallegrande where he was photographed lying on a concrete slab in a laundry room. Hundreds of the local people filed past the dead body in tears, regarding it as Christ-like in its martyrdom. Berger considered that this photograph resembled two paintings of outstanding historical importance, namely, Rembrandt’s **[The Anatomy Lesson of Dr. Nicolaes Tulp](https://en.wikipedia.org/wiki/The_Anatomy_Lesson_of_Dr._Nicolaes_Tulp#/media/File:Rembrandt_Harmensz._van_Rijn_007.jpg), Mauritshuis, The Hague (1632) and Mantegna’s *Lamentation*.
+After his execution, Guevara’s body had been flown to Vallegrande where he was photographed lying on a concrete slab in a laundry room. Hundreds of the local people filed past the dead body in tears, regarding it as Christ-like in its martyrdom. Berger considered that this photograph resembled two paintings of outstanding historical importance, namely, Rembrandt’s **[The Anatomy Lesson of Dr. Nicolaes Tulp](/images/post-images/rembrandt_harmensz-_van_rijn_007.jpg), Mauritshuis, The Hague (1632) and Mantegna’s *Lamentation*.
 
 As in Pasolini’s radical political filmic critique and in Alborta’s photograph, Christology has been lifted out of the bounds of institutional church dogma, floating free in the perception of the congregation, of the audience for the ritual performance of the Church and hence no longer institutionalized and Catholic in a confessional sense, but only in a generic one. Is this still a Christian/ Catholic image?
 

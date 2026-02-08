@@ -1,7 +1,7 @@
 ---
 title: "Slam Poetry Returns Literature To The People (Interview)"
 date: 2016-11-15T00:55:47+00:00
-author: editors
+author: "Interview"
 permalink: /slam-poetry-returns-literature-to-the-people-interview/
 image: /images/wp-content/uploads/2016/11/slam-poetry.png
 description: "This interview with slam poets Lane Shuler and Jonathan “Courageous” Clark along with commentary and some history of the genre was undertaken by Esthesis"

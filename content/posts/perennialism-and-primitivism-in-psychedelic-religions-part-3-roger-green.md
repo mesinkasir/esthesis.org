@@ -1,7 +1,7 @@
 ---
 title: "Perennialism and Primitivism In Psychedelic Religions, Part 3 (Roger Green)"
 date: 2017-04-03T01:22:01+00:00
-author: editors
+author: "Roger Green"
 permalink: /perennialism-and-primitivism-in-psychedelic-religions-part-3-roger-green/
 image: /images/wp-content/uploads/2017/04/shamaness.png
 description: "The following is the last of a three-part series. The first installment can be found here, the second here. Although Mercante tracks gender differences,"

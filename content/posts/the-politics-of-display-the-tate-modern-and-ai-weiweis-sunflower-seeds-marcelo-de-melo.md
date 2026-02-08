@@ -1,7 +1,7 @@
 ---
 title: "The Politics Of Display – The Tate Modern And Ai WeiWei’s “Sunflower Seeds” (Marcelo de Melo)"
 date: 2018-05-28T14:33:59+00:00
-author: editors
+author: "Marcelo de Melo"
 permalink: /the-politics-of-display-the-tate-modern-and-ai-weiweis-sunflower-seeds-marcelo-de-melo/
 image: /images/wp-content/uploads/2018/04/1280px-Sunflower_Seeds_by_Ai_Weiwei-800x500.jpg
 description: "Note: This essay was inspired by the author’s visit to Tate Modern’s Turbine Hall and its exhibition of Al WeiWei’s Sunflower Seeds as part of the Unilever"

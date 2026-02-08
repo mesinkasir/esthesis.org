@@ -1,0 +1,134 @@
+---
+layout: page.njk
+title: Search
+description: "Search articles and content on Esthesis"
+permalink: /search/
+---
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h1 class="display-5 fw-bold mb-3">Search</h1>
+            <p class="lead text-muted mb-5">Find articles, contributors, and content across Esthesis</p>
+
+            <div class="mb-4">
+                <label for="search-input" class="form-label visually-hidden">Search</label>
+                <input id="search-input" class="form-control pagefind-ui__search-input" type="search" placeholder="Search…" autocomplete="off" />
+            </div>
+
+            <div id="search-results" class="mb-5"></div>
+
+            <script type="module">
+                import "/pagefind/pagefind.js";
+
+                const input = document.getElementById("search-input");
+                const resultsEl = document.getElementById("search-results");
+
+                const escapeHtml = (s) =>
+                    String(s ?? "")
+                        .replace(/&/g, "&amp;")
+                        .replace(/</g, "&lt;")
+                        .replace(/>/g, "&gt;")
+                        .replace(/\"/g, "&quot;")
+                        .replace(/'/g, "&#039;");
+
+                let lastRun = 0;
+                async function runSearch(query) {
+                    const runId = ++lastRun;
+                    const q = query.trim();
+
+                    if (!q) {
+                        resultsEl.innerHTML = "";
+                        return;
+                    }
+
+                    resultsEl.innerHTML = `<p class="text-muted small mb-3">Searching…</p>`;
+
+                    const search = await window.pagefind.search(q);
+                    if (runId !== lastRun) return;
+
+                    if (!search?.results?.length) {
+                        resultsEl.innerHTML = `<p class="text-muted">No results.</p>`;
+                        return;
+                    }
+
+                    const items = await Promise.all(search.results.slice(0, 20).map(r => r.data()));
+                    if (runId !== lastRun) return;
+
+                    const html = items.map((d) => {
+                        const title = d?.meta?.title || d?.meta?.page_title || d?.url || "Untitled";
+                        const description = d?.meta?.description || "";
+                        const excerpt = d?.excerpt || "";
+                        const snippet = description || excerpt;
+
+                        return `
+                            <article class="mb-4 pb-3 border-bottom">
+                                <a class="pagefind-ui__result-link d-block mb-1" href="${escapeHtml(d.url)}">${escapeHtml(title)}</a>
+                                ${snippet ? `<div class="text-muted small">${snippet}</div>` : ""}
+                            </article>
+                        `;
+                    }).join("");
+
+                    resultsEl.innerHTML = html;
+                }
+
+                let timer = null;
+                input.addEventListener("input", () => {
+                    window.clearTimeout(timer);
+                    timer = window.setTimeout(() => runSearch(input.value), 120);
+                });
+
+                // Support ?q=foo
+                const params = new URLSearchParams(window.location.search);
+                const q = params.get("q");
+                if (q) {
+                    input.value = q;
+                    runSearch(q);
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Customize Pagefind UI styling to match theme */
+:root {
+    --pf-background-color: #ffffff;
+    --pf-border-color: #e0e0e0;
+    --pf-text-color: #333333;
+    --pf-link-color: #000000;
+}
+
+.pagefind-ui__search-input {
+    border: 2px solid #000 !important;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+.pagefind-ui__search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.pagefind-ui__result-link {
+    color: #000;
+    font-weight: 500;
+}
+
+.pagefind-ui__result-link:hover {
+    color: #666;
+}
+
+.pagefind-ui__button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.pagefind-ui__button:hover {
+    background-color: #333;
+}
+</style>

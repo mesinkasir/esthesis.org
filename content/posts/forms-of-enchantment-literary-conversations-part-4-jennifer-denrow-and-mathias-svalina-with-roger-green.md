@@ -1,7 +1,7 @@
 ---
 title: "Forms Of Enchantment – Literary Conversations, Part 4 (Jennifer Denrow and Mathias Svalina With Roger Green)"
 date: 2020-10-20T01:58:10+00:00
-author: editors
+author: "Roger Green"
 permalink: /forms-of-enchantment-literary-conversations-part-4-jennifer-denrow-and-mathias-svalina-with-roger-green/
 image: /images/wp-content/uploads/2020/10/1600px-Paper_birds-800x500.jpg
 description: "The following is republished from The New Polis, and is the last of a four-part series. The first installment can be found here, the secondhere, the The"

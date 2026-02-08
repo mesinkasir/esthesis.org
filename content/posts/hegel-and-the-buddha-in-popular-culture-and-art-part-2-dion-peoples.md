@@ -1,7 +1,7 @@
 ---
 title: "Hegel And The Buddha in Popular Culture and Art, Part 2 (Dion Peoples)"
 date: 2017-06-20T19:44:18+00:00
-author: editors
+author: "Dion Peoples"
 permalink: /hegel-and-the-buddha-in-popular-culture-and-art-part-2-dion-peoples/
 image: /images/wp-content/uploads/2017/06/temple.jpg
 description: "The following is the second part of a two-part series. The first installment can be found here. The Dhamma, when told to someone, conditions the mind of the"

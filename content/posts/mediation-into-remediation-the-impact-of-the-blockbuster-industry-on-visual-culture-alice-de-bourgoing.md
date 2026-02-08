@@ -1,7 +1,7 @@
 ---
 title: "Mediation Into Remediation – The Impact Of The “Blockbuster” Industry On Visual Culture, Part 1 (Alice De Bourgoing)"
 date: 2019-06-24T15:02:07+00:00
-author: editors
+author: "Alice De Bourgoing"
 permalink: /mediation-into-remediation-the-impact-of-the-blockbuster-industry-on-visual-culture-alice-de-bourgoing/
 image: /images/wp-content/uploads/2019/06/La-La-Land-Products-800x500.jpg
 description: "The following is the first of a two-part series. When Damien Chazelle’s La La Land 2016 won six Oscars and seven Golden Globes, I wondered how a film"

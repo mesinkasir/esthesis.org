@@ -1,7 +1,7 @@
 ---
 title: "Perennialism and Primitivism In Psychedelic Religions, Part 2 (Roger Green)"
 date: 2017-03-25T04:05:45+00:00
-author: editors
+author: "Roger Green"
 permalink: /perennialism-and-primitivism-in-psychedelic-religions-part-2-roger-green/
 image: /images/wp-content/uploads/2017/03/vg.jpg
 description: "The following is the second of a three-part series. The first installment can be found here. An economic approach that more astutely tracks what’s at stake"

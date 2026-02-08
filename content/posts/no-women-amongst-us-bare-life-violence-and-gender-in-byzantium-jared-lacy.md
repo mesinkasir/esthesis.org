@@ -1,7 +1,7 @@
 ---
 title: "“No Women Amongst Us” – Bare Life, Violence, And Gender in Byzantium (Jared Lacy)"
 date: 2020-02-14T04:15:10+00:00
-author: editors
+author: "Jared Lacy"
 permalink: /no-women-amongst-us-bare-life-violence-and-gender-in-byzantium-jared-lacy/
 image: /images/wp-content/uploads/2020/02/Neil_Jordan.4749-800x500.jpg
 description: "This article is republished from The New Polis, Dec. 23, 2019. Neil Jordan’s film Byzantium 2012, which tells the story of a pair of mother/daughter"

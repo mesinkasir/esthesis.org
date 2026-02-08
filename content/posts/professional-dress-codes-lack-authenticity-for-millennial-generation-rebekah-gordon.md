@@ -1,7 +1,7 @@
 ---
 title: "Professional Dress Codes Lack “Authenticity” For Millennial Generation (Rebekah Gordon)"
 date: 2016-11-07T02:03:22+00:00
-author: editors
+author: "Rebekah Gordon"
 permalink: /professional-dress-codes-lack-authenticity-for-millennial-generation-rebekah-gordon/
 image: /images/wp-content/uploads/2016/11/professional-dress.jpg
 description: "I worked at a bank for a year and a half between the completion of my undergraduate degree and the beginning of my master’s. Our dress code, which by many"

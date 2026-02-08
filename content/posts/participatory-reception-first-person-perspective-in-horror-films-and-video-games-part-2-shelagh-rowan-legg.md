@@ -1,7 +1,7 @@
 ---
 title: "Participatory Reception – First Person Perspective In Horror Films And Video Games, Part 2 (Shelagh Rowan-Legg)"
 date: 2019-10-15T02:52:36+00:00
-author: editors
+author: "Shelagh Rowan-Legg"
 permalink: /participatory-reception-first-person-perspective-in-horror-films-and-video-games-part-2-shelagh-rowan-legg/
 image: /images/wp-content/uploads/2019/10/995px-Kittelsen_-_Die_Pest_kommt_-_1896-800x500.jpg
 description: "The following is the second installment of a two-part series. The first can be found here. In describing this kind of cinema Craig writes, “when choosing"

@@ -2,7 +2,14 @@
     <div class="container col-md-10 mx-auto p-3 text-center">
         <h1 class="text-uppercase text-hero fw-bold">
             <a href="{{ metadata.url }}" class="none">
-                {{ title or tag_name or category_name or author_name or metadata.title }}
+                {% set heroTitle = title or tag_name or category_name or author_name %}
+                {% if heroTitle %}
+                    {{ heroTitle }}
+                {% elseif metadata.wordmark %}
+                    <img class="img-fluid" height="40" alt="{{ metadata.title }}" src="{{ metadata.wordmark }}" />
+                {% else %}
+                    {{ metadata.title }}
+                {% endif %}
             </a>
         </h1>
     </div>

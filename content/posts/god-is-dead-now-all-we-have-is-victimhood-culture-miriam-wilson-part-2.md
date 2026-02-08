@@ -1,7 +1,7 @@
 ---
 title: "God Is Dead – Now All We Have Is Victimhood Culture (Miriam Wilson) – Part 2"
 date: 2018-02-27T20:32:01+00:00
-author: editors
+author: "Miriam Wilson"
 permalink: /god-is-dead-now-all-we-have-is-victimhood-culture-miriam-wilson-part-2/
 image: /images/wp-content/uploads/2018/02/Bad-Air.jpg
 description: "The following is the second installment of a two-part series. The first portion can be read here. The Nietzschean frame that most easily lends itself as a"
@@ -21,7 +21,7 @@ tags:
   - "zarathustra"
 ---
 
----
+
 
 *The following is the second installment of a two-part series.  The first portion can be read here.*The Nietzschean frame that most easily lends itself as a comparison to contemporary victimhood is that of the Last Man. Appearing in the prologue of **[Thus Spoke Zarathustra](https://www.amazon.com/Zarathustra-Translated-Introductions-Huntington-Forster-Nietzsche-ebook/dp/B01LZ6B0HJ/ref=sr_1_1?ie=UTF8&qid=1519760802&sr=8-1&keywords=thus+spoke+zarathustra+thomas+common), the figure of the Last Man is the direct opposite of the *Übermensch, or*“overman.”. When the townspeople  are unenthused at the presented challenge of overcoming the self in order to embody the overman, Zarathustra attempts to sway them towards this goal by presenting an overall revolting image of the Last Man, whose wrongs were so egregious that Zarathustra viewed him explicitly as a straw man.
 

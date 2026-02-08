@@ -1,7 +1,7 @@
 ---
 title: "The Hollow Christians Of End Times Fiction, Part 2 (Paul Maltby)"
 date: 2020-03-09T22:40:54+00:00
-author: editors
+author: "Paul Maltby"
 permalink: /the-hollow-christians-of-end-times-fiction-part-2-paul-maltby/
 image: /images/wp-content/uploads/2020/03/MARTIN_John_Great_Day_of_His_Wrath.jpg
 description: "The following is republished from Religious Theory. It is the second of a three-part series. The first can be found here. End Times fiction’s The following"

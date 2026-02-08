@@ -1,7 +1,7 @@
 ---
 title: "Racing For The Prize, Part 1 (Michael Boughn)"
 date: 2017-11-10T05:22:57+00:00
-author: editors
+author: "Michael Boughn"
 permalink: /racing-for-the-prize-part-1-michael-boughn/
 image: /images/wp-content/uploads/2017/11/IMG_2103.jpg
 description: "The following is the first of a two-part installment. The article was previously published in Canadian Literature 219 Winter 2013: 193-199. It is The"

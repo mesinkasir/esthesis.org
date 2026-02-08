@@ -1,7 +1,7 @@
 ---
 title: "But Is It Art? – Searching For Simple, Practical, And Illuminating Answers, Part 2 (Jakob Zaaiman)"
 date: 2017-01-09T07:22:06+00:00
-author: editors
+author: "Jakob Zaaiman"
 permalink: /but-is-it-art-searching-for-simple-practical-and-illuminating-answers-part-2-jakob-zaaiman/
 image: /images/wp-content/uploads/2017/01/Tracey-Emin-exhibit.jpg
 description: "Tracey Emin Exhibit, London. 2014 The following is a second installment of a two-part series. The first part can be found here. The question then arises,"

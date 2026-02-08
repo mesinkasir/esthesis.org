@@ -1,7 +1,7 @@
 ---
 title: "“Post-Matter” – Wearable Art That Blurs The Boundaries Between Bodies And Environment (Larissa E. Shaw)"
 date: 2017-11-01T14:10:05+00:00
-author: editors
+author: "Larissa E. Shaw"
 permalink: /post-matter-wearable-art-that-blurs-the-boundaries-between-bodies-and-environment-larissa-e-shaw/
 image: /images/wp-content/uploads/2017/11/atmospheric-reentry.jpg
 description: "Contemporary artist Maiko Takeda creates futuristic, ethereal garments for the human body influenced by environmental phenomena such as wind, by exploring the"

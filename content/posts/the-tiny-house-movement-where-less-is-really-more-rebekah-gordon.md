@@ -1,7 +1,7 @@
 ---
 title: "The Tiny House Movement – Where Less Is Really More (Rebekah Gordon)"
 date: 2017-02-14T01:16:29+00:00
-author: editors
+author: "Rebekah Gordon"
 permalink: /the-tiny-house-movement-where-less-is-really-more-rebekah-gordon/
 image: /images/wp-content/uploads/2017/02/tiny-house.jpg
 description: "The current vogue for so-called “tiny houses”, where people live in as little as 100 to 400 square feet, derives in many respects from the earlier artistic"

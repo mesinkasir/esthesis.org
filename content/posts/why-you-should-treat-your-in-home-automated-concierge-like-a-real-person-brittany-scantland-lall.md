@@ -1,7 +1,7 @@
 ---
 title: "Treating Your In-Home Automated Concierge Like A Real Person (Brittany Scantland-Lall)"
 date: 2016-12-30T17:52:52+00:00
-author: editors
+author: "Brittany Scantland-Lall"
 permalink: /why-you-should-treat-your-in-home-automated-concierge-like-a-real-person-brittany-scantland-lall/
 image: /images/wp-content/uploads/2016/12/Automated-person.jpg
 description: "For Christmas, my parents gave us an Amazon Echo. If you’ve seen the commercials or have one in your home, you know this is the Amazon in-home concierge with"

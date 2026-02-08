@@ -1,7 +1,7 @@
 ---
 title: "Gender And Sexuality In The Animated Films Of Walt Disney and Hayao Miyazaki, Part 3 (Hiroko Miyashita)"
 date: 2018-05-03T20:11:31+00:00
-author: editors
+author: "Hiroko Miyashita"
 permalink: /gender-and-sexuality-in-the-animated-films-of-walt-disney-and-hayao-miyazaki-part-3-hiroko-miyashita/
 image: /images/wp-content/uploads/2018/05/publicdomainq-0004934crltvo.png
 description: "The following is the third of a three-part series. The first installment can be found here, the second one here. Storylines and Narrative Forms of Disney"

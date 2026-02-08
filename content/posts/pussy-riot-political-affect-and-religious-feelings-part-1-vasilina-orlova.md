@@ -1,7 +1,7 @@
 ---
 title: "Pussy Riot – Political Affect and Religious Feelings, Part 1 (Vasilina Orlova)"
 date: 2019-10-22T21:52:45+00:00
-author: editors
+author: "Vasilina Orlova"
 permalink: /pussy-riot-political-affect-and-religious-feelings-part-1-vasilina-orlova/
 image: /images/wp-content/uploads/2019/10/Pussy-Riot-800x500.jpg
 description: "The following is the first of a two-part series. On February 21, 2012 the Russian feminist punk band Pussy Riot staged a performance in the Christ the Savior"

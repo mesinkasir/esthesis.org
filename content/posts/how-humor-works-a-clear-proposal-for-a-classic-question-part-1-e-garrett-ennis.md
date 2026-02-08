@@ -1,7 +1,7 @@
 ---
 title: "How Humor Works – A Clear Proposal For A Classic Question, Part 1 (E. Garrett Ennis)"
 date: 2020-12-08T18:06:17+00:00
-author: editors
+author: "E. Garrett Ennis"
 permalink: /how-humor-works-a-clear-proposal-for-a-classic-question-part-1-e-garrett-ennis/
 image: /images/Titelseite__Berliner_Humor__1950.jpg
 description: "The following is the first of a four-part series. “Many theorists seem to confuse offering the necessary conditions for a response to count as humor with"

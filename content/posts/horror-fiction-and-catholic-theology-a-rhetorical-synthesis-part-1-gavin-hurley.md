@@ -1,7 +1,7 @@
 ---
 title: "Horror Fiction And Catholic Theology – A Rhetorical Synthesis, Part 1 (Gavin Hurley)"
 date: 2019-12-16T22:55:39+00:00
-author: editors
+author: "Gavin Hurley"
 permalink: /horror-fiction-and-catholic-theology-a-rhetorical-synthesis-part-1-gavin-hurley/
 image: /images/wp-content/uploads/2019/12/Dracula_1958_a-800x467.jpg
 description: "The following is the first installment of a two-part series. The article is published simultaneously with Religious Theory. Catholic horror—horror fiction"

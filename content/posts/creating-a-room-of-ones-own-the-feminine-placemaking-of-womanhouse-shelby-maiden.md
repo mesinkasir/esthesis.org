@@ -1,7 +1,7 @@
 ---
 title: "Creating a Room of One’s Own – The Feminine Placemaking of “Womanhouse”  (Shelby Maiden)"
 date: 2018-03-11T00:56:57+00:00
-author: Editor
+author: "Shelby Maiden"
 permalink: /creating-a-room-of-ones-own-the-feminine-placemaking-of-womanhouse-shelby-maiden/
 image: /images/wp-content/uploads/2018/03/IMG_0032-800x500.jpg
 description: "The visual and performing arts are inherently bonded to the art of literature; all additionally lend themselves to the narratives of women and their specific"

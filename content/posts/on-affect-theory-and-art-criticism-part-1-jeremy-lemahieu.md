@@ -1,7 +1,7 @@
 ---
 title: "On Affect Theory And Art Criticism, Part 1 (Jeremy LeMahieu)"
 date: 2017-02-28T19:57:26+00:00
-author: editors
+author: "Jeremy LeMahieu"
 permalink: /on-affect-theory-and-art-criticism-part-1-jeremy-lemahieu/
 image: /images/wp-content/uploads/2017/02/Morris-exhibit.jpg
 description: "Robert Morris, Exhibition at the Dwan Gallery. Installation View, 1966. The following is the first installment of a two-part series. There it is. Here you"

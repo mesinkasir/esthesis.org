@@ -1,5 +1,6 @@
 ---
-title: "Colbey Emmerson Reid"
+name: "Colbey Emmerson Reid"
+role: author
 image: /images/wp-content/uploads/2016/08/colby-reid_med_hr-202x300-202x300.png
 permalink: /contributor/colbey-emmerson-reid/
 ---

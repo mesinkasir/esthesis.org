@@ -1,7 +1,7 @@
 ---
 title: "Gender And Sexuality In The Animated Films Of Walt Disney and Hayao Miyazaki, Part 1 (Hiroko Miyashita)"
 date: 2018-04-18T23:46:10+00:00
-author: editors
+author: "Hiroko Miyashita"
 permalink: /gender-and-sexuality-in-the-animated-films-of-walt-disney-and-hayao-miyazaki-hiroko-miyashita/
 image: /images/wp-content/uploads/2018/04/publicdomainq-anime-800x500.png
 description: "The following is the first installment of a three-part series. Hayao Miyazaki and Walt Disney are the two best-known and world famous directors in the history"

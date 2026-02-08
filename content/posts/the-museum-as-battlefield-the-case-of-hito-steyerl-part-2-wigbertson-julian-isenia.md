@@ -1,7 +1,7 @@
 ---
 title: "The Museum As Battlefield – The Case Of Hito Steyerl, Part 2 (Wigbertson Julian Isenia)"
 date: 2017-05-01T19:28:37+00:00
-author: editors
+author: "Wigbertson Julian Isenia"
 permalink: /the-museum-as-battlefield-the-case-of-hito-steyerl-part-2-wigbertson-julian-isenia/
 image: /images/wp-content/uploads/2017/05/c1f791beef78ad9e2e9e2b98553b1c53.jpg
 description: "The following is the second of a two-part series. The first installment can be found here. The museum as a public space What is the public in a contemporary"

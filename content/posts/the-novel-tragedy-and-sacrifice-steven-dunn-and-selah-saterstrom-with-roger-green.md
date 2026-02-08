@@ -1,7 +1,7 @@
 ---
 title: "The Novel, Tragedy, And Sacrifice (Steven Dunn and Selah Saterstrom With Roger Green)"
 date: 2020-07-23T01:18:54+00:00
-author: editors
+author: "Steven Dunn; Selah Saterstrom; Roger Green"
 permalink: /the-novel-tragedy-and-sacrifice-steven-dunn-and-selah-saterstrom-with-roger-green/
 image: /images/wp-content/uploads/2020/07/813px-Lucrezia_as_Poetry_by_Salvator_Rosa.jpg
 description: "By Roger Green Steven Dunn and Selah Saterstrom, two novelists currently working in Denver, Colorado, share many aesthetic sensibilities. Here I as the"
@@ -12,10 +12,7 @@ tags:
   - "criticism"
   - "political-theology"
 ---
-
----
-
-**By Roger Green**Steven Dunn and Selah Saterstrom, two novelists currently working in Denver, Colorado, share many aesthetic sensibilities. Here I as the interviewer particularly focuses on material approaches to language that we see in their work, arguing that what they bring to the novel is a notion of cultural dissent. One is particularly drawn to the ways both dissent and desire-toward-power are simultaneously embodied in literary works and discourse about them.
+**By Roger Green Steven Dunn and Selah Saterstrom**, two novelists currently working in Denver, Colorado, share many aesthetic sensibilities. Here I as the interviewer particularly focuses on material approaches to language that we see in their work, arguing that what they bring to the novel is a notion of cultural dissent. One is particularly drawn to the ways both dissent and desire-toward-power are simultaneously embodied in literary works and discourse about them.
 
 In a series of posts last year, I[reread Max Horkheimer and Theodor Adorno’s](https://thenewpolis.com/?s=Dialectic+of+Enlightenment+)*[Dialectic of Enlightenment](https://thenewpolis.com/?s=Dialectic+of+Enlightenment+)*, exploring how philosophers and social theorists rely on literary texts and implicit concepts of what “Literature” is and does. Static and transcendent concepts of “Literature” were increasingly called into question during the late twentieth-century. As Daniel Boyarin summarizes in *[Carnal Israel](https://www.ucpress.edu/book/9780520203365/carnal-israel)*, the approach known as New Historicism integrated earlier Marxian historicist approaches to literature with aestheticized New Criticism, which treated the literary text as an art object (14).
 

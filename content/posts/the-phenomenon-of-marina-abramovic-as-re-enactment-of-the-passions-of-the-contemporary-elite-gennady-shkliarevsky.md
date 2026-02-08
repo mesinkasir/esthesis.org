@@ -1,7 +1,7 @@
 ---
 title: "The Phenomenon Of Marina Abramović As Re-enactment Of The Passions Of The Contemporary Elite, Part 1 (Gennady Shkliarevsky)"
 date: 2020-11-09T21:52:39+00:00
-author: editors
+author: "Gennady Shkliarevsky"
 permalink: /the-phenomenon-of-marina-abramovic-as-re-enactment-of-the-passions-of-the-contemporary-elite-gennady-shkliarevsky/
 image: /images/wp-content/uploads/2020/11/Marina_abramovic_2010_01-800x500.jpg
 description: "The following is the first of a two-part series. Marina Abramovic is arguably the most celebrated contemporary artist in the world. She works in performance"

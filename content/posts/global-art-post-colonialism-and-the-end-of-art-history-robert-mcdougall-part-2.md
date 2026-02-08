@@ -1,7 +1,7 @@
 ---
 title: "Global Art, Post-Colonialism And The End of Art History (Robert McDougall), Part 2"
 date: 2020-05-10T20:40:27+00:00
-author: editors
+author: "Robert McDougall"
 permalink: /global-art-post-colonialism-and-the-end-of-art-history-robert-mcdougall-part-2/
 image: /images/wp-content/uploads/2020/05/14541996798_ec2b4a4b2c_b-800x500.jpg
 description: "The following is the second of a two-part series. The first can be found here. Anthony Gardner, in a piece commissioned by GAM, proclaims a difference,"

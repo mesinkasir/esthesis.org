@@ -1,7 +1,7 @@
 ---
 title: "Searching For The Soul In The Digital Age (Karli Brittz)"
 date: 2020-02-05T18:11:30+00:00
-author: editors
+author: "Karli Brittz"
 permalink: /searching-for-the-soul-in-the-digital-age-karli-brittz/
 image: /images/wp-content/uploads/2020/02/robot-touch-800x500.jpg
 description: "A version of this article appeared in Image & Text, Number 31, September 2018. In 2015 Pixar Animation and Disney released Inside Out, a clever, moving"

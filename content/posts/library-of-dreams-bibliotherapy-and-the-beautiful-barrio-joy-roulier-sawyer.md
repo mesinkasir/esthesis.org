@@ -1,7 +1,7 @@
 ---
 title: "Library Of Dreams – Bibliotherapy And The Beautiful Barrio (Joy Roulier Sawyer)"
 date: 2017-02-20T21:11:43+00:00
-author: editors
+author: "Joy Roulier Sawyer"
 permalink: /library-of-dreams-bibliotherapy-and-the-beautiful-barrio-joy-roulier-sawyer/
 image: /images/wp-content/uploads/2017/02/Reading-butterflies.jpg
 description: "Years ago I pursued a doctorate in the interdisciplinary fields of art, psychology, and theology. At the time, I served as poetry editor for a flailing literary"

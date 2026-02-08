@@ -1,19 +1,30 @@
 ---
 permalink: /feed/feed.rss
+layout: null
+eleventyExcludeFromCollections: true
 ---
-
 <?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="/feed/feed.xsl"?>
 <rss version="2.0">
 <channel>
   <title>{{ metadata.title }}</title>
   {% set baseUrl = metadata.url | baseUrl %}
   <link>{{ "/" | absUrl(baseUrl) }}</link>
   <description>{{ metadata.description }}</description>
+  <language>{{ metadata.language }}</language>
+  <lastBuildDate>
+    {%- if collections.posts and collections.posts.length -%}
+      {{ collections.posts[0].date.toUTCString() }}
+    {%- else -%}
+      {{ buildinfo.now.toUTCString() }}
+    {%- endif -%}
+  </lastBuildDate>
 
   {% for post in collections.posts %}
   <item>
     <title>{{ post.data.title }}</title>
     <link>{{ post.url | absUrl(baseUrl) }}</link>
+    <guid isPermaLink="true">{{ post.url | absUrl(baseUrl) }}</guid>
     <pubDate>{{ post.date.toUTCString() }}</pubDate>
     <description>{{ post.data.description }}</description>
   </item>

@@ -1,7 +1,7 @@
 ---
 title: "Baz’s Bronx – Get Down Or Let Down? (Lachlan MacDowall)"
 date: 2016-11-29T21:17:54+00:00
-author: editors
+author: "Lachlan MacDowall"
 permalink: /bazs-bronx-get-down-or-let-down-lachlan-macdowall/
 image: /images/wp-content/uploads/2016/11/jeweled-music.jpg
 description: "On August 12 Netflix screened the latest project by Australian film director Baz Luhrmann. The Get Down is a twelve-part television series set in the Bronx"

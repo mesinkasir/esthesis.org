@@ -1,7 +1,7 @@
 ---
 title: "Duchamp – A Liberating Lineage For Social Art Practice, Part 2 (Jacquelynn Baas)"
 date: 2019-09-09T18:53:06+00:00
-author: editors
+author: "Jacquelynn Baas"
 permalink: /duchamp-a-liberating-lineage-for-social-art-practice-part-2-jacquelynn-baas/
 image: /images/wp-content/uploads/2019/09/Five-Way_Portrait_of_Marcel_Duchamp_21_June_1917_New_York_City-800x500.jpg
 description: "The following is the second of a two-part series. The first can be found here. My thanks to curator Mary Jane Jacob and artist Ernesto Pujol for their"

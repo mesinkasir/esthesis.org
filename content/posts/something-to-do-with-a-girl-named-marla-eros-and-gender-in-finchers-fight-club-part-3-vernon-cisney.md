@@ -1,7 +1,7 @@
 ---
 title: "Something To Do With A Girl Named Marla – Eros And Gender In Fincher’s “Fight Club”, Part 3 (Vernon Cisney)"
 date: 2019-08-20T19:26:36+00:00
-author: editors
+author: "Vernon Cisney"
 permalink: /something-to-do-with-a-girl-named-marla-eros-and-gender-in-finchers-fight-club-part-3-vernon-cisney/
 image: /images/wp-content/uploads/2019/08/fighting-800x500.jpg
 description: "The following is the third installment of a three-part series. The first can be found here. The second is here. Something to Do With a Girl Named Marla"
@@ -17,9 +17,6 @@ tags:
   - "nancy-bauer"
   - "phallocentrism"
 ---
-
----
-
 *The following is the third installment of a three-part series.  The first can be found [here](/something-to-do-with-a-girl-named-marla-eros-and-gender-in-finchers-fight-club-part-1-vernon-cisney/).  The second is [here](/something-to-do-with-a-girl-named-marla-eros-and-gender-in-finchers-fight-club-part-2-vernon-cisney/).**Something to Do With a Girl Named Marla *The most significant shortcoming of Tyler’s pure yang energy, however, resides in the fact that it is *powerless *or *unable *to love. As we’ve seen, in his explicit reflections on women, Tyler expresses disregard and disdain, and Fight Club is specifically dedicated to the re-masculization of society’s men. It is therefore little surprise that Tyler repeatedly uses Marla to discharge his sexual urges, only to afterwards treat her with contempt. In spite of the fact that Marla clearly has feelings for him, she embodies for Tyler what Stark calls “toxic femininity”, and is useful only as a vessel of libidinous gratification.
 
 During one particularly rambunctious session, the narrator approaches Tyler’s bedroom door, and Tyler answers, wearing durable rubber gloves, the kind one might wear when cleaning a bathroom. At the end of every sexual escapade between Tyler and Marla, when he has exhausted his desires and his physical stamina, Tyler loses all interest in any further contact with her, leaving to the narrator the task of dispatching her. Tyler, as pure activity, is constitutionally incapable of love.*What of it?*, we might wonder. As pure activity, Tyler likely doesn’t *suffer *from the fact that he is unable to love Marla. He is likely perfectly happy in his ravenous, animalistic carnality with her, so why does it matter? There are two responses we can give. First, whether or not Tyler is *aware *of this incapacity is irrelevant. Marla highlights with respect to the narrator the limitations constitutive of his activity. She demonstrates an inherent *weakness *in the notion of pure activity, in the following way: love, insofar as it opens the self to vulnerability, requires a willingness to be weak; and it takes tremendous strength to be weak in this way, just as it takes tremendous strength to be weak enough to forgive, or to be weak enough to trust. As pure activity, Tyler is not strong enough to be weak.

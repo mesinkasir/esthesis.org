@@ -1,7 +1,7 @@
 ---
 title: "From Shakespeare To Search Engines – Experimental Poetry Comes Of Age (Daniel Y. Harris)"
 date: 2016-10-31T14:27:17+00:00
-author: "Carl Raschke"
+author: "Carl Raschke; Daniel Y. Harris"
 permalink: /from-shakespeare-to-search-engines-experimental-poetry-comes-of-age/
 image: /images/wp-content/uploads/2016/10/Eddie-Daemon.jpg
 description: "The following are edited portions of an interview withDaniel Y. Harris, a contributing editor of Esthesis as well as co-founder and current editor"

@@ -1,7 +1,7 @@
 ---
 title: "The Visual Arts Classroom – A Site of Societal Influence And Change (Shannon Pennell)"
 date: 2020-05-30T04:43:57+00:00
-author: editors
+author: "Shannon Pennell"
 permalink: /the-visual-arts-classroom-a-site-of-societal-influence-and-change-shannon-pennell/
 image: /images/wp-content/uploads/2020/05/Graffiti_in_Budapest_Pestszentlőrinc-800x500.jpg
 description: "Here I am, in the “visual arts classroom” as it exists in the midst of the 2020 COVID-19 precautions. I t was while I was digging through my previous essays"

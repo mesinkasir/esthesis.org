@@ -15,13 +15,13 @@ layout: base.njk
                     <a href="/contributor/{{ person.fileSlug }}/" class="text-decoration-none text-dark">
                         <div class="ratio ratio-1x1 mb-3">
                             <img src="{{ person.data.image or metadata.image }}" 
-                                 alt="{{ person.data.title }}"
+                                 alt="{{ person.data.name or person.data.title }}"
                                  class="rounded-3 object-fit-cover grayscale-hover"
                                  style="transition: filter 0.3s ease;">
                         </div>
-                        <h3 class="fw-bold h4 mb-1">{{ person.data.title }}</h3>
+                        <h3 class="fw-bold h4 mb-1">{{ person.data.name or person.data.title }}</h3>
                         <p class="text-muted small text-uppercase letter-spacing-1">
-                            {{ person.data.affiliation | default('Contributor') }}
+                            {{ person.data.role or person.data.affiliation or 'Author' }}
                         </p>
                     </a>
                 </div>

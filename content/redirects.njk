@@ -24,6 +24,12 @@ permalink: /_redirects
 /wp-includes/*        / 410
 /themes/*             / 410
 
+# Legacy post URLs (/posts/* -> /)
+/posts/ /archive/ 301
+{% for post in collections.posts %}
+/posts{{ post.url }} {{ post.url }} 301
+{% endfor %}
+
 {% for item in collections.all %}
   {% if item.data.redirect_from %}
     {% set froms = item.data.redirect_from %}
@@ -37,17 +43,26 @@ permalink: /_redirects
 # Category/tag casing and spacing redirects
 {% for category in collections.categories %}
   {% set display = category | displayName %}
-/category/{{ display }}/ /category/{{ category }}/ 301
-/category/{{ display | replace(" ", "%20") }}/ /category/{{ category }}/ 301
+/category/{{ display }}/ /categories/{{ category | slugify }}/ 301
+/category/{{ display | replace(" ", "%20") }}/ /categories/{{ category | slugify }}/ 301
+/category/{{ category }}/ /categories/{{ category | slugify }}/ 301
 {% endfor %}
 
-/category/uncategorized/ /category/aesthetics/ 301
+/category/uncategorized/ /categories/aesthetics/ 301
+/authors/ /contributors/ 301
+/contributor/ /contributors/ 301
+/archives/ /archive/ 301
+/archives /archive/ 301
 /contributor/kenneth-ken-lokensgard/ /contributor/kenneth-lokensgard/ 301
+/contributor/editor/ /contributor/editors/ 301
+/contributor/michael-orourke/ /contributor/michael-o-rourke/ 301
+/author/editor/ /author/editors/ 301
 
 {% for tag in collections.tags %}
   {% set display = tag | displayName %}
-/tag/{{ display }}/ /tag/{{ tag }}/ 301
-/tag/{{ display | replace(" ", "%20") }}/ /tag/{{ tag }}/ 301
+/tag/{{ display }}/ /tags/{{ tag | slugify }}/ 301
+/tag/{{ display | replace(" ", "%20") }}/ /tags/{{ tag | slugify }}/ 301
+/tag/{{ tag }}/ /tags/{{ tag | slugify }}/ 301
 {% endfor %}
 
 # Auto-generated redirects for moved assets

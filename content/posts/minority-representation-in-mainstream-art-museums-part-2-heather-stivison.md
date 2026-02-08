@@ -1,7 +1,7 @@
 ---
 title: "Minority Representation In Mainstream Art Museums, Part 2 (Heather Stivison)"
 date: 2019-02-07T03:11:04+00:00
-author: editors
+author: "Heather Stivison"
 permalink: /minority-representation-in-mainstream-art-museums-part-2-heather-stivison/
 image: /images/wp-content/uploads/2019/02/Poisoned-Man-by-Schutz-800x500.jpg
 description: "The following is the second of a three-part series. The first can be found here. Cultural Perspectives & Inequities The history of colonialism in the The"

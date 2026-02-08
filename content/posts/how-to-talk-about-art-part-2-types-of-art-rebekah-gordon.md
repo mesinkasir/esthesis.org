@@ -1,7 +1,7 @@
 ---
 title: "How To Talk About Art, Part 2 – Types Of Art (Rebekah Gordon)"
 date: 2017-07-28T03:46:05+00:00
-author: editors
+author: "Rebekah Gordon"
 permalink: /how-to-talk-about-art-part-2-types-of-art-rebekah-gordon/
 image: /images/wp-content/uploads/2017/07/541806823_1280x720.jpg
 description: "The following is the second of a three-part series. The first installment can be found here. In the first installment of our “How To Talk About Art” series"

@@ -1,7 +1,7 @@
 ---
 title: "“Cattle of the Lord” – An Interview with Poet Rosa Alice Branco (Millicent Borges Accardi)"
 date: 2018-09-11T14:04:22+00:00
-author: editors
+author: "Millicent Borges Accardi"
 permalink: /cattle-of-the-lord-an-interview-with-poet-rosa-alice-branco-millicent-borges-accardi/
 image: /images/wp-content/uploads/2018/09/IMG_5906-800x500.jpg
 description: "The following interview originally appeared in the Portuguese American Journal. One of today’s most admired Portuguese-language poets, Rosa Alice Branco,"

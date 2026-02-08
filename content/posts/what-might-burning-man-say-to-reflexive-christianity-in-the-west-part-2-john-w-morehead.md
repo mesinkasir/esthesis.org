@@ -1,7 +1,7 @@
 ---
 title: "What Might Burning Man Say To Reflexive Christianity In The West?, Part 2 (John W. Morehead)"
 date: 2019-06-01T03:04:15+00:00
-author: editors
+author: "John W. Morehead"
 permalink: /what-might-burning-man-say-to-reflexive-christianity-in-the-west-part-2-john-w-morehead/
 image: /images/wp-content/uploads/2019/06/934506-1-800x500.jpg
 description: "The following is the second of a two-part series. The first installment can be found here. With a basic definition of counterculture, as well as consideration"

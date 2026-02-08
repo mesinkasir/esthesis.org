@@ -1,7 +1,7 @@
 ---
 title: "“When Did Beauty Become So F…n’ Ugly?” (Davor Džalto)"
 date: 2017-04-13T00:54:04+00:00
-author: editors
+author: "Davor Džalto"
 permalink: /when-did-beauty-become-so-fn-ugly-davor-dzalto/
 image: /images/wp-content/uploads/2017/04/beauty-and-the-beast.jpg
 description: "In Jonathan Parker’s movie Untitled 2009 we find an insightful and also cynical description of some of the major features of the contemporary art world."

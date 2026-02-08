@@ -1,7 +1,7 @@
 ---
 title: "A Cathartic Manifesto: Corporeality in James Joyce, Part 2 (Tim Royan)"
 date: 2018-11-09T22:34:10+00:00
-author: editors
+author: Tim Royan
 permalink: /a-cathartic-manifesto-corporeality-in-james-joyce-part-2-tim-royan/
 image: /images/wp-content/uploads/2018/11/riverscape-800x500.jpg
 description: "The following is the second part in a two-part installment. The first part can be found here. The fact that Bloom implements a diseased prostitute’s body,"
@@ -16,7 +16,7 @@ tags:
   - "violating-taboos"
 ---
 
-*The following is the second part in a two-part installment. The first part can be found [here](/a-cathartic-manifesto-corporeality-in-james-joyce-part-1-tim-royan/).*The fact that Bloom implements a diseased prostitute’s body, “medically&hellip;speaking,” to launch into an argument against dualism obviously mirrors Joyce’s implementation of the human body for the exact same reason, as well as the scientific motivations for doing so. What is more interesting about this section is that, by Stephen linking dualism to religion at the outset of the debate, we are treated to another motivation for Joyce to reclaim the human body – not only have Freud and Nietzsche’s endeavors overturned dualism, but in doing so, they have undermined the authority of religion. This allows Bloom to say that
+*The following is the second part in a two-part installment. The first part can be found [here](/a-cathartic-manifesto-corporeality-in-james-joyce-part-1-tim-royan/).* The fact that Bloom implements a diseased prostitute’s body, “medically&hellip;speaking,” to launch into an argument against dualism obviously mirrors Joyce’s implementation of the human body for the exact same reason, as well as the scientific motivations for doing so. What is more interesting about this section is that, by Stephen linking dualism to religion at the outset of the debate, we are treated to another motivation for Joyce to reclaim the human body – not only have Freud and Nietzsche’s endeavors overturned dualism, but in doing so, they have undermined the authority of religion. This allows Bloom to say that
 
 > it is one thing for instance to invent those rays Röntgen did, or the telescope &hellip;The same applies to the laws, for example, of a farreaching natural phenomenon such as electricity but it’s a horse of quite another colour to say you believe in the existence of a supernatural God.
 

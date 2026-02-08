@@ -1,5 +1,6 @@
 ---
-title: "George Elerick"
+name: "George Elerick"
+role: author
 image: /images/wp-content/uploads/2016/08/Elerick.jpeg
 permalink: /contributor/george-elerick/
 ---

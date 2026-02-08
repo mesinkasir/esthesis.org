@@ -20,7 +20,7 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ metadata.url }}{{ page.url }}"
+    "@id": "{{ canonical_url or (metadata.url + page.url) }}"
   }
 }
 </script>

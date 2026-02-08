@@ -1,7 +1,7 @@
 ---
 title: "On Affect Theory And Art Criticism, Part 2 (Jeremy LeMahieu)"
 date: 2017-03-07T08:32:51+00:00
-author: editors
+author: "Jeremy LeMahieu"
 permalink: /on-affect-theory-and-art-criticism-part-2-jeremy-lemahieu/
 image: /images/wp-content/uploads/2017/03/open_event_2016_affecttechno_2.jpg
 description: "The following is the second installment of a two-part series. The first part can be found here. There are two common methods of writing about this experience."

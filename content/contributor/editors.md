@@ -1,5 +1,6 @@
 ---
-title: "Editors"
-image: /images/esthesis.png
+name: "Editors"
+role: "editor"
+image: "/images/esthesis.png"
 ---
-Editors of Esthesis
+[Editors of Esthesis](/editorial-staff/)

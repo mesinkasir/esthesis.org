@@ -3,16 +3,25 @@ layout: base.njk
 ---
 <div class="container">
     <div class="col-md-8 mx-auto text-center mt-5 mb-4">
+       {% set contributorName = name or title %}
        {% if image or metadata.image %}
     <img src="{{ image or metadata.image }}" 
-         alt="Profile Picture of {{ title }}" 
+         alt="Profile Picture of {{ contributorName }}" 
          class="rounded-circle object-fit-cover border" 
          width="90" 
          height="90"
          style="aspect-ratio: 1/1;">
 {% endif %}
         <div>
-            <h1 class="mb-0">{{ title }}</h1>
+            {% set contributorTitleWeight = 6.0 %}
+            {% if page.fileSlug == "editors" %}
+              {% set contributorTitleWeight = 5.0 %}
+            {% endif %}
+            <h1 class="mb-0" data-pagefind-meta="title" data-pagefind-weight="{{ contributorTitleWeight }}">{{ contributorName }}</h1>
+            {% if description %}<p class="visually-hidden" data-pagefind-meta="description">{{ description }}</p>{% endif %}
+            {% if role %}
+                <p class="text-muted small text-uppercase mb-1">{{ role }}</p>
+            {% endif %}
             {% if website %}
                 <p class="mb-0">
                     <a href="{{ website }}" target="_blank" rel="nofollow noopener">
@@ -32,7 +41,7 @@ layout: base.njk
 <div class="container-fluid border-bottom">
     <div class="col-md-10 mx-auto p-3">
         <div class="row justify-content-center">
-            {% set namedPosts = collections.posts | postsNamedForContributor(title) %}
+            {% set namedPosts = collections.posts | postsNamedForContributor(contributorName) %}
             
             {% for post in namedPosts %}
             <article class="col-md-4 p-3">
