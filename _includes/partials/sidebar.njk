@@ -3,20 +3,19 @@
         <h3 class="col-md-12 mt-5 mb-5 fw-semibold">{{ metadata.widgets.widget_1.title }}</h3>
         {% for post in collections.posts | limit(3) %}
             <article class="row mt-3 hover-effect-container">
-                <div class="col-md-4 col-3">
-                    <a href="{{ post.url }}" title="{{ post.data.title }}">
-                        <img class="img-fluid rounded" style="height:120px;object-fit:cover;" 
-						alt="{{ post.data.title }}" 
-                             width="100%" height="100%" loading="eager"
-                             src="{{ post.data.image or metadata.image }}"/>
-                    </a>
-                </div>
-                <div class="col-md-8 col-9 text-list-article">
+               <div class="col-md-4 col-3 rounded"
+         style="background-image: url('{{ post.data.image or metadata.image }}'); 
+                background-size: cover; 
+                background-position: center; 
+                background-repeat: no-repeat;
+                min-height: 70px;">
+    </div>
+                <div class="col-md-8 col-9 ">
                     <a href="{{ post.url }}" class="none d">
                         <p class="fw-semibold mb-1">{{ post.data.title }}</p>
-                        <div class="small text-muted">
-                             {{ post.data.description | default('') | truncate(60) }}
-                        </div>
+                        <div class="small text-body-secondary">
+             {{ post.data.description | default('') | truncate(60) }}
+        </div>
                     </a>
                 </div>
             </article>
@@ -31,7 +30,7 @@
             <div class="col-md-12">
                     <img class="img-thumbnail border-0 p-0 mb-3" 
                          alt="{{ metadata.widgets.widget_2.alt }}" 
-                         width="100%" height="100%"
+                         style="width: 100px; height: auto;"
                          loading="lazy"
                          src="{{ metadata.widgets.widget_2.image }}"/>
                     <p class="small">{{ metadata.widgets.widget_2.text }}</p>
@@ -39,36 +38,45 @@
         </article>
     {% endif %}
 
- {% if metadata.widgets.show_authors %}
-    <h3 class="col-md-12 mt-5 mb-5 fw-semibold">{{ metadata.widgets.widget_3.title }}</h3>
-    
-    {% set count = 0 %}
-    {% for author in collections.all %}
-        {% if "/contributor/" in author.inputPath and not author.inputPath.endsWith("index.md") and count < 3 %}
-            {% set count = count + 1 %}
-            <article class="row mt-3 mb-3 align-items-center hover-effect-container">
-                <div class="col-md-3 col-3">
-                    <a href="/contributor/{{ author.fileSlug }}/" class="d-block">
-                        <div class="ratio ratio-1x1 mx-auto" style="width: 50px;"> 
-                            <img src="{{ author.data.image or metadata.image }}" 
-                                 alt="{{ author.data.name or author.data.title }}" 
-                                 class="rounded-circle object-fit-cover border shadow-sm"
-                                 style="width: 50px; height: 50px;">
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-9 col-9 ps-2">
-                    <a href="/contributor/{{ author.fileSlug }}/" class="text-decoration-none d-block">
-                        <p class="fw-bold mb-0 text-dark" style="font-size: 0.9rem; line-height: 1.2;">
-                            {{ author.data.name or author.data.title }}
-                        </p>
-                        <span class="small text-muted d-block" style="font-size: 0.7rem;">
-                            {{ author.data.role or author.data.affiliation or 'Author' }}
-                        </span>
-                    </a>
-                </div>
-            </article>
-        {% endif %}
-    {% endfor %}
-{% endif %}
+    {% if metadata.widgets.show_authors %}
+        <h3 class="col-md-12 mt-5 mb-5 fw-semibold">{{ metadata.widgets.widget_3.title }}</h3>
+        
+        {% set count = 0 %}
+        {% for author in collections.all %}
+            {% if "/contributor/" in author.inputPath and not author.inputPath.endsWith("index.md") and count < 5 %}
+                {% set count = count + 1 %}
+                <article class="row mt-3 mb-3 align-items-center hover-effect-container">
+                    <div class="col-md-3 col-3">
+                        <a href="/contributor/{{ author.fileSlug }}/" 
+                        class="d-block">
+                            <div class="ratio ratio-1x1 mx-auto" style="width: 50px;"> 
+                                {% if author.data.image %}
+                                    <img src="{{ author.data.image }}" 
+                                         alt="{{ author.data.title }}" 
+                                         class="rounded-circle object-fit-cover border shadow-sm"
+                                         style="width: 50px; height: 50px;">
+                                {% else %}
+                                    <div class="rounded-circle bg-danger text-black d-flex align-items-center justify-content-center fw-bold shadow-sm" 
+                                         style="width: 50px; height: 50px; font-size: 1.2rem; border: 1px solid #ddd;">
+                                        E
+                                    </div>
+                                {% endif %}
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-9 col-9 ps-2">
+                        <a href="/contributor/{{ author.fileSlug }}/" 
+                        class="text-decoration-none d-block">
+                            <p class="fw-bold mb-0" style="font-size: 0.9rem; line-height: 1.2;">
+                                {{ author.data.title }}
+                            </p>
+                            <span class="small text-body-secondary d-block" style="font-size: 0.7rem;">
+                                {{ author.data.affiliation | default('Contributor') }}
+                            </span>
+                        </a>
+                    </div>
+                </article>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 </div>

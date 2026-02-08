@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="{{ metadata.language or 'en' }}">
+<html lang="{{ metadata.language or 'en' }}" data-bs-theme="auto">
+<script src="/docs/5.3/assets/js/color-modes.js"></script>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,28 @@
 {{content|safe}}
 {% include "partials/footer.njk" %}
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+  const setTheme = theme => {
+    localStorage.setItem('theme', theme)
+    const actual = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme
+    document.documentElement.setAttribute('data-bs-theme', actual)
+    
+    const activeIcon = document.querySelector('#bd-theme use')
+    const selectedIcon = document.querySelector(`[data-bs-theme-value="${theme}"] use`).getAttribute('href')
+    activeIcon.setAttribute('href', selectedIcon)
+    
+    document.querySelectorAll('[data-bs-theme-value]').forEach(el => el.classList.remove('active'))
+    document.querySelector(`[data-bs-theme-value="${theme}"]`).classList.add('active')
+  }
+
+  document.querySelectorAll('[data-bs-theme-value]').forEach(toggle => {
+    toggle.onclick = () => setTheme(toggle.getAttribute('data-bs-theme-value'))
+  })
+
+  setTheme(localStorage.getItem('theme') || 'auto')
+})
+</script>
 <script type="module" src="{% getBundleFileUrl "js" %}"></script>
 </body>
 </html>

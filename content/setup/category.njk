@@ -18,8 +18,8 @@ permalink: "/categories/{{ category | slugify }}/"
                         <li class="breadcrumb-item active" aria-current="page">{{ category | formatCategoryTag }}</li>
                     </ol>
                 </nav>
-                <h1 class="display-4 fw-bold text-dark" data-pagefind-meta="title" data-pagefind-weight="1">
-                    <span class="text-muted fw-light">Category:</span> {{ category | formatCategoryTag }}
+                <h1 class="display-4 fw-bold">
+                    <span class="text-body-secondary fw-light">Category:</span> {{ category | displayName }}
                 </h1>
             </header>
 
@@ -40,12 +40,12 @@ permalink: "/categories/{{ category | slugify }}/"
                             
                             <div class="card-body p-4">
                                 <h2 class="h4 card-title mb-3">
-                                    <a href="{{ post.url }}" class="text-decoration-none text-dark hover-primary">
+                                    <a href="{{ post.url }}" class="text-decoration-none  hover-primary">
                                         {{ post.data.title }}
                                     </a>
                                 </h2>
                                 
-                                <p class="card-text text-muted small mb-4">
+                                <p class="card-text text-body-secondary small mb-4">
                                     {{ post.data.description | truncate(110) }}
                                 </p>
                                 

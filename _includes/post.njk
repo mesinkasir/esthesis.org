@@ -21,13 +21,13 @@ layout: base.njk
             </div>
         </div>
 
-        <div class="col-md-8 p-3 p-md-5 col-scrollable bg-white">
+        <div class="col-md-8 p-3 p-md-5 col-scrollable">
             <div class="mb-5">
-                <a href="/archive/" class="text-dark text-decoration-none"><i class="fas fa-arrow-left me-2"></i> Back</a>
+                <a href="/archive/" class="text-body-secondary text-decoration-none"><i class="fas fa-arrow-left me-2"></i> Back</a>
             </div>
 
             {% set contentWithIDs = content | addHeadingIDs %}
-            <div class="mb-5 tocus p-4 border-start border-4 border-dark bg-light">
+            <div class="mb-5 tocus p-4 border-start border-4 border-dark bg-body-tertiary">
                 <h3 class="fw-bold h5 text-uppercase">Table of Contents</h3>
                 {{ contentWithIDs | toc | safe }} 
             </div>
@@ -43,11 +43,10 @@ layout: base.njk
                         <a href="/tags/{{ tag | slugify }}/" class="badge text-bg-light border text-decoration-none me-1">{{ tag | displayName }}</a>
                     {% endif %}{% endfor %}
                 </p>
-                {% set authors = (author) | parseAuthors(collections.all) %}
-                {% if authors.length > 0 %}
-                    <p>By {% for auth in authors %}
-                        <span class="fw-bold"><a href="/contributor/{{ auth.slug }}/" class="text-decoration-none text-dark">{{ auth.name }}</a></span>{% if not loop.last %}; {% endif %}
-                    {% endfor %}</p>
+               {% if author %}
+                    <p>By <span class="fw-bold">
+                        <a href="/contributor/{{ author | slugify }}/" 
+                        class="text-decoration-none text-body-secondary">{{ author }}</a></span></p>
                 {% endif %}
             </div>
 

@@ -65,6 +65,13 @@
 {% include "css/style.css" %}
 </style>
 <style>{% getBundle "css" %}</style>
+<script>
+  (() => {
+    const theme = localStorage.getItem('theme') || 'auto'
+    const actual = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme
+    document.documentElement.setAttribute('data-bs-theme', actual)
+  })()
+</script>
 <script type="module">
 {% include "node_modules/@zachleat/heading-anchors/heading-anchors.js" %}
 {% include "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js" %}
