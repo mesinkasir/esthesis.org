@@ -1,8 +1,10 @@
+logo_url: whitestone-logo.png
+
 backend:
-  name: github
+  name: git-gateway
   repo: adamdjbrett/esthesis.org
   branch: main
-  base_url: https://xxx.workers.dev # cloudflare workers.dev
+
 
 media_folder: "public/images"
 public_folder: "/images"
