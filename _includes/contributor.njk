@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 ---
-<div class="container">
+<div class="container h-entry">
     <div class="col-md-8 mx-auto text-center mt-5 mb-4">
        {% set contributorName = name or title %}
        {% if image or metadata.image %}
@@ -17,7 +17,8 @@ layout: base.njk
             {% if page.fileSlug == "editors" %}
               {% set contributorTitleWeight = 5.0 %}
             {% endif %}
-            <h1 class="mb-0" data-pagefind-meta="title" data-pagefind-weight="{{ contributorTitleWeight }}">{{ contributorName }}</h1>
+            <h1 class="mb-0" data-pagefind-meta="title" 
+            data-pagefind-weight="{{ contributorTitleWeight }}">{{ contributorName }}</h1>
             {% if description %}<p class="visually-hidden" data-pagefind-meta="description">{{ description }}</p>{% endif %}
             {% if role %}
                 <p class="text-muted small text-uppercase mb-1">{{ role }}</p>
@@ -32,7 +33,7 @@ layout: base.njk
         </div>
     </div>   
     <div class="p-3 text-center col-md-8 mx-auto">
-        <div class="contributor-bio">
+        <div class="contributor-bio e-content">
             {{ content | safe }}
         </div>
     </div>

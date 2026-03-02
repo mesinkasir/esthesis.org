@@ -1,0 +1,32 @@
+---
+permalink: /feed/firehose.xml
+eleventyExcludeFromCollections: true
+layout: false
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ metadata.title }} Firehose</title>
+  <subtitle>{{ metadata.description }}</subtitle>
+  <link href="{{ metadata.url }}/feed/firehose.xml" rel="self"/>
+  <link href="{{ metadata.url }}"/>
+  <updated>{{ page.date.toISOString() if page.date else "" }}</updated>
+  <id>{{ metadata.url }}/</id>
+  <author>
+    <name>{{ metadata.author.name }}</name>
+  </author>
+
+  {%- for post in collections.all | reverse %}
+    {%- if post.url and post.url != permalink and post.data.title and loop.index0 < 100 %}
+    <entry>
+      <title>{{ post.data.title }}</title>
+      <link href="{{ metadata.url }}{{ post.url }}"/>
+      <updated>{{ post.date.toISOString() if post.date else page.date.toISOString() }}</updated>
+      <id>{{ metadata.url }}{{ post.url }}</id>
+      {# Gunakan truncate dulu untuk tes, kalau berhasil baru kita kembalikan ke full content #}
+      <content type="html"><![CDATA[
+        {{ post.templateContent | safe }}
+      ]]></content>
+    </entry>
+    {%- endif %}
+  {%- endfor %}
+</feed>

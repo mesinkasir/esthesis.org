@@ -4,15 +4,16 @@ layout: base.njk
 {% include "partials/hero.njk" %}
 {% include "partials/nav.njk" %}
 
-<section class="container py-5">
+<section class="container py-5 h-entry">
     <div class="col-md-10 mx-auto">
      
         
-        <div class="row g-4">
+        <div class="row g-4 e-content">
             {% for person in contributors %}
             <article class="col-6 col-md-3 mb-5">
-                <div class="contributor-card h-100">
-                    <a href="/contributor/{{ person.fileSlug }}/" class="text-decoration-none text-dark">
+                <div class="contributor-card h-100 p-author h-card">
+                    <a href="/contributor/{{ person.fileSlug }}/" 
+                    class="text-decoration-none text-dark p-name u-url">
                         <div class="ratio ratio-1x1 mb-3">
                             <img src="{{ person.data.image or metadata.image }}" 
                                  alt="{{ person.data.name or person.data.title }}"

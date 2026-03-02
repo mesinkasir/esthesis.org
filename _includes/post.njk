@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 
-<section class="container-fluid border-bottom">
+<section class="container-fluid border-bottom h-entry">
     <div class="row row-full-height">
         
         <div class="col-md-4 col-12 d-flex flex-column justify-content-center text-white col-centered p-3 p-md-5" 
@@ -15,13 +15,13 @@ layout: base.njk
                     {%- endfor -%}
                 </nav>
                 
-                <h1 class="text-uppercase text-hero-posts fw-bold" data-pagefind-meta="title" data-pagefind-weight="7.0">{{ title }}</h1>
+                <h1 class="text-uppercase text-hero-posts fw-bold p-name" data-pagefind-meta="title" data-pagefind-weight="7.0">{{ title }}</h1>
                 {% if description %}<h2 class="lead my-3">{{ description }}</h2>{% endif %}
                 <p class="small">{{ page.date | readableDate }}</p>
             </div>
         </div>
 
-        <div class="col-md-8 p-3 p-md-5 col-scrollable">
+        <div class="col-md-8 p-3 p-md-5 col-scrollable e-content">
             <div class="mb-5">
                 <a href="/archive/" class="text-body-secondary text-decoration-none"><i class="fas fa-arrow-left me-2"></i> Back</a>
             </div>
@@ -44,9 +44,9 @@ layout: base.njk
                     {% endif %}{% endfor %}
                 </p>
                {% if author %}
-                    <p>By <span class="fw-bold">
+                    <p  class="p-author h-card">By <span class="fw-bold">
                         <a href="/contributor/{{ author | slugify }}/" 
-                        class="text-decoration-none text-body-secondary">{{ author }}</a></span></p>
+                        class="text-decoration-none text-body-secondary p-name u-url">{{ author }}</a></span></p>
                 {% endif %}
             </div>
 

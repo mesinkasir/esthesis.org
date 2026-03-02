@@ -1,0 +1,64 @@
+{% set contributorData = collections.contributor | getContributor(authors) %}
+{% set canonicalUrl = canonical_url or (metadata.url + page.url) %}
+
+<script type="application/ld+json" data-no-bundle>
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thewhitestonefoundation.org/#organization",
+      "name": "The Whitestone Foundation",
+      "url": "https://thewhitestonefoundation.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://thewhitestonefoundation.org/favicon.ico"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ metadata.url }}/#website",
+      "url": "{{ metadata.url }}",
+      "name": "{{ metadata.title }}",
+      "publisher": { "@id": "https://thewhitestonefoundation.org/#organization" }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "{{ canonicalUrl }}/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "{{ metadata.url }}"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "{{ title or metadata.title }}",
+          "item": "{{ canonicalUrl }}"
+        }
+      ]
+    }
+    {% if authors or title %},
+    {
+      "@type": "BlogPosting",
+      "@id": "{{ canonicalUrl }}/#post",
+      "headline": "{{ title }}",
+      "description": "{{ description or excerpt or metadata.description }}",
+      "datePublished": "{% if date.toISOString %}{{ date.toISOString() }}{% else %}{{ date }}{% endif %}",
+      "dateModified": "{% if date.toISOString %}{{ date.toISOString() }}{% else %}{{ date }}{% endif %}",
+      "mainEntityOfPage": { "@id": "{{ canonicalUrl }}" },
+      "isPartOf": { "@id": "{{ metadata.url }}/#website" },
+      "image": "{{ metadata.url }}{{ image or metadata.image }}",
+      "author": {
+        "@type": "Person",
+        "name": "{{ contributorData.data.name or authors or metadata.author.name or 'Whitestone Staff' }}",
+        "url": "{{ metadata.url }}{{ contributorData.url or '' }}"
+      },
+      "publisher": { "@id": "https://thewhitestonefoundation.org/#organization" }
+    }
+    {% endif %}
+  ]
+}
+</script>

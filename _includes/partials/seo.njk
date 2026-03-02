@@ -50,16 +50,7 @@
 <meta name="locale" content="{{ metadata.locale }}" />
 <meta name="generator" content="{{ eleventy.generator }}" />
 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="{{ metadata.title }}">
-{% include "partials/schema-breadcrumb.njk" %}
-
-{% if layout == "blog.njk" %}
-{% include "partials/schema-blog.njk" %}
-{% endif %}
-
-{% if authors %}
-{% include "partials/schema-blog-post.njk" %}
-{% endif %}
-
+{% include "partials/schema.njk" %}
 <style>
 {% include "node_modules/bootstrap/dist/css/bootstrap.min.css" %}
 {% include "css/style.css" %}

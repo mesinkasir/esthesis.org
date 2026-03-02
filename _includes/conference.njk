@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 ---
-<section class="container-fluid border-bottom">
+<section class="container-fluid border-bottom h-entry">
     <div class="row row-full-height">
         
         
@@ -20,7 +20,7 @@ layout: base.njk
                     {%- endfor -%}
                 </nav>
                 
-                <h1 class="text-uppercase text-hero-post fw-bold display-4" style="line-height: 0.9; letter-spacing: -0.02em;">
+                <h1 class="text-uppercase text-hero-post fw-bold display-4 p-name" style="line-height: 0.9; letter-spacing: -0.02em;">
                     {{ title }}
                 </h1>
 
@@ -31,7 +31,7 @@ layout: base.njk
                 {% if date %}
                     <p class="small mt-4 opacity-75">
                         <i class="far fa-calendar-alt me-2"></i>
-                        <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+                        <time class="dt-published" datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
                     </p>
                 {% endif %}
             </div>
@@ -55,7 +55,7 @@ layout: base.njk
                 {{ content | toc | safe }} 
             </div>
 
-            <article class="post-article fs-5 line-height-lg">
+            <article class="post-article fs-5 line-height-lg e-content">
                 {{ content | safe }}
             </article>
             <div class="mt-5 pt-5 border-top">
